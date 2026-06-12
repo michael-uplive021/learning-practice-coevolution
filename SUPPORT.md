@@ -8,8 +8,8 @@
 
 | Region / 地区 | Channel / 渠道 | Link / 链接 | QR |
 | --- | --- | --- | --- |
-| Mainland China / 中国境内 | Alipay / 支付宝 | Scan the QR code / 扫描二维码 | <img src="assets/alipay-jie-qr.jpg" alt="Alipay QR code" width="260"> |
-| International / 海外 | PayPal.Me | [paypal.me/michael061394](https://paypal.me/michael061394) | ![PayPal.Me QR code](assets/paypal-me-michael061394.svg) |
+| Mainland China / 中国境内 | Alipay / 支付宝 | Scan the QR code / 扫描二维码 | <img src="assets/alipay-jie-qr.png" alt="Alipay QR code" width="180"> |
+| International / 海外 | PayPal.Me | [paypal.me/michael061394](https://paypal.me/michael061394) | <img src="assets/paypal-me-michael061394.svg" alt="PayPal.Me QR code" width="180"> |
 
 ## Boundary / 边界
 

@@ -93,8 +93,8 @@
 
 | 地区 | 链接 | 二维码 |
 | --- | --- | --- |
-| 中国境内 | 支付宝二维码 | <img src="assets/alipay-jie-qr.jpg" alt="支付宝二维码" width="260"> |
-| 海外 | [PayPal.Me](https://paypal.me/michael061394) | ![PayPal.Me 二维码](assets/paypal-me-michael061394.svg) |
+| 中国境内 | 支付宝二维码 | <img src="assets/alipay-jie-qr.png" alt="支付宝二维码" width="180"> |
+| 海外 | [PayPal.Me](https://paypal.me/michael061394) | <img src="assets/paypal-me-michael061394.svg" alt="PayPal.Me 二维码" width="180"> |
 
 这些是外部手动支持入口。支付宝图片是用户提供的公开收款二维码。本仓库不包含支付密码、API key、银行卡信息或隐藏的自动扣费逻辑。完整边界见 [SUPPORT.md](SUPPORT.md)。
 

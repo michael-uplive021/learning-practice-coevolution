@@ -91,8 +91,8 @@ If this skill helps your reading, learning, or real-work practice loop, you can 
 
 | Region | Link | QR |
 | --- | --- | --- |
-| Mainland China | Alipay QR | <img src="assets/alipay-jie-qr.jpg" alt="Alipay QR code" width="260"> |
-| International | [PayPal.Me](https://paypal.me/michael061394) | ![PayPal.Me QR code](assets/paypal-me-michael061394.svg) |
+| Mainland China | Alipay QR | <img src="assets/alipay-jie-qr.png" alt="Alipay QR code" width="180"> |
+| International | [PayPal.Me](https://paypal.me/michael061394) | <img src="assets/paypal-me-michael061394.svg" alt="PayPal.Me QR code" width="180"> |
 
 These are external manual support channels. The Alipay image is a user-provided public payment QR image. This repository does not include payment passwords, API keys, bank-card data, or hidden checkout automation. See [SUPPORT.md](SUPPORT.md) for the full payment boundary.
 

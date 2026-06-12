@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-13 - Cropped Alipay QR
+
+- Replaced the full Alipay screenshot with a cropped QR-only image asset.
+- Removed visible Alipay banner text, recommendation text, bottom nickname, and scan instruction from the published QR image.
+- Matched Alipay and PayPal QR display widths across README and SUPPORT pages.
+
 ## 2026-06-12 - Alipay QR and Chinese-friendly landing
 
 - Replaced the mainland China support QR with a user-provided Alipay QR image.

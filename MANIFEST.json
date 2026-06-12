@@ -1,12 +1,12 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-12-alipay-zh-landing",
+  "version": "2026-06-13-cropped-alipay-qr",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
   "spdx_license_id": "MIT",
   "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
-  "generated_at": "2026-06-12",
+  "generated_at": "2026-06-13",
   "default_language": "en",
   "languages": [
     "en",
@@ -15,8 +15,8 @@
   "support": {
     "mainland_china": {
       "provider": "Alipay",
-      "qr_asset": "assets/alipay-jie-qr.jpg",
-      "note": "User-provided public Alipay payment QR image."
+      "qr_asset": "assets/alipay-jie-qr.png",
+      "note": "Cropped QR-only Alipay payment image with visible banner and nickname text removed."
     },
     "international": {
       "provider": "PayPal",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "08542b5a2886259b04c6ead3cdb8d8ce081033f04a5c07b785b3a988bd8e81f6"
+      "sha256": "75ef55f52ec378af5d8b4a67834b2aa3b7b578d89b9333e2f23f6e6abdbc53cf"
     },
     {
       "path": "LICENSE",
@@ -61,15 +61,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "d1e92ee3ab2739d7be31eb5acd89f9377b55b2ff85892cc2b5901651de872416"
+      "sha256": "495d5dd9a446edd64807f6de68fad307e59102dd88594dc7a5b0233fbc56fb5f"
     },
     {
       "path": "README.en.md",
-      "sha256": "f16bc87b676cfb99831fc2cdc2a89d29a58752d24c617dc245022ad2d50e4b85"
+      "sha256": "62bfd76619f72022f1ec907fee8209bb44c9573fbb8b0d091030ddd48a12942e"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "93894435ca0bca684d64b844661c46d2970dcb29261fd9002e89ec6cd3ff0145"
+      "sha256": "54127b263f57538d7f6622f007614c998b0ba7591a81d131a093a90409108452"
     },
     {
       "path": "SKILL.md",
@@ -85,15 +85,15 @@
     },
     {
       "path": "SUPPORT.md",
-      "sha256": "0582e4ea2e35d70658164c95ad5b37e14131946ab69c2826bbf2428cf6fac342"
+      "sha256": "f557d01f859e1145a3c8f91638bf59087468bcb5dbdcbe631af556be1fa94fee"
     },
     {
       "path": "agents/openai.yaml",
       "sha256": "8f0d51d37b927c4042b4d74d15ddba7c6db8d6c32ac3d249680ddc1e5805ee97"
     },
     {
-      "path": "assets/alipay-jie-qr.jpg",
-      "sha256": "f840bc3284cbdc6aa142d0b2422c1e799d25bfedf2f48af5222bc53ccb0f9aab"
+      "path": "assets/alipay-jie-qr.png",
+      "sha256": "579a33b82e94d9ce28d807c1ca94a75c6c1ee452711f887ccc95db8e14b4ed15"
     },
     {
       "path": "assets/paypal-me-michael061394.svg",
