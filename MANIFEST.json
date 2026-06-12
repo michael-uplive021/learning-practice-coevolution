@@ -1,0 +1,55 @@
+{
+  "package_id": "learning-practice-coevolution",
+  "version": "2026-06-12-public-open-source",
+  "name": "Learning Practice Coevolution",
+  "owner": "Jie Huang",
+  "license": "MIT",
+  "spdx_license_id": "MIT",
+  "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
+  "generated_at": "2026-06-12",
+  "distribution": {
+    "tier": "public_open_source",
+    "redistribution_allowed": true,
+    "attribution_required": true
+  },
+  "verification": {
+    "signature_required": false,
+    "verification_status": "public_git_source",
+    "hash_algorithm": "sha256"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "e9531e230e683baaf2899bcc33aa6327a6a50bd4178b205d7acec8bbb63dcb36"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "7573e3093f73493e04d6c76fc39fa7b05c3f1a4220f673b745efb3283aca0a17"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "8f0d51d37b927c4042b4d74d15ddba7c6db8d6c32ac3d249680ddc1e5805ee97"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "9618bf5d85831c14c195bb17083e5c25c3bbb452ebe5b73d48fa9058e50bb2d4"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "031c0f80802496857f862dcf878a5400de7f6cb125192f4691b2223446a9b41e"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b511bdf4140a8754cf242316d70d25ad91be5ff0502d4e5d6d6806f00b7cb56d"
+    }
+  ],
+  "private_material_excluded": [
+    "local_paths",
+    "account_traces",
+    "connector_configuration",
+    "private_project_examples",
+    "logs",
+    "secrets",
+    "non_public_knowledge"
+  ]
+}

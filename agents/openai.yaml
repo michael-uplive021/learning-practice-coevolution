@@ -1,0 +1,4 @@
+interface:
+  display_name: "学习实践共演助手"
+  short_description: "把读书、主动回忆、真实项目练习和长期学习工作区牵引成可复用能力"
+  default_prompt: "Use $learning-practice-coevolution to turn this book or learning goal into active recall, transfer practice, and a Learning Workspace next step."
