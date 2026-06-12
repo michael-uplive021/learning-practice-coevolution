@@ -1,8 +1,12 @@
 # Learning Practice Coevolution
 
-Reading is training. Practice is learning.
+<p align="center">
+  <a href="README.zh-CN.md"><strong>中文</strong></a>
+  |
+  <a href="README.en.md"><strong>English</strong></a>
+</p>
 
-中文说明见 [README.zh-CN.md](README.zh-CN.md). English version: [README.en.md](README.en.md).
+Reading is training. Practice is learning.
 
 `learning-practice-coevolution` is an agent skill for turning books, articles, course notes, excerpts, highlights, and real work into active recall, critique, transfer practice, learning records, and reusable learning assets.
 
@@ -11,6 +15,30 @@ Reading is training. Practice is learning.
 It is designed for people who do not want AI to simply summarize material for them. The skill keeps the user in charge of the problem, uses AI as mentor before execution, and only switches to execution after the learning or problem contract is clear.
 
 它不把 AI 当成默认总结器，而是先让用户保留问题主导权：执行前先进入导师式批改，问题或学习合约清楚后再切换到数字员工执行。
+
+## 中文快速理解
+
+这不是一个“帮我总结这本书”的模板，而是一套给 Agent 使用的学习训练流程。它默认先让你说出自己的理解，再让 AI 批改、追问、补例子、找迁移场景，最后才进入真实任务执行。
+
+它适合三类情况：
+
+- 你读过材料，但说不清楚、用不出来；
+- 你想把阅读变成真实项目里的练习，而不是停在笔记整理；
+- 你想沉淀方法、SOP、Prompt 或 Skill 候选，但又不想因为一次好答案就过早固化。
+
+推荐用法很简单：
+
+```text
+使用 $learning-practice-coevolution 帮我读这篇材料。
+不要先总结。先问我问题，让我解释，然后批改我的理解。
+最后帮我设计一个能用到真实工作的练习。
+```
+
+如果你已经有项目或真实任务，直接把任务告诉它。本 Skill 会优先把真实工作当作练习题，而不是另造一个没有业务意义的作业。
+
+## Project Article / 项目说明文章
+
+- 中文项目说明文章（微信公众号）：[阅读文章](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
 
 ## Language Versions
 
@@ -51,7 +79,7 @@ Do not use it as a generic summarizer.
 - `README.en.md` / `README.zh-CN.md` - bilingual documentation.
 - `SUPPORT.md` - support and payment links.
 - `agents/openai.yaml` - optional OpenAI-facing display metadata.
-- `assets/` - QR code SVG assets for public payment links.
+- `assets/` - QR code assets for public support channels.
 - `MANIFEST.json` - package metadata and file hashes.
 - `LICENSE` - MIT License.
 - `CHANGELOG.md` - public release notes.
@@ -74,11 +102,15 @@ Use $learning-practice-coevolution. I understand the concept vaguely but cannot 
 Make me reconstruct it, then give me a toy example and one transfer exercise.
 ```
 
-## Host System Boundary
+## Usage Boundary / 使用边界
 
 If your host system has its own runtime, governance, evidence, privacy, or writeback rules, follow the host system first. This skill is a compatible adapter, not an override for your local rules.
 
+如果你使用的 AI、笔记或 Agent 系统已经有自己的运行规则、证据要求、隐私要求或写回规则，优先遵循原系统规则。本 Skill 只是一个兼容适配器，不覆盖你的本地规则。
+
 The public version intentionally excludes private project examples, local paths, connector configuration, account traces, logs, and non-public knowledge.
+
+公开版本已经剥离私有项目样例、本地路径、连接器配置、账号痕迹、日志和非公开知识。
 
 ## Support
 
@@ -88,10 +120,10 @@ If this skill helps your reading, learning, or real-work practice loop, you can 
 
 | Region | Link | QR |
 | --- | --- | --- |
-| Mainland China / 中国境内 | [Afdian V2 item](https://ifdian.net/item/e2f39c10505211f1a93452540025c377) | ![Afdian QR code](assets/afdian-v2-early-access.svg) |
+| Mainland China / 中国境内 | Alipay QR / 支付宝二维码 | <img src="assets/alipay-jie-qr.jpg" alt="Alipay QR code" width="260"> |
 | International / 海外 | [PayPal.Me](https://paypal.me/michael061394) | ![PayPal.Me QR code](assets/paypal-me-michael061394.svg) |
 
-These are external manual support channels. The QR codes encode only the public payment URLs above. They do not include passwords, API keys, bank-card data, or hidden checkout automation. See [SUPPORT.md](SUPPORT.md) for the full payment boundary.
+These are external manual support channels. The Alipay image is a user-provided public payment QR image. This repository does not include payment passwords, API keys, bank-card data, or hidden checkout automation. See [SUPPORT.md](SUPPORT.md) for the full payment boundary.
 
 ## License
 

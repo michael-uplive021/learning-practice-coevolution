@@ -1,10 +1,18 @@
 # Changelog
 
+## 2026-06-12 - Alipay QR and Chinese-friendly landing
+
+- Replaced the mainland China support QR with a user-provided Alipay QR image.
+- Removed the previous mainland China QR asset from the current package manifest.
+- Added a clearer Chinese quick explanation to the main README.
+- Added prominent `中文 | English` language switching links across README files.
+- Added the public WeChat article link as the Chinese project explanation entry.
+
 ## 2026-06-12 - Bilingual docs and support links
 
 - Added English and Simplified Chinese entry documents: `README.en.md`, `README.zh-CN.md`, `SKILL.en.md`, and `SKILL.zh-CN.md`.
 - Added `SUPPORT.md` and `.github/FUNDING.yml` with mainland China and international support links.
-- Added QR assets for Afdian and PayPal support; both encode public payment URLs only.
+- Added QR assets for mainland China and PayPal support.
 - Kept payment boundaries explicit: no payment passwords, API keys, Stripe secret keys, bank-card data, private account screenshots, or hidden checkout automation are included.
 
 ## 2026-06-12 - Public open-source release

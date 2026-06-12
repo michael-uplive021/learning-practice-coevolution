@@ -1,12 +1,22 @@
 # Learning Practice Coevolution
 
-Reading is training. Practice is learning.
+<p align="center">
+  <a href="README.zh-CN.md">中文</a>
+  |
+  <strong>English</strong>
+  |
+  <a href="README.md">Main</a>
+</p>
 
-Chinese version: [README.zh-CN.md](README.zh-CN.md). Main bilingual landing page: [README.md](README.md).
+Reading is training. Practice is learning.
 
 `learning-practice-coevolution` is an agent skill for turning books, articles, course notes, excerpts, highlights, and real work into active recall, critique, transfer practice, learning records, and reusable learning assets.
 
 It is designed for people who do not want AI to simply summarize material for them. The skill keeps the user in charge of the problem, uses AI as mentor before execution, and only switches to execution after the learning or problem contract is clear.
+
+## Project Article
+
+- Chinese WeChat article: [Read the article](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
 
 ## Language Versions
 
@@ -46,7 +56,7 @@ Do not use it as a generic summarizer.
 - `README.en.md` / `README.zh-CN.md` - bilingual documentation.
 - `SUPPORT.md` - support and payment links.
 - `agents/openai.yaml` - optional OpenAI-facing display metadata.
-- `assets/` - QR code SVG assets for public payment links.
+- `assets/` - QR code assets for public support channels.
 - `MANIFEST.json` - package metadata and file hashes.
 - `LICENSE` - MIT License.
 - `CHANGELOG.md` - public release notes.
@@ -81,10 +91,10 @@ If this skill helps your reading, learning, or real-work practice loop, you can 
 
 | Region | Link | QR |
 | --- | --- | --- |
-| Mainland China | [Afdian V2 item](https://ifdian.net/item/e2f39c10505211f1a93452540025c377) | ![Afdian QR code](assets/afdian-v2-early-access.svg) |
+| Mainland China | Alipay QR | <img src="assets/alipay-jie-qr.jpg" alt="Alipay QR code" width="260"> |
 | International | [PayPal.Me](https://paypal.me/michael061394) | ![PayPal.Me QR code](assets/paypal-me-michael061394.svg) |
 
-These are external manual support channels. The QR codes encode only the public payment URLs above. They do not include passwords, API keys, bank-card data, or hidden checkout automation. See [SUPPORT.md](SUPPORT.md) for the full payment boundary.
+These are external manual support channels. The Alipay image is a user-provided public payment QR image. This repository does not include payment passwords, API keys, bank-card data, or hidden checkout automation. See [SUPPORT.md](SUPPORT.md) for the full payment boundary.
 
 ## License
 

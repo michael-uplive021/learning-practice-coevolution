@@ -1,12 +1,22 @@
 # Learning Practice Coevolution
 
-阅读是训练。实践是学习。
+<p align="center">
+  <strong>中文</strong>
+  |
+  <a href="README.en.md">English</a>
+  |
+  <a href="README.md">主入口</a>
+</p>
 
-English version: [README.en.md](README.en.md). 主入口: [README.md](README.md).
+阅读是训练。实践是学习。
 
 `learning-practice-coevolution` 是一个 Agent Skill，用于把书籍、文章、课程笔记、摘录、高亮和真实工作转成主动回忆、批改、迁移练习、学习记录和可复用学习资产。
 
 它不是通用总结器。它默认让用户保留问题主导权：先用 AI 做导师式批改，暴露假熟悉、模糊理解和迁移断点；等学习合约或问题合约清楚后，再切换到数字员工执行。
+
+## 项目说明文章
+
+- 微信公众号中文说明：[阅读文章](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
 
 ## 语言版本
 
@@ -47,14 +57,14 @@ English version: [README.en.md](README.en.md). 主入口: [README.md](README.md)
 - `README.en.md` / `README.zh-CN.md` - 中英文说明。
 - `SUPPORT.md` - 支持入口和付款边界。
 - `agents/openai.yaml` - 可选的 OpenAI 展示元数据。
-- `assets/` - 公开付款链接的二维码 SVG。
+- `assets/` - 公开支持入口的二维码资产。
 - `MANIFEST.json` - 包元数据和文件哈希。
 - `LICENSE` - MIT License。
 - `CHANGELOG.md` - 公开版本记录。
 
 ## 快速开始
 
-把 `SKILL.md` 或 `SKILL.zh-CN.md` 放到你的 Agent Runtime 支持的 Skill 目录中。如果宿主系统不支持安装型 Skill，也可以把它作为任务材料引用。
+把 `SKILL.md` 或 `SKILL.zh-CN.md` 放到你的 Agent Runtime 支持的 Skill 目录中。如果你的工具环境不支持安装型 Skill，也可以把它作为任务材料引用。
 
 示例：
 
@@ -71,9 +81,9 @@ English version: [README.en.md](README.en.md). 主入口: [README.md](README.md)
 先让我重构，再给一个玩具例子和一个迁移练习。
 ```
 
-## 宿主系统边界
+## 使用边界
 
-如果你的宿主系统已有自己的 Runtime、治理、证据、隐私或写回规则，优先遵循宿主系统。本 Skill 是兼容适配器，不覆盖本地规则。
+如果你使用的 AI、笔记或 Agent 系统已经有自己的运行规则、证据要求、隐私要求或写回规则，优先遵循原系统规则。本 Skill 只是一个兼容适配器，不覆盖你的本地规则。
 
 公开版本刻意剥离了私有项目样例、本地路径、连接器配置、账号痕迹、日志和非公开知识。
 
@@ -83,10 +93,10 @@ English version: [README.en.md](README.en.md). 主入口: [README.md](README.md)
 
 | 地区 | 链接 | 二维码 |
 | --- | --- | --- |
-| 中国境内 | [爱发电 V2 item](https://ifdian.net/item/e2f39c10505211f1a93452540025c377) | ![爱发电二维码](assets/afdian-v2-early-access.svg) |
+| 中国境内 | 支付宝二维码 | <img src="assets/alipay-jie-qr.jpg" alt="支付宝二维码" width="260"> |
 | 海外 | [PayPal.Me](https://paypal.me/michael061394) | ![PayPal.Me 二维码](assets/paypal-me-michael061394.svg) |
 
-这些是外部手动支持入口。二维码只编码上方公开付款 URL，不包含密码、API key、银行卡信息或隐藏的自动扣费逻辑。完整边界见 [SUPPORT.md](SUPPORT.md)。
+这些是外部手动支持入口。支付宝图片是用户提供的公开收款二维码。本仓库不包含支付密码、API key、银行卡信息或隐藏的自动扣费逻辑。完整边界见 [SUPPORT.md](SUPPORT.md)。
 
 ## 许可证
 
