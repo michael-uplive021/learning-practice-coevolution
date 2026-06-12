@@ -1,12 +1,29 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-12-public-open-source",
+  "version": "2026-06-12-bilingual-support",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
   "spdx_license_id": "MIT",
   "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
   "generated_at": "2026-06-12",
+  "default_language": "en",
+  "languages": [
+    "en",
+    "zh-CN"
+  ],
+  "support": {
+    "mainland_china": {
+      "provider": "Afdian",
+      "url": "https://ifdian.net/item/e2f39c10505211f1a93452540025c377",
+      "qr_asset": "assets/afdian-v2-early-access.svg"
+    },
+    "international": {
+      "provider": "PayPal",
+      "url": "https://paypal.me/michael061394",
+      "qr_asset": "assets/paypal-me-michael061394.svg"
+    }
+  },
   "distribution": {
     "tier": "public_open_source",
     "redistribution_allowed": true,
@@ -19,28 +36,60 @@
   },
   "files": [
     {
-      "path": "README.md",
-      "sha256": "e9531e230e683baaf2899bcc33aa6327a6a50bd4178b205d7acec8bbb63dcb36"
+      "path": ".github/FUNDING.yml",
+      "sha256": "b6ae1890eff3cb15c8c0a879c923a2359edbde9d96895d5eb45cdbd3f97851aa"
     },
     {
-      "path": "SKILL.md",
-      "sha256": "7573e3093f73493e04d6c76fc39fa7b05c3f1a4220f673b745efb3283aca0a17"
-    },
-    {
-      "path": "agents/openai.yaml",
-      "sha256": "8f0d51d37b927c4042b4d74d15ddba7c6db8d6c32ac3d249680ddc1e5805ee97"
+      "path": ".gitignore",
+      "sha256": "b511bdf4140a8754cf242316d70d25ad91be5ff0502d4e5d6d6806f00b7cb56d"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "9618bf5d85831c14c195bb17083e5c25c3bbb452ebe5b73d48fa9058e50bb2d4"
+      "sha256": "a22b2eafda02cf85e561b5904c7b8022c5735afade886999da3b2f5df70eef69"
     },
     {
       "path": "LICENSE",
       "sha256": "031c0f80802496857f862dcf878a5400de7f6cb125192f4691b2223446a9b41e"
     },
     {
-      "path": ".gitignore",
-      "sha256": "b511bdf4140a8754cf242316d70d25ad91be5ff0502d4e5d6d6806f00b7cb56d"
+      "path": "README.md",
+      "sha256": "9e8e76a5430e445369e4185d770dc2a3dacabf6ea248be0aa3081d639bce89b4"
+    },
+    {
+      "path": "README.en.md",
+      "sha256": "6c76964ccf830d7ffce72cb0ddabb695612c723a3286321f736429899ac76d9e"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "10d4adf5d7689230cf76667cacb744144273d8911b5ad157f8768df93d96f533"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "7573e3093f73493e04d6c76fc39fa7b05c3f1a4220f673b745efb3283aca0a17"
+    },
+    {
+      "path": "SKILL.en.md",
+      "sha256": "7573e3093f73493e04d6c76fc39fa7b05c3f1a4220f673b745efb3283aca0a17"
+    },
+    {
+      "path": "SKILL.zh-CN.md",
+      "sha256": "c56a3ee684a1ac7e48063a56cde466d3eab39c4ed1d1a5605dc9d90a6a07b6ad"
+    },
+    {
+      "path": "SUPPORT.md",
+      "sha256": "ece3092a8b9d9e0e276a37089429a47790e89a1a7c3aaab3092ba11c8df899ba"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "8f0d51d37b927c4042b4d74d15ddba7c6db8d6c32ac3d249680ddc1e5805ee97"
+    },
+    {
+      "path": "assets/afdian-v2-early-access.svg",
+      "sha256": "952ebfec7987825dae99f21c8ed6a8c5d1ef27220bfdea244ba88401f3d093d1"
+    },
+    {
+      "path": "assets/paypal-me-michael061394.svg",
+      "sha256": "8916c7e5ff32f06a3d62ae9e25926c76ae5fea2817cddcf4242c5e1058874c08"
     }
   ],
   "private_material_excluded": [
@@ -50,6 +99,11 @@
     "private_project_examples",
     "logs",
     "secrets",
-    "non_public_knowledge"
+    "non_public_knowledge",
+    "payment_passwords",
+    "api_keys",
+    "stripe_secret_keys",
+    "bank_card_data",
+    "private_account_screenshots"
   ]
 }

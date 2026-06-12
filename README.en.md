@@ -2,23 +2,18 @@
 
 Reading is training. Practice is learning.
 
-中文说明见 [README.zh-CN.md](README.zh-CN.md). English version: [README.en.md](README.en.md).
+Chinese version: [README.zh-CN.md](README.zh-CN.md). Main bilingual landing page: [README.md](README.md).
 
 `learning-practice-coevolution` is an agent skill for turning books, articles, course notes, excerpts, highlights, and real work into active recall, critique, transfer practice, learning records, and reusable learning assets.
 
-`learning-practice-coevolution` 是一个学习实践共演 Skill，用于把读书、文章、课程笔记、摘录、高亮和真实工作转成主动回忆、批改、迁移练习、学习记录和可复用学习资产。
-
 It is designed for people who do not want AI to simply summarize material for them. The skill keeps the user in charge of the problem, uses AI as mentor before execution, and only switches to execution after the learning or problem contract is clear.
-
-它不把 AI 当成默认总结器，而是先让用户保留问题主导权：执行前先进入导师式批改，问题或学习合约清楚后再切换到数字员工执行。
 
 ## Language Versions
 
 - Main skill: [SKILL.md](SKILL.md)
 - English skill snapshot: [SKILL.en.md](SKILL.en.md)
-- 中文 Skill 版本: [SKILL.zh-CN.md](SKILL.zh-CN.md)
-- English README: [README.en.md](README.en.md)
-- 中文 README: [README.zh-CN.md](README.zh-CN.md)
+- Chinese skill version: [SKILL.zh-CN.md](SKILL.zh-CN.md)
+- Chinese README: [README.zh-CN.md](README.zh-CN.md)
 
 ## What It Does
 
@@ -84,12 +79,10 @@ The public version intentionally excludes private project examples, local paths,
 
 If this skill helps your reading, learning, or real-work practice loop, you can support future maintenance through the public payment links below.
 
-如果这个 Skill 对你的读书、学习或真实项目练习有帮助，可以通过下面公开付款入口支持后续维护。
-
 | Region | Link | QR |
 | --- | --- | --- |
-| Mainland China / 中国境内 | [Afdian V2 item](https://ifdian.net/item/e2f39c10505211f1a93452540025c377) | ![Afdian QR code](assets/afdian-v2-early-access.svg) |
-| International / 海外 | [PayPal.Me](https://paypal.me/michael061394) | ![PayPal.Me QR code](assets/paypal-me-michael061394.svg) |
+| Mainland China | [Afdian V2 item](https://ifdian.net/item/e2f39c10505211f1a93452540025c377) | ![Afdian QR code](assets/afdian-v2-early-access.svg) |
+| International | [PayPal.Me](https://paypal.me/michael061394) | ![PayPal.Me QR code](assets/paypal-me-michael061394.svg) |
 
 These are external manual support channels. The QR codes encode only the public payment URLs above. They do not include passwords, API keys, bank-card data, or hidden checkout automation. See [SUPPORT.md](SUPPORT.md) for the full payment boundary.
 
