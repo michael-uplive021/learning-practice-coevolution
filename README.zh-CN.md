@@ -8,7 +8,7 @@
   <a href="README.md">主入口</a>
 </p>
 
-阅读是训练。实践是学习。
+核心理念：阅读即训练，实践即学习。
 
 `learning-practice-coevolution` 是一个 Agent Skill，用于把书籍、文章、课程笔记、摘录、高亮和真实工作转成主动回忆、批改、迁移练习、学习记录和可复用学习资产。
 

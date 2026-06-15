@@ -23,7 +23,7 @@ share_verification:
 
 # Learning Practice Coevolution 中文版
 
-阅读是训练。实践是学习。
+核心理念：阅读即训练，实践即学习。
 
 ## 角色
 

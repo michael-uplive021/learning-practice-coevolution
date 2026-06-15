@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-06-15 - Chinese Core Slogan Update
+
+- Updated the Chinese core slogan to `核心理念：阅读即训练，实践即学习。`.
+
 ## 2026-06-15 - Public Positioning Update
 
 - Expanded public documentation from "reading assistant" to a host-neutral learning-practice coevolution workflow.

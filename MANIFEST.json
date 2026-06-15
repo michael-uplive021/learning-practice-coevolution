@@ -1,6 +1,6 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-15-public-positioning-update",
+  "version": "2026-06-15-chinese-core-slogan-update",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "66d2edb05c99e4bb096e17b67b57a496b7e6a001e0959a40667c91a1d3b4b02e"
+      "sha256": "0861337eb54b6c76233a422af2d1a8286baff65f0ca7ff82c998d948f00f36ad"
     },
     {
       "path": "LICENSE",
@@ -69,7 +69,7 @@
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "f8b869b46ed0f8745c5094d683eb959b092ceb5965ea22a938dc172b37274b69"
+      "sha256": "5573b9ce5a3f3efaeb2e0d6b8acef78c9018b057903afa6930673af6d22faca9"
     },
     {
       "path": "SKILL.md",
@@ -81,7 +81,7 @@
     },
     {
       "path": "SKILL.zh-CN.md",
-      "sha256": "54e465584bedf20d2978f73f7f9a5ec13e31cec9fb4948ed0c4b3b0988b5a931"
+      "sha256": "ce4cdb59f954bce5b5b00c77e6ecdad45b5a36cc64a3ed8db0c176beaad908d0"
     },
     {
       "path": "SUPPORT.md",
