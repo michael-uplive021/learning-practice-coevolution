@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-06-15 - Philosophy Explanation Alignment
+
+- Rewrote the Chinese and English entry descriptions to explain how "reading as training, practice as learning" works.
+- Aligned the README and skill core-idea loops around reconstruction, critique, transfer practice, real-task testing, observation, and reusable asset candidates.
+
 ## 2026-06-15 - Chinese Core Slogan Update
 
 - Updated the Chinese core slogan to `核心理念：阅读即训练，实践即学习。`.

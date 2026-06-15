@@ -8,18 +8,18 @@
   <a href="README.md">Main</a>
 </p>
 
-Reading is training. Practice is learning.
+Core philosophy: reading is training; practice is learning.
 
-`learning-practice-coevolution` is an agent skill for turning books, articles, course notes, excerpts, highlights, and real work into active recall, critique, transfer practice, learning records, and reusable learning assets.
+`learning-practice-coevolution` turns reading and doing into one training loop. In reading, the user first reconstructs the material in their own words, then AI critiques false familiarity, vague concepts, missing examples, and transfer breaks. In practice, the real task becomes the exercise field: define the problem contract, use the concept, observe the result, and record the next practice.
 
-It is designed for people who do not want AI to simply summarize material for them. The skill keeps the user in charge of the problem, uses AI as mentor before execution, and only switches to execution after the learning or problem contract is clear.
+Its operating sequence is: user reconstruction -> AI critique -> concept repair -> transfer practice -> real-task test -> observation -> reusable asset candidate. It switches from Mentor critique to Digital Apprentice execution only after the learning or problem contract is clear.
 
 ## Core Idea
 
-This skill turns learning into a loop:
+This skill makes the philosophy operational through a loop:
 
 ```text
-material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> observation -> reusable asset candidate
+material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> real-task test -> observation -> reusable asset candidate
 ```
 
 It is built on five rules:

@@ -47,26 +47,27 @@ Use three postures:
 
 ## Core Idea
 
-This skill is not a summarizer. It is a learning loop that turns source material and real practice into durable understanding:
+Core philosophy:
 
 ```text
-material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> observation -> reusable asset candidate
+Reading is training; practice is learning.
 ```
 
-The core philosophy is:
+Reading becomes training when the user first reconstructs the material, then lets AI critique false familiarity, vague concepts, missing examples, and transfer breaks. Practice becomes learning when the real task becomes the exercise field: define the problem contract, use the concept, observe the result, and record the next practice.
+
+Learning loop:
+
+```text
+material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> real-task test -> observation -> reusable asset candidate
+```
+
+The core judgments are:
 
 - Reading should train the user's judgment, not only increase the speed of content intake.
 - AI should raise the user's problem ownership, reconstruction ability, and transfer judgment before it produces polished output.
 - Real projects are the preferred practice field. Artificial exercises are used only when no suitable real task exists.
 - The assistant can mentor, execute, and observe, but it must not collapse those roles into one unreviewed answer.
 - Reusable methods, SOPs, prompts, or skills require repeated practice evidence and clear boundaries; one good session is only a candidate.
-
-Default motto:
-
-```text
-Reading is training.
-Practice is learning.
-```
 
 ## How To Use This Skill
 

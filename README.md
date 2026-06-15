@@ -6,22 +6,24 @@
   <a href="README.en.md"><strong>English</strong></a>
 </p>
 
-Reading is training. Practice is learning.
+Core philosophy: reading is training; practice is learning.
 
-`learning-practice-coevolution` is an agent skill for turning books, articles, course notes, excerpts, highlights, and real work into active recall, critique, transfer practice, learning records, and reusable learning assets.
+`learning-practice-coevolution` turns reading and doing into one training loop. In reading, the user first reconstructs the material in their own words, then AI critiques false familiarity, vague concepts, missing examples, and transfer breaks. In practice, the real task becomes the exercise field: define the problem contract, use the concept, observe the result, and record the next practice.
 
-`learning-practice-coevolution` 是一个学习实践共演 Skill，用于把读书、文章、课程笔记、摘录、高亮和真实工作转成主动回忆、批改、迁移练习、学习记录和可复用学习资产。
+Its operating sequence is: user reconstruction -> AI critique -> concept repair -> transfer practice -> real-task test -> observation -> reusable asset candidate. It switches from Mentor critique to Digital Apprentice execution only after the learning or problem contract is clear.
 
-It is designed for people who do not want AI to simply summarize material for them. The skill keeps the user in charge of the problem, uses AI as mentor before execution, and only switches to execution after the learning or problem contract is clear.
+核心理念：阅读即训练，实践即学习。
 
-它不把 AI 当成默认总结器，而是先让用户保留问题主导权：执行前先进入导师式批改，问题或学习合约清楚后再切换到数字员工执行。
+`learning-practice-coevolution` 把“读”和“做”放进同一个训练闭环：阅读时，用户先用自己的话重构材料，AI 再批改假熟悉、模糊概念、缺少例子和迁移断点；实践时，真实任务就是练习场，先定义问题合约，再用概念解决问题、观察结果、记录下一步练习。
+
+它的运行顺序是：用户重构 -> AI 批改 -> 概念修补 -> 迁移练习 -> 真实任务检验 -> 观察复盘 -> 可复用资产候选。只有学习合约或问题合约清楚后，才从导师式批改切换到数字员工执行。
 
 ## Core Idea / 核心理念
 
-This skill turns learning into a loop:
+This skill makes the philosophy operational through a loop:
 
 ```text
-material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> observation -> reusable asset candidate
+material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> real-task test -> observation -> reusable asset candidate
 ```
 
 It is built on five rules:
@@ -32,10 +34,10 @@ It is built on five rules:
 - Mentor, Digital Apprentice, and Observer are different postures and should not be collapsed into one unreviewed answer.
 - Reusable methods, SOPs, prompts, or skills need repeated practice evidence; one good session is only a candidate.
 
-这个 Skill 的核心不是“总结得更快”，而是让学习形成闭环：
+这个 Skill 通过一条闭环把理念落到操作上：
 
 ```text
-材料或任务 -> 用户重构 -> 批改 -> 概念修补 -> 迁移练习 -> 观察复盘 -> 可复用资产候选
+材料或任务 -> 用户重构 -> 批改 -> 概念修补 -> 迁移练习 -> 真实任务检验 -> 观察复盘 -> 可复用资产候选
 ```
 
 核心规则：
