@@ -56,15 +56,11 @@ The core position has not changed: this is still not a generic summarizer. It ha
 2. **Long-running learning**: mission setting, Learning Records, ZPD-based next practice, and lightweight learning workspace boundaries.
 3. **Real-work practice**: using real business or research projects as practice anchors, with decision questions, hypothesis trees, evidence plans, method-lens tracking, and Observer recommendations.
 
-The public version keeps these ideas host-neutral. It does not depend on BP-Wiki, Obsidian, a dashboard, or any private workspace. If a host system already has its own runtime, evidence rules, dashboard, project workspace, or learning log, those rules come first.
-
 核心定位没有变：它仍然不是通用总结器。变化在于，它已经从“读书辅助”扩展为一套学习实践共演流程，可支撑三层场景：
 
 1. **单次学习**：主动回忆、teach-back、理解批改、迁移测试、误用检查和 Learning Session Record。
 2. **长期学习**：Mission、Learning Record、基于 ZPD 的下一步练习，以及轻量学习工作区边界。
 3. **真实工作练习**：把业务研究或真实项目作为 practice anchor，先定义决策问题、假设树、证据计划，记录 method lens，并由 Observer 给出学习建议。
-
-公开版保持 host-neutral，不绑定 BP-Wiki、Obsidian、Dashboard 或任何私有工作区。如果你的宿主系统已有 Runtime、证据规则、项目空间、看板或学习日志，优先遵守宿主系统。
 
 ## 中文快速理解
 
@@ -139,7 +135,7 @@ Do not use it as a generic summarizer.
 
 ## Quick Start
 
-Copy `SKILL.md` into the skill folder used by your agent runtime, or reference it directly as task material if your host system does not support installable skills.
+Copy `SKILL.md` into the skill folder used by your agent tool, or reference it directly as task material.
 
 Example prompt:
 
@@ -157,13 +153,9 @@ Make me reconstruct it, then give me a toy example and one transfer exercise.
 
 ## Usage Boundary / 使用边界
 
-If your host system has its own runtime, governance, evidence, privacy, or writeback rules, follow the host system first. This skill is a compatible adapter, not an override for your local rules.
+Use this skill as a learning and practice workflow. Do not include confidential material, local paths, account traces, connector configuration, logs, secrets, or other non-public information when sharing examples or derivatives.
 
-如果你使用的 AI、笔记或 Agent 系统已经有自己的运行规则、证据要求、隐私要求或写回规则，优先遵循原系统规则。本 Skill 只是一个兼容适配器，不覆盖你的本地规则。
-
-The public version intentionally excludes private project examples, local paths, connector configuration, account traces, logs, and non-public knowledge.
-
-公开版本已经剥离私有项目样例、本地路径、连接器配置、账号痕迹、日志和非公开知识。
+把这个 Skill 当作学习和实践流程使用。分享示例或衍生版本时，不要包含保密材料、本地路径、账号痕迹、连接器配置、日志、密钥或其他非公开信息。
 
 ## Support
 

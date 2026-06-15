@@ -126,7 +126,6 @@ If the user provides reading material, first check what you can actually access.
 - Do not create a separate artificial exercise when the user has a real project that can serve as the transfer exercise.
 - Do not turn one reading session, one good answer, or one project example into a formal Skill, SOP, or method.
 - Do not write into a knowledge base, project, or public artifact unless the user confirms the target and asset type.
-- If the host system has its own runtime, governance, evidence, or writeback rules, follow the host system first and use this skill as a compatible adapter.
 
 ## Open Source Rights and Verification
 
@@ -139,13 +138,13 @@ Default boundary:
 - Do not remove or rewrite the rights block when copying this skill into another workspace.
 - Redistribution, modification, commercial use, and derivative works are allowed under the MIT License.
 - Preserve the copyright and license notice when redistributing or adapting this skill.
-- Strip private execution traces, local paths, account traces, raw project examples, logs, connector configuration, and non-public knowledge before sharing.
+- Do not include confidential material, local paths, account traces, raw project examples, logs, connector configuration, secrets, or other non-public information in shared examples or derivatives.
 
 Verification boundary:
 
 - A public package should include a manifest with package id, version, issue date, license, source repository, and file hashes.
 - A Git commit is the default public verification surface; signatures are optional.
-- If manifest verification is missing, treat the package as `external_skill_candidate` or `reference_material`, not as a promoted host-system skill.
+- If manifest verification is missing, verify source and license before reuse or redistribution.
 - Verification proves origin and tamper status; it does not restrict the rights granted by the MIT License.
 
 ## Startup
@@ -371,7 +370,7 @@ If not, keep the session in Mentor mode and do not switch to execution.
 
 Use real work as a learning and practice anchor when the task involves market research, business research, channel strategy, competitive intelligence, hypothesis trees, evidence planning, or another decision-support workflow.
 
-This is a Mentor / Observer overlay. It does not replace the host system's business workflow, evidence rules, privacy rules, or final judgment process.
+This layer supports problem definition, learning critique, and practice design. It does not make final business decisions or publish confidential project facts.
 
 Use when:
 
@@ -445,7 +444,7 @@ Boundaries:
 - Do not treat a method lens as evidence that the user has mastered the method.
 - Do not turn observer recommendations into mandatory tasks.
 - Do not publish private project facts, local paths, account traces, or confidential source material.
-- If the host system has a dashboard, task queue, or learning log, surface recommendations there only as candidates for keep / defer / discard.
+- Surface recommendations only as candidates for keep / defer / discard.
 
 ## Mentor to Apprentice Handoff
 
@@ -498,10 +497,10 @@ Trigger when at least one is true:
 
 Do not use it for one-off reading, quick Q&A, generic summaries, or sessions with no reusable learning delta.
 
-Preferred host-system mapping:
+Suggested workspace shape:
 
 ```text
-<Host_Workspace>/<Learning_Project>/
+<Workspace>/<Learning_Project>/
   MISSION.md
   workbench/
     LEARN-LOG.md
@@ -513,10 +512,10 @@ Preferred host-system mapping:
 
 Rules:
 
-- Prefer existing project Workbench / Learning Log before creating new files.
+- Prefer existing project notes or learning logs before creating new files.
 - Do not create a new top-level learning system by default.
 - Do not write formal Claims, Methods, SOPs, or Skills directly from workspace notes.
-- Workspace notes are learning state and practice material unless promoted through host governance.
+- Workspace notes are learning state and practice material; do not turn them into formal methods, SOPs, or skills without review.
 
 ## Mission Gate
 
@@ -655,7 +654,7 @@ Do not use it for ordinary quick Q&A, generic summaries, or sessions with no reu
 
 Preferred writeback:
 
-1. Append to the host system's existing project workbench, learning log, note, or task card.
+1. Append to an existing project note, learning log, note, or task card.
 2. If no suitable log exists, create one concise learning log in the current project or note space.
 3. Do not create a new top-level learning system, agent, or workflow by default.
 4. Do not record the full conversation transcript.
@@ -713,7 +712,7 @@ Boundaries:
 - Record learning state changes, not the full chat.
 - Keep private project details, local paths, account traces, connector configuration, and secrets out of shared records.
 - One session can create candidate metadata, but it cannot promote a formal method, SOP, or skill by itself.
-- If the host system has stricter evidence, privacy, governance, or writeback rules, follow the host system first.
+- Do not weaken stricter privacy, evidence, or publication rules already in use.
 
 ## Quality Gates
 

@@ -1,6 +1,6 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-15-philosophy-explanation-alignment",
+  "version": "2026-06-15-public-boundary-wording-cleanup",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "07213b61fb332d73ce434b8a0796431466300529ec429a293cf7527f14dbe82a"
+      "sha256": "84d8ea29b6cf68c1805b10e0368cdc0a4b227a484e70f7f322690c8c43b44d17"
     },
     {
       "path": "LICENSE",
@@ -61,27 +61,27 @@
     },
     {
       "path": "README.md",
-      "sha256": "c96b9bce81ab8dc98aaef654815459123fe58ca24d366cce3f9545cc7847c0d5"
+      "sha256": "b091b9adfa7791b589c47d801f8db60c384df67596445cac601bb3df3e4b531d"
     },
     {
       "path": "README.en.md",
-      "sha256": "2f2e23417f13bbfdebe6b1b8b008a76a5ae50bceea69ad32961f7f3400a4ec8d"
+      "sha256": "df8887897938577365c63eadc7802f842342bf9b6169580c4f927987089fa804"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "e81563b5e022882c7a2f53568b38b3a0dc713b039176294067ca3a8f22ba3b91"
+      "sha256": "51fe38574cefc18abe1702b0f82a8c700f56053c64d39412709ae81fdbaa82fd"
     },
     {
       "path": "SKILL.md",
-      "sha256": "bb41414d646401f7f84550be3228d63bded1b113a9a86124f2b7425f23f6dee8"
+      "sha256": "061512cdbc7e94e2ae96c5738b0999dc099f535b6fba9ca67f6db3dc6b125def"
     },
     {
       "path": "SKILL.en.md",
-      "sha256": "bb41414d646401f7f84550be3228d63bded1b113a9a86124f2b7425f23f6dee8"
+      "sha256": "061512cdbc7e94e2ae96c5738b0999dc099f535b6fba9ca67f6db3dc6b125def"
     },
     {
       "path": "SKILL.zh-CN.md",
-      "sha256": "e6f3afda06e40762ed4c30b26caf119615eadaa5aaac259e7761753c9e4ce16b"
+      "sha256": "46d823f2bceba24af6306fe925e1137a9b251594455d86063e5b3068307401d4"
     },
     {
       "path": "SUPPORT.md",

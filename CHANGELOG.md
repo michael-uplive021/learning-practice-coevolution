@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-06-15 - Public Boundary Wording Cleanup
+
+- Removed implementation-specific boundary wording from public documentation.
+- Replaced adapter-oriented language with generic usage and confidentiality boundaries.
+
 ## 2026-06-15 - Philosophy Explanation Alignment
 
 - Rewrote the Chinese and English entry descriptions to explain how "reading as training, practice as learning" works.
@@ -11,18 +16,18 @@
 
 ## 2026-06-15 - Public Positioning Update
 
-- Expanded public documentation from "reading assistant" to a host-neutral learning-practice coevolution workflow.
+- Expanded public documentation from "reading assistant" to a learning-practice coevolution workflow.
 - Documented the three-layer positioning: single-session learning, long-running learning, and real-work practice.
 - Added public skill guidance for SQ3R / Cornell active-reading micro-patterns.
 - Added public skill guidance for real-work research practice: decision questions, hypothesis trees, evidence plans, method lenses, and Observer recommendations.
-- Kept the boundary explicit: this public version does not depend on BP-Wiki, Obsidian, dashboards, or any private workspace.
+- Kept setup guidance generic and focused on the published skill package.
 
 ## 2026-06-15 - Core Idea and Usage Update
 
 - Added explicit `Core Idea` and `How To Use This Skill` sections to the main and language-specific skill files.
 - Updated README files so GitHub visitors can see the core learning loop and usage boundary from the repository homepage.
 - Refreshed OpenAI-facing display metadata.
-- Preserved the public share-version boundary: this repository remains the MIT public version, separate from the user's private vault runtime/source copy.
+- Preserved MIT public repository metadata and manifest verification.
 
 ## 2026-06-13 - Cropped Alipay QR
 
@@ -50,5 +55,5 @@
 - Published `learning-practice-coevolution` as a standalone open-source skill.
 - Converted the external share boundary from proprietary evaluation to MIT open source.
 - Kept the core learning workflow intact: Mentor, Digital Apprentice, Observer, Learning Workspace Adapter, Learning Record, and Learning Session Record.
-- Replaced host-specific workspace path examples with neutral host-workspace mapping.
+- Replaced local workspace path examples with generic workspace placeholders.
 - Added public README, LICENSE, and MANIFEST files.

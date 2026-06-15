@@ -38,8 +38,6 @@ The core position has not changed: this is still not a generic summarizer. It ha
 2. **Long-running learning**: mission setting, Learning Records, ZPD-based next practice, and lightweight learning workspace boundaries.
 3. **Real-work practice**: using real business or research projects as practice anchors, with decision questions, hypothesis trees, evidence plans, method-lens tracking, and Observer recommendations.
 
-The public version keeps these ideas host-neutral. It does not depend on BP-Wiki, Obsidian, a dashboard, or any private workspace. If a host system already has its own runtime, evidence rules, dashboard, project workspace, or learning log, those rules come first.
-
 ## Project Article
 
 - Chinese WeChat article: [Read the article](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
@@ -92,7 +90,7 @@ Do not use it as a generic summarizer.
 
 ## Quick Start
 
-Copy `SKILL.md` into the skill folder used by your agent runtime, or reference it directly as task material if your host system does not support installable skills.
+Copy `SKILL.md` into the skill folder used by your agent tool, or reference it directly as task material.
 
 Example prompt:
 
@@ -108,11 +106,9 @@ Use $learning-practice-coevolution. I understand the concept vaguely but cannot 
 Make me reconstruct it, then give me a toy example and one transfer exercise.
 ```
 
-## Host System Boundary
+## Usage Boundary
 
-If your host system has its own runtime, governance, evidence, privacy, or writeback rules, follow the host system first. This skill is a compatible adapter, not an override for your local rules.
-
-The public version intentionally excludes private project examples, local paths, connector configuration, account traces, logs, and non-public knowledge.
+Use this skill as a learning and practice workflow. Do not include confidential material, local paths, account traces, connector configuration, logs, secrets, or other non-public information when sharing examples or derivatives.
 
 ## Support
 

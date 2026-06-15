@@ -121,7 +121,6 @@ share_verification:
 - 用户有真实项目时，不另造人工练习。
 - 不把一次阅读、一次好答案或一个项目样例直接升格为正式 Skill、SOP 或方法论。
 - 未经用户确认，不写入知识库、项目或公开产物。
-- 如果宿主系统有自己的 Runtime、治理、证据或写回规则，优先遵循宿主系统；本 Skill 只是兼容适配器。
 
 ## 开源权利与验证
 
@@ -132,13 +131,13 @@ share_verification:
 - 保留署名、owner、license id 和 share tier。
 - 分发或改编时保留版权和许可证声明。
 - 可以在 MIT License 范围内复制、修改、再分发、商用或做衍生版本。
-- 分享前剥离私有执行痕迹、本地路径、账号痕迹、项目样例、日志、connector 配置和非公开知识。
+- 分享示例或衍生版本时，不要包含保密材料、本地路径、账号痕迹、项目样例、日志、connector 配置、密钥或其他非公开信息。
 
 验证边界：
 
 - 公开包应包含 `MANIFEST.json`，记录包版本、发布日期、许可证、来源仓库和文件哈希。
 - Git commit 是默认公开验证面；签名是可选项。
-- 如果缺少 manifest 校验，应把包视为 `external_skill_candidate` 或 `reference_material`，不要直接提升为宿主系统的 promoted Skill。
+- 如果缺少 manifest 校验，复用或再分发前先核验来源和许可证。
 
 ## 启动问题
 
@@ -363,7 +362,7 @@ sq3r_micro_pattern:
 
 当任务涉及市场研究、业务研究、渠道策略、竞品情报、假设树、证据计划或其他决策支持工作时，可以把真实工作作为学习和练习锚点。
 
-这是 Mentor / Observer overlay。它不替代宿主系统的业务流程、证据规则、隐私规则或最终判断流程。
+这一层用于支持问题定义、学习批改和练习设计。它不做最终业务判断，也不发布保密项目事实。
 
 适用场景：
 
@@ -437,7 +436,7 @@ learning_observer_recommendation:
 - 不要把 method lens 当成用户已经掌握该方法的证据。
 - 不要把 observer recommendation 变成强制任务。
 - 不要发布私有项目事实、本地路径、账号痕迹或保密材料。
-- 如果宿主系统有 dashboard、任务队列或学习日志，只把建议作为 keep / defer / discard 的候选项露出。
+- 只把建议作为 keep / defer / discard 的候选项露出。
 
 ## 导师到数字员工交接
 
@@ -490,10 +489,10 @@ observer_note:
 
 不要用于一次性阅读、快速问答、通用总结或没有复用学习增量的会话。
 
-推荐宿主映射：
+推荐工作区形态：
 
 ```text
-<Host_Workspace>/<Learning_Project>/
+<Workspace>/<Learning_Project>/
   MISSION.md
   workbench/
     LEARN-LOG.md
@@ -505,10 +504,10 @@ observer_note:
 
 规则：
 
-- 优先使用已有项目 Workbench / Learning Log。
+- 优先使用已有项目笔记或学习记录。
 - 不默认创建新的顶层学习系统。
 - 不从学习笔记直接写正式 Claims、Methods、SOPs 或 Skills。
-- 工作区笔记属于学习状态和实践材料，除非通过宿主治理提升。
+- 工作区笔记属于学习状态和实践材料；未经复核，不要转成正式方法、SOP 或 Skill。
 
 ## Learning Session Record
 
@@ -527,7 +526,7 @@ observer_note:
 
 首选写回：
 
-1. 追加到宿主系统已有项目 Workbench、学习日志、笔记或任务卡。
+1. 追加到已有项目笔记、学习记录、笔记或任务卡。
 2. 没有合适日志时，在当前项目或笔记空间创建一个简洁学习日志。
 3. 不默认创建新的顶层学习系统、Agent 或 Workflow。
 4. 不记录完整聊天流水。
@@ -585,7 +584,7 @@ Markdown 形态：
 - 记录学习状态变化，不记录完整聊天。
 - 不把私有项目细节、本地路径、账号痕迹、连接器配置和 secrets 放进共享记录。
 - 单次会话可以产生候选元数据，但不能直接 promoted 为正式方法、SOP 或 Skill。
-- 如果宿主系统有更严格的证据、隐私、治理或写回规则，优先遵循宿主系统。
+- 不要削弱已经在使用的隐私、证据或发布规则。
 
 ## 质量门
 
