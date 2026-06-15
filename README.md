@@ -46,6 +46,24 @@ It is built on five rules:
 - 导师、数字员工和观察者是不同姿态，不能混成一个未经审查的答案。
 - 方法、SOP、Prompt 或 Skill 候选需要重复实践证据；一次好会话只能算候选。
 
+## Recent Evolution / 最近定位变化
+
+The core position has not changed: this is still not a generic summarizer. It has expanded from a reading assistant into a learning-practice coevolution workflow that can support three layers:
+
+1. **Single-session learning**: active recall, teach-back, critique, transfer tests, misuse checks, and Learning Session Records.
+2. **Long-running learning**: mission setting, Learning Records, ZPD-based next practice, and lightweight learning workspace boundaries.
+3. **Real-work practice**: using real business or research projects as practice anchors, with decision questions, hypothesis trees, evidence plans, method-lens tracking, and Observer recommendations.
+
+The public version keeps these ideas host-neutral. It does not depend on BP-Wiki, Obsidian, a dashboard, or any private workspace. If a host system already has its own runtime, evidence rules, dashboard, project workspace, or learning log, those rules come first.
+
+核心定位没有变：它仍然不是通用总结器。变化在于，它已经从“读书辅助”扩展为一套学习实践共演流程，可支撑三层场景：
+
+1. **单次学习**：主动回忆、teach-back、理解批改、迁移测试、误用检查和 Learning Session Record。
+2. **长期学习**：Mission、Learning Record、基于 ZPD 的下一步练习，以及轻量学习工作区边界。
+3. **真实工作练习**：把业务研究或真实项目作为 practice anchor，先定义决策问题、假设树、证据计划，记录 method lens，并由 Observer 给出学习建议。
+
+公开版保持 host-neutral，不绑定 BP-Wiki、Obsidian、Dashboard 或任何私有工作区。如果你的宿主系统已有 Runtime、证据规则、项目空间、看板或学习日志，优先遵守宿主系统。
+
 ## 中文快速理解
 
 这不是一个“帮我总结这本书”的模板，而是一套给 Agent 使用的学习训练流程。它默认先让你说出自己的理解，再让 AI 批改、追问、补例子、找迁移场景，最后才进入真实任务执行。
@@ -86,6 +104,8 @@ It is built on five rules:
 - Turns real work into the practice exercise when possible.
 - Supports Mentor, Digital Apprentice, and Observer postures.
 - Provides lightweight Learning Session Record and Learning Workspace structures.
+- Offers SQ3R and Cornell-style micro-patterns for active reading and review notes.
+- Uses real-work research as a practice anchor through decision questions, hypothesis trees, evidence plans, method lenses, and observer recommendations.
 - Keeps candidate methods, SOPs, prompts, and skills behind validation gaps instead of promoting them after one session.
 
 ## When To Use
@@ -96,6 +116,7 @@ Use this skill when you want help with:
 - understanding a concept you can recognize but cannot use;
 - Feynman-style explanation checks, active recall, or blank-paper reconstruction;
 - turning reading into a project exercise, method candidate, SOP, prompt, or skill candidate;
+- turning a business or research topic into a decision question, hypothesis tree, evidence plan, and practice loop;
 - maintaining a long-running learning workspace with learning records and next-practice steps;
 - handing off from learning critique to real execution only after the problem is well defined.
 

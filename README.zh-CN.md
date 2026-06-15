@@ -30,6 +30,16 @@
 - 导师、数字员工和观察者是不同姿态，不能混成一个未经审查的答案。
 - 方法、SOP、Prompt 或 Skill 候选需要重复实践证据；一次好会话只能算候选。
 
+## 最近定位变化
+
+核心定位没有变：它仍然不是通用总结器。变化在于，它已经从“读书辅助”扩展为一套学习实践共演流程，可支撑三层场景：
+
+1. **单次学习**：主动回忆、teach-back、理解批改、迁移测试、误用检查和 Learning Session Record。
+2. **长期学习**：Mission、Learning Record、基于 ZPD 的下一步练习，以及轻量学习工作区边界。
+3. **真实工作练习**：把业务研究或真实项目作为 practice anchor，先定义决策问题、假设树、证据计划，记录 method lens，并由 Observer 给出学习建议。
+
+公开版保持 host-neutral，不绑定 BP-Wiki、Obsidian、Dashboard 或任何私有工作区。如果你的宿主系统已有 Runtime、证据规则、项目空间、看板或学习日志，优先遵守宿主系统。
+
 ## 项目说明文章
 
 - 微信公众号中文说明：[阅读文章](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
@@ -50,6 +60,8 @@
 - 优先把用户的真实工作当作练习题，而不是另造一套低摩擦但无业务意义的作业。
 - 支持三种姿态：导师、数字员工、观察者。
 - 支持轻量 Learning Session Record 和长期 Learning Workspace。
+- 提供 SQ3R 与 Cornell 笔记微模式，用于主动阅读和复习笔记。
+- 把真实业务研究作为 practice anchor，通过决策问题、假设树、证据计划、method lens 和 observer recommendation 形成练习闭环。
 - 对方法、SOP、Prompt、Skill 候选保留验证缺口，不因一次好答案直接升格。
 
 ## 什么时候使用
@@ -60,6 +72,7 @@
 - 对概念“看得懂但用不出来”；
 - 做费曼解释、主动回忆、空白纸重构、理解批改；
 - 把阅读转成项目练习、方法候选、SOP、Prompt 或 Skill 候选；
+- 把业务或研究主题转成决策问题、假设树、证据计划和练习闭环；
 - 维护长期学习项目，沉淀 learning records 和下一步练习；
 - 从导师批改切到真实执行前，先确认问题定义和验收标准。
 

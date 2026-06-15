@@ -1,6 +1,6 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-15-core-idea-usage",
+  "version": "2026-06-15-public-positioning-update",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "d3a59a284eb4799d99c59615cfa4bee50199c66154934e02d3b80d629265a6dd"
+      "sha256": "66d2edb05c99e4bb096e17b67b57a496b7e6a001e0959a40667c91a1d3b4b02e"
     },
     {
       "path": "LICENSE",
@@ -61,27 +61,27 @@
     },
     {
       "path": "README.md",
-      "sha256": "14b167fa3449c37450ece20df59f2526aa7d0eb2e87884a68c3b1d9c9a0a0511"
+      "sha256": "c05ddaad1d2edf44cc706163153ea4e9efe571dbb007fbc385746fad95c4887f"
     },
     {
       "path": "README.en.md",
-      "sha256": "d2c2c8e4540489e9681b0731007f24129e1b446a47880c74815dc4f773729291"
+      "sha256": "be27f31a69846e2ddf902bece16ccf8f566cb36bd6bf17d14b72c54250b4cc21"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "181fa36ff8bcb6a18a04af5f7fe0686a87ccb123d3886cd7167dae48cdc9462e"
+      "sha256": "f8b869b46ed0f8745c5094d683eb959b092ceb5965ea22a938dc172b37274b69"
     },
     {
       "path": "SKILL.md",
-      "sha256": "21a4b3aba08f28a6ccb4ffad6f873cbf7e82dc7ede7c99af3fb591299d90054d"
+      "sha256": "fe0c774faa09362ef9c4b78492b7f132970e344656a2513b1e823ccfba98faaf"
     },
     {
       "path": "SKILL.en.md",
-      "sha256": "21a4b3aba08f28a6ccb4ffad6f873cbf7e82dc7ede7c99af3fb591299d90054d"
+      "sha256": "fe0c774faa09362ef9c4b78492b7f132970e344656a2513b1e823ccfba98faaf"
     },
     {
       "path": "SKILL.zh-CN.md",
-      "sha256": "4f777443139fcca70cabfb62922cc789fd494a2b310d9a3bdc6293c67125f34c"
+      "sha256": "54e465584bedf20d2978f73f7f9a5ec13e31cec9fb4948ed0c4b3b0988b5a931"
     },
     {
       "path": "SUPPORT.md",

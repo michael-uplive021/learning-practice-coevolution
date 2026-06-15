@@ -30,6 +30,16 @@ It is built on five rules:
 - Mentor, Digital Apprentice, and Observer are different postures and should not be collapsed into one unreviewed answer.
 - Reusable methods, SOPs, prompts, or skills need repeated practice evidence; one good session is only a candidate.
 
+## Recent Evolution
+
+The core position has not changed: this is still not a generic summarizer. It has expanded from a reading assistant into a learning-practice coevolution workflow that can support three layers:
+
+1. **Single-session learning**: active recall, teach-back, critique, transfer tests, misuse checks, and Learning Session Records.
+2. **Long-running learning**: mission setting, Learning Records, ZPD-based next practice, and lightweight learning workspace boundaries.
+3. **Real-work practice**: using real business or research projects as practice anchors, with decision questions, hypothesis trees, evidence plans, method-lens tracking, and Observer recommendations.
+
+The public version keeps these ideas host-neutral. It does not depend on BP-Wiki, Obsidian, a dashboard, or any private workspace. If a host system already has its own runtime, evidence rules, dashboard, project workspace, or learning log, those rules come first.
+
 ## Project Article
 
 - Chinese WeChat article: [Read the article](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
@@ -49,6 +59,8 @@ It is built on five rules:
 - Turns real work into the practice exercise when possible.
 - Supports Mentor, Digital Apprentice, and Observer postures.
 - Provides lightweight Learning Session Record and Learning Workspace structures.
+- Offers SQ3R and Cornell-style micro-patterns for active reading and review notes.
+- Uses real-work research as a practice anchor through decision questions, hypothesis trees, evidence plans, method lenses, and observer recommendations.
 - Keeps candidate methods, SOPs, prompts, and skills behind validation gaps instead of promoting them after one session.
 
 ## When To Use
@@ -59,6 +71,7 @@ Use this skill when you want help with:
 - understanding a concept you can recognize but cannot use;
 - Feynman-style explanation checks, active recall, or blank-paper reconstruction;
 - turning reading into a project exercise, method candidate, SOP, prompt, or skill candidate;
+- turning a business or research topic into a decision question, hypothesis tree, evidence plan, and practice loop;
 - maintaining a long-running learning workspace with learning records and next-practice steps;
 - handing off from learning critique to real execution only after the problem is well defined.
 

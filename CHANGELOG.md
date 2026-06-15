@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-15 - Public Positioning Update
+
+- Expanded public documentation from "reading assistant" to a host-neutral learning-practice coevolution workflow.
+- Documented the three-layer positioning: single-session learning, long-running learning, and real-work practice.
+- Added public skill guidance for SQ3R / Cornell active-reading micro-patterns.
+- Added public skill guidance for real-work research practice: decision questions, hypothesis trees, evidence plans, method lenses, and Observer recommendations.
+- Kept the boundary explicit: this public version does not depend on BP-Wiki, Obsidian, dashboards, or any private workspace.
+
 ## 2026-06-15 - Core Idea and Usage Update
 
 - Added explicit `Core Idea` and `How To Use This Skill` sections to the main and language-specific skill files.

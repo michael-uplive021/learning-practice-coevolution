@@ -289,6 +289,64 @@ Good output shapes:
 - project material candidate;
 - SOP/method/prompt/skill candidate with validation gaps.
 
+## Active Reading Micro-Patterns
+
+Use these as optional micro-patterns inside the Reading Loop. They are not separate skills and should not override the user's real task.
+
+### SQ3R Reading Micro-Pattern
+
+Use SQ3R when the user needs active reading rather than passive summary:
+
+```yaml
+sq3r_micro_pattern:
+  survey: scan the table of contents, headings, figures, summaries, and visible structure
+  question: turn the reading round into 3-5 concrete questions linked to the user's task
+  read: capture only relevant definitions, arguments, examples, counterexamples, and text anchors
+  recite: close the material and reconstruct the answer in the user's own words
+  review: compare reconstruction against the source, correct gaps, mark misuse risks, and choose a transfer target
+```
+
+Rules:
+
+- Do not let Survey become a full summary.
+- Do not let Question become generic prompts unrelated to the real task.
+- Do not turn Read into full-text excerpting.
+- Recite should happen before the assistant gives a full explanation when feasible.
+- Review should produce gaps, corrections, transfer targets, and next practice.
+
+### Cornell Note Micro-Pattern
+
+Use Cornell-style notes when the output should support recall, review, and transfer.
+
+```markdown
+## Cornell Note - <Chapter / Section>
+
+### Right Column | Notes / Evidence
+- Source anchor:
+- Author viewpoint:
+- Key concept / definition:
+- Example / case:
+- Counterexample / boundary:
+
+### Left Column | Cues / Recall Prompts
+- Keywords:
+- Recall questions:
+- Confusing points:
+- Misconception triggers:
+
+### Bottom | Reflection / Transfer
+- My understanding:
+- Transfer target:
+- Misuse boundary:
+- Next practice:
+```
+
+Rules:
+
+- Keep author content and user judgment separate.
+- If text anchors are missing, mark the note as partial.
+- Do not treat copied highlights as understanding.
+
 ## Practice Co-Evolution Loop
 
 When learning is tied to practice, keep the loop short:
@@ -307,6 +365,86 @@ Before implementation-heavy work, check:
 - Is the next practice step small enough to reveal the next misunderstanding?
 
 If not, keep the session in Mentor mode and do not switch to execution.
+
+## Real-Work Research Practice Overlay
+
+Use real work as a learning and practice anchor when the task involves market research, business research, channel strategy, competitive intelligence, hypothesis trees, evidence planning, or another decision-support workflow.
+
+This is a Mentor / Observer overlay. It does not replace the host system's business workflow, evidence rules, privacy rules, or final judgment process.
+
+Use when:
+
+- the user has a real business decision or project question;
+- the user needs to clarify the question before research;
+- the user wants critique of a hypothesis tree, issue tree, evidence plan, or research approach;
+- the project can reveal reusable blind spots, method gaps, or next-practice opportunities.
+
+Before substantive research, prefer this sequence:
+
+```text
+topic -> decision question -> perspectives -> question set -> hypothesis tree -> counter-hypotheses -> evidence plan -> execution
+```
+
+Use a compact definition block:
+
+```yaml
+pre_research_definition:
+  topic:
+  decision_question:
+  one_sentence_hypothesis:
+  perspectives:
+    - actor
+    - customer
+    - channel
+    - geography
+    - time
+    - unit_economics
+    - regulation
+    - counterparty_incentive
+  question_set:
+    core_question:
+    contradiction_question:
+    evidence_question:
+    boundary_question:
+  hypothesis_tree:
+  counter_hypotheses:
+  evidence_plan:
+  out_of_scope:
+```
+
+During the work, track method use as a lens, not as proof of mastery:
+
+```yaml
+method_lens:
+  name:
+  used_for:
+    - problem_definition
+    - hypothesis_tree
+    - storyline
+    - evidence_plan
+  observed_gap:
+  evidence_of_mastery:
+  recommended_practice:
+```
+
+After the work, the Observer may suggest a learning follow-up when a repeated or high-impact gap appears:
+
+```yaml
+learning_observer_recommendation:
+  observed_gap:
+  why_it_matters:
+  likely_skill_gap:
+  recommended_reading:
+  recommended_practice:
+  action_status: candidate | kept | deferred | discarded
+```
+
+Boundaries:
+
+- Do not treat a method lens as evidence that the user has mastered the method.
+- Do not turn observer recommendations into mandatory tasks.
+- Do not publish private project facts, local paths, account traces, or confidential source material.
+- If the host system has a dashboard, task queue, or learning log, surface recommendations there only as candidates for keep / defer / discard.
 
 ## Mentor to Apprentice Handoff
 

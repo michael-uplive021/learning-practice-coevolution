@@ -281,6 +281,64 @@ minimum_package:
 - 项目材料候选；
 - 带验证缺口的 SOP / 方法 / Prompt / Skill 候选。
 
+## 主动阅读微模式
+
+这些是阅读循环里的可选微模式，不是独立 Skill，也不能覆盖用户的真实任务。
+
+### SQ3R 阅读微模式
+
+当用户需要主动阅读，而不是被动总结时使用 SQ3R：
+
+```yaml
+sq3r_micro_pattern:
+  survey: 浏览目录、标题、图表、摘要和可见结构
+  question: 把本轮阅读转成 3-5 个与真实任务相关的具体问题
+  read: 只捕捉相关定义、论证、例子、反例和文本锚点
+  recite: 合上材料，用用户自己的话重构答案
+  review: 对照原文修正缺口，标注意误用风险，并选择迁移目标
+```
+
+规则：
+
+- 不要让 Survey 变成全文总结。
+- 不要让 Question 变成和真实任务无关的泛泛问题。
+- 不要让 Read 变成全文摘录。
+- 可行时，先 Recite，再由助手给完整解释。
+- Review 要产出缺口、修正、迁移目标和下一步练习。
+
+### Cornell 笔记微模式
+
+当输出需要支持回忆、复习和迁移时，用 Cornell 笔记结构。
+
+```markdown
+## Cornell Note - <章节 / 小节>
+
+### Right Column | Notes / Evidence
+- Source anchor:
+- Author viewpoint:
+- Key concept / definition:
+- Example / case:
+- Counterexample / boundary:
+
+### Left Column | Cues / Recall Prompts
+- Keywords:
+- Recall questions:
+- Confusing points:
+- Misconception triggers:
+
+### Bottom | Reflection / Transfer
+- My understanding:
+- Transfer target:
+- Misuse boundary:
+- Next practice:
+```
+
+规则：
+
+- 作者内容和用户判断要分开。
+- 缺少文本锚点时，标为 partial。
+- 不要把复制高亮当成真正理解。
+
 ## 实践共演循环
 
 学习和实践绑定时，保持短循环：
@@ -299,6 +357,86 @@ minimum_package:
 - 下一步练习是否足够小，能暴露下一处误解？
 
 如果不能，保持导师模式，不切换到执行。
+
+## 真实工作 / 业务研究练习层
+
+当任务涉及市场研究、业务研究、渠道策略、竞品情报、假设树、证据计划或其他决策支持工作时，可以把真实工作作为学习和练习锚点。
+
+这是 Mentor / Observer overlay。它不替代宿主系统的业务流程、证据规则、隐私规则或最终判断流程。
+
+适用场景：
+
+- 用户有真实业务决策或项目问题；
+- 用户需要在研究前先澄清问题；
+- 用户希望批改假设树、议题树、证据计划或研究方法；
+- 项目能暴露可复用的盲区、方法缺口或下一步练习机会。
+
+正式研究前，优先使用这个顺序：
+
+```text
+topic -> decision question -> perspectives -> question set -> hypothesis tree -> counter-hypotheses -> evidence plan -> execution
+```
+
+使用一个紧凑定义块：
+
+```yaml
+pre_research_definition:
+  topic:
+  decision_question:
+  one_sentence_hypothesis:
+  perspectives:
+    - actor
+    - customer
+    - channel
+    - geography
+    - time
+    - unit_economics
+    - regulation
+    - counterparty_incentive
+  question_set:
+    core_question:
+    contradiction_question:
+    evidence_question:
+    boundary_question:
+  hypothesis_tree:
+  counter_hypotheses:
+  evidence_plan:
+  out_of_scope:
+```
+
+项目过程中，把方法使用记录为 lens，而不是掌握证明：
+
+```yaml
+method_lens:
+  name:
+  used_for:
+    - problem_definition
+    - hypothesis_tree
+    - storyline
+    - evidence_plan
+  observed_gap:
+  evidence_of_mastery:
+  recommended_practice:
+```
+
+项目后，如果出现重复或高影响缺口，观察者可以给学习建议：
+
+```yaml
+learning_observer_recommendation:
+  observed_gap:
+  why_it_matters:
+  likely_skill_gap:
+  recommended_reading:
+  recommended_practice:
+  action_status: candidate | kept | deferred | discarded
+```
+
+边界：
+
+- 不要把 method lens 当成用户已经掌握该方法的证据。
+- 不要把 observer recommendation 变成强制任务。
+- 不要发布私有项目事实、本地路径、账号痕迹或保密材料。
+- 如果宿主系统有 dashboard、任务队列或学习日志，只把建议作为 keep / defer / discard 的候选项露出。
 
 ## 导师到数字员工交接
 
