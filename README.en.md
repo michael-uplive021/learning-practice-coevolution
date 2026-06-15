@@ -14,6 +14,22 @@ Reading is training. Practice is learning.
 
 It is designed for people who do not want AI to simply summarize material for them. The skill keeps the user in charge of the problem, uses AI as mentor before execution, and only switches to execution after the learning or problem contract is clear.
 
+## Core Idea
+
+This skill turns learning into a loop:
+
+```text
+material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> observation -> reusable asset candidate
+```
+
+It is built on five rules:
+
+- Reading should train judgment, not only speed up content intake.
+- AI should improve the user's problem ownership and reconstruction ability before producing polished output.
+- Real projects are the preferred practice field.
+- Mentor, Digital Apprentice, and Observer are different postures and should not be collapsed into one unreviewed answer.
+- Reusable methods, SOPs, prompts, or skills need repeated practice evidence; one good session is only a candidate.
+
 ## Project Article
 
 - Chinese WeChat article: [Read the article](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)

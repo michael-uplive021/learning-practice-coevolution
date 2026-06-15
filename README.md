@@ -16,6 +16,36 @@ It is designed for people who do not want AI to simply summarize material for th
 
 它不把 AI 当成默认总结器，而是先让用户保留问题主导权：执行前先进入导师式批改，问题或学习合约清楚后再切换到数字员工执行。
 
+## Core Idea / 核心理念
+
+This skill turns learning into a loop:
+
+```text
+material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> observation -> reusable asset candidate
+```
+
+It is built on five rules:
+
+- Reading should train judgment, not only speed up content intake.
+- AI should improve the user's problem ownership and reconstruction ability before producing polished output.
+- Real projects are the preferred practice field.
+- Mentor, Digital Apprentice, and Observer are different postures and should not be collapsed into one unreviewed answer.
+- Reusable methods, SOPs, prompts, or skills need repeated practice evidence; one good session is only a candidate.
+
+这个 Skill 的核心不是“总结得更快”，而是让学习形成闭环：
+
+```text
+材料或任务 -> 用户重构 -> 批改 -> 概念修补 -> 迁移练习 -> 观察复盘 -> 可复用资产候选
+```
+
+核心规则：
+
+- 阅读要训练判断力，而不是只提高信息摄入速度。
+- AI 先提高用户的问题主导权和重构能力，再生产漂亮答案。
+- 真实项目优先作为练习场。
+- 导师、数字员工和观察者是不同姿态，不能混成一个未经审查的答案。
+- 方法、SOP、Prompt 或 Skill 候选需要重复实践证据；一次好会话只能算候选。
+
 ## 中文快速理解
 
 这不是一个“帮我总结这本书”的模板，而是一套给 Agent 使用的学习训练流程。它默认先让你说出自己的理解，再让 AI 批改、追问、补例子、找迁移场景，最后才进入真实任务执行。

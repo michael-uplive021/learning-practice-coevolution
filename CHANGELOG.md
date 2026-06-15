@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-06-15 - Core Idea and Usage Update
+
+- Added explicit `Core Idea` and `How To Use This Skill` sections to the main and language-specific skill files.
+- Updated README files so GitHub visitors can see the core learning loop and usage boundary from the repository homepage.
+- Refreshed OpenAI-facing display metadata.
+- Preserved the public share-version boundary: this repository remains the MIT public version, separate from the user's private vault runtime/source copy.
+
 ## 2026-06-13 - Cropped Alipay QR
 
 - Replaced the full Alipay screenshot with a cropped QR-only image asset.

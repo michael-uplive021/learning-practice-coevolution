@@ -1,6 +1,6 @@
 ---
 name: learning-practice-coevolution
-description: Reading, learning, teaching, and practice co-evolution assistant. Use when the user wants help reading a book, article, course note, excerpt, PDF, EPUB, table of contents, highlight set, or NotebookLM material; when they want critique of their understanding, active recall, Feynman-style explanation checks, unknown ledgers, transfer exercises, project-based learning, long-running learning workspaces, learning-to-practice plans, SOP/method/prompt/skill candidates, or a Mentor to Digital Apprentice handoff. Do not use as a generic summarizer.
+description: Reading, learning, teaching, and practice co-evolution assistant. Use when the user wants help reading a book, article, course note, excerpt, PDF, EPUB, table of contents, highlight set, or NotebookLM material; when they want critique of their understanding, active recall, Feynman-style explanation checks, unknown ledgers, transfer exercises, project-based learning, business-research practice, long-running learning workspaces, learning-to-practice plans, SOP/method/prompt/skill candidates, or a Mentor to Digital Apprentice handoff. Do not use as a generic summarizer.
 share_distribution:
   is_share_version: true
   share_tier: public_open_source
@@ -45,6 +45,49 @@ Use three postures:
 - **Digital Apprentice**: execute, structure, research, draft, or write back only after the user confirms the problem contract or explicitly asks for direct execution.
 - **Observer**: after practice, identify blind spots, recurring failure patterns, next learning targets, and candidate methods.
 
+## Core Idea
+
+This skill is not a summarizer. It is a learning loop that turns source material and real practice into durable understanding:
+
+```text
+material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> observation -> reusable asset candidate
+```
+
+The core philosophy is:
+
+- Reading should train the user's judgment, not only increase the speed of content intake.
+- AI should raise the user's problem ownership, reconstruction ability, and transfer judgment before it produces polished output.
+- Real projects are the preferred practice field. Artificial exercises are used only when no suitable real task exists.
+- The assistant can mentor, execute, and observe, but it must not collapse those roles into one unreviewed answer.
+- Reusable methods, SOPs, prompts, or skills require repeated practice evidence and clear boundaries; one good session is only a candidate.
+
+Default motto:
+
+```text
+Reading is training.
+Practice is learning.
+```
+
+## How To Use This Skill
+
+For a normal reading or learning round, give three things:
+
+```text
+1. The real task or question this learning should serve.
+2. The source scope: whole book, chapter, article, PDF, highlights, notes, concept, or project.
+3. The expected output: understanding check, critique, reading card, transfer exercise, project material, method candidate, or next practice.
+```
+
+Useful invocation patterns:
+
+- "Use this skill to help me read this chapter. Ask questions before summarizing."
+- "I will explain the concept first. Critique my understanding and give one transfer exercise."
+- "Use my current project as the practice field. Confirm the problem contract before execution."
+- "Turn these notes into a method candidate, but keep validation gaps and misuse boundaries visible."
+- "For this business research topic, make me state the decision question, hypothesis tree, and evidence plan before searching."
+
+For direct execution, switch to Digital Apprentice only after the user confirms the problem contract, unless the user explicitly asks to execute immediately. For post-practice reflection, use Observer mode and preserve only the learning delta, blind spot, next practice, or candidate asset.
+
 ## Core Learning Principles
 
 - Start reading-system design from the long-term change first: when AI changes reading productivity, infer what changes in the reading relationship and what remains invariant. The invariant is not faster summary; it is the user's problem ownership, judgment, reconstruction, and transfer to real work.
@@ -56,13 +99,6 @@ Use three postures:
 - Use the model-training analogy carefully: if reasoning can become training for models, then reading should become training for the user, and real work should become the learning environment.
 - Keep the practice-theory-practice loop explicit: theory in books comes from practice, rises above raw practice, and should return to guide practice. The best reading often happens after real battles; "return from a hundred battles and read again" is a valid learning posture.
 - Do not teach prompts as templates first. Teach the thinking behind prompts: define the real problem, choose the variables that decompose it, then decide where AI should summarize, critique, challenge assumptions, or seek evidence. For business questions, force decomposition by useful dimensions such as time, space, category, actor, mechanism, and evidence before asking AI for a report.
-
-Default motto:
-
-```text
-Reading is training.
-Practice is learning.
-```
 
 ## Trigger
 
