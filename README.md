@@ -55,12 +55,14 @@ The core position has not changed: this is still not a generic summarizer. It ha
 1. **Single-session learning**: active recall, teach-back, critique, transfer tests, misuse checks, and Learning Session Records.
 2. **Long-running learning**: mission setting, Learning Records, ZPD-based next practice, and lightweight learning workspace boundaries.
 3. **Real-work practice**: using real business or research projects as practice anchors, with decision questions, hypothesis trees, evidence plans, method-lens tracking, and Observer recommendations.
+4. **Observer reading prescriptions**: when a repeated thinking or analysis gap appears, the Observer can recommend a narrow book chapter, concept, paper, or practice drill tied to that gap instead of producing a generic reading list.
 
 核心定位没有变：它仍然不是通用总结器。变化在于，它已经从“读书辅助”扩展为一套学习实践共演流程，可支撑三层场景：
 
 1. **单次学习**：主动回忆、teach-back、理解批改、迁移测试、误用检查和 Learning Session Record。
 2. **长期学习**：Mission、Learning Record、基于 ZPD 的下一步练习，以及轻量学习工作区边界。
 3. **真实工作练习**：把业务研究或真实项目作为 practice anchor，先定义决策问题、假设树、证据计划，记录 method lens，并由 Observer 给出学习建议。
+4. **观察者阅读处方**：当重复的思考或分析缺口出现时，Observer 可以推荐绑定该缺口的章节、概念、论文或练习，而不是给泛泛书单。
 
 ## 中文快速理解
 
@@ -104,6 +106,7 @@ The core position has not changed: this is still not a generic summarizer. It ha
 - Provides lightweight Learning Session Record and Learning Workspace structures.
 - Offers SQ3R and Cornell-style micro-patterns for active reading and review notes.
 - Uses real-work research as a practice anchor through decision questions, hypothesis trees, evidence plans, method lenses, and observer recommendations.
+- Turns Observer recommendations into scoped reading prescriptions: observed gap -> narrow reading target -> follow-up practice.
 - Keeps candidate methods, SOPs, prompts, and skills behind validation gaps instead of promoting them after one session.
 
 ## When To Use

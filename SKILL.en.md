@@ -424,6 +424,7 @@ method_lens:
     - evidence_plan
   observed_gap:
   evidence_of_mastery:
+  recommended_reading:
   recommended_practice:
 ```
 
@@ -435,14 +436,32 @@ learning_observer_recommendation:
   why_it_matters:
   likely_skill_gap:
   recommended_reading:
+    - title:
+      author:
+      why_this:
+      scope:
+      use_for:
+      stop_after:
+  recommended_chapter_or_concept:
+    - ""
   recommended_practice:
   action_status: candidate | kept | deferred | discarded
 ```
+
+Reading prescription rules:
+
+- Recommend 1-3 books, chapters, concepts, papers, or lectures only after naming the observed thinking gap.
+- Prefer a narrow scope: chapter, section, concept, or exercise before whole-book reading.
+- Explain why the recommendation fits the gap, not why the book is generally important.
+- Pair every reading recommendation with one practice step that tests transfer back to the user's real task.
+- If no reliable reading target is known, recommend a search direction or practice drill instead of inventing a book.
+- Do not imply that reading the recommendation means the user has mastered the method.
 
 Boundaries:
 
 - Do not treat a method lens as evidence that the user has mastered the method.
 - Do not turn observer recommendations into mandatory tasks.
+- Do not output generic book lists that are not tied to a demonstrated learning or analysis gap.
 - Do not publish private project facts, local paths, account traces, or confidential source material.
 - Surface recommendations only as candidates for keep / defer / discard.
 
@@ -692,6 +711,14 @@ learning_session_record:
     handoff_to_execution: true | false
   next_practice:
     - ""
+  observer_recommendation:
+    observed_gap: ""
+    recommended_reading:
+      - title:
+        scope:
+        why_this:
+        practice_after_reading:
+    action_status: none | candidate | kept | deferred | discarded
   writeback_decision: no_writeback | learning_log | note | method_candidate | skill_candidate | retrospective
 ```
 

@@ -1,12 +1,12 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-15-public-boundary-wording-cleanup",
+  "version": "2026-06-19-observer-reading-prescription",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
   "spdx_license_id": "MIT",
   "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
-  "generated_at": "2026-06-15",
+  "generated_at": "2026-06-19",
   "default_language": "en",
   "languages": [
     "en",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "84d8ea29b6cf68c1805b10e0368cdc0a4b227a484e70f7f322690c8c43b44d17"
+      "sha256": "9efb2c1dcc4f68967fa5089f9a18ce6cef09e826239924a8620fbedb9641e55e"
     },
     {
       "path": "LICENSE",
@@ -61,27 +61,27 @@
     },
     {
       "path": "README.md",
-      "sha256": "b091b9adfa7791b589c47d801f8db60c384df67596445cac601bb3df3e4b531d"
+      "sha256": "8894da60210dc9a53618b5f58f206a24ff094c8bb5e3fececadf5eea0125b033"
     },
     {
       "path": "README.en.md",
-      "sha256": "df8887897938577365c63eadc7802f842342bf9b6169580c4f927987089fa804"
+      "sha256": "d2c106221c32717ddbe2c7ffc9c2f44db3bb9354e3b980f10684912e631838df"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "51fe38574cefc18abe1702b0f82a8c700f56053c64d39412709ae81fdbaa82fd"
+      "sha256": "a1465a89248c90293df656ae2ad88acfe993c7171c6f834b8592f6e8ba7f383a"
     },
     {
       "path": "SKILL.md",
-      "sha256": "061512cdbc7e94e2ae96c5738b0999dc099f535b6fba9ca67f6db3dc6b125def"
+      "sha256": "b2cb07b4a0029161b5a8c3db48f4f3b07301e5c7e31df892b919ffe9b7b483de"
     },
     {
       "path": "SKILL.en.md",
-      "sha256": "061512cdbc7e94e2ae96c5738b0999dc099f535b6fba9ca67f6db3dc6b125def"
+      "sha256": "b2cb07b4a0029161b5a8c3db48f4f3b07301e5c7e31df892b919ffe9b7b483de"
     },
     {
       "path": "SKILL.zh-CN.md",
-      "sha256": "46d823f2bceba24af6306fe925e1137a9b251594455d86063e5b3068307401d4"
+      "sha256": "9f43576ac71fc0c00fe249692405cc5d9923434d37a424553330678dda9f0ffc"
     },
     {
       "path": "SUPPORT.md",

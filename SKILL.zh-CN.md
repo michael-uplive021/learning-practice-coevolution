@@ -416,6 +416,7 @@ method_lens:
     - evidence_plan
   observed_gap:
   evidence_of_mastery:
+  recommended_reading:
   recommended_practice:
 ```
 
@@ -427,14 +428,32 @@ learning_observer_recommendation:
   why_it_matters:
   likely_skill_gap:
   recommended_reading:
+    - title:
+      author:
+      why_this:
+      scope:
+      use_for:
+      stop_after:
+  recommended_chapter_or_concept:
+    - ""
   recommended_practice:
   action_status: candidate | kept | deferred | discarded
 ```
+
+推荐阅读处方规则：
+
+- 只有先说明 observed thinking gap，才推荐 1-3 本书、章节、概念、论文或课程。
+- 优先推荐窄范围：章节、段落、概念或练习，而不是一上来推荐整本书。
+- 说明这项阅读如何对应当前缺口，不写泛泛的“这本书很重要”。
+- 每条阅读建议都必须配一个回到真实任务的练习，用来测试迁移。
+- 如果没有可靠阅读对象，宁可推荐搜索方向或练习任务，不要编造书名。
+- 不要暗示用户读完推荐内容就等于已经掌握该方法。
 
 边界：
 
 - 不要把 method lens 当成用户已经掌握该方法的证据。
 - 不要把 observer recommendation 变成强制任务。
+- 不要输出没有绑定具体学习或分析缺口的泛泛书单。
 - 不要发布私有项目事实、本地路径、账号痕迹或保密材料。
 - 只把建议作为 keep / defer / discard 的候选项露出。
 
@@ -564,6 +583,14 @@ learning_session_record:
     handoff_to_execution: true | false
   next_practice:
     - ""
+  observer_recommendation:
+    observed_gap: ""
+    recommended_reading:
+      - title:
+        scope:
+        why_this:
+        practice_after_reading:
+    action_status: none | candidate | kept | deferred | discarded
   writeback_decision: no_writeback | learning_log | note | method_candidate | skill_candidate | retrospective
 ```
 

@@ -37,6 +37,7 @@
 1. **单次学习**：主动回忆、teach-back、理解批改、迁移测试、误用检查和 Learning Session Record。
 2. **长期学习**：Mission、Learning Record、基于 ZPD 的下一步练习，以及轻量学习工作区边界。
 3. **真实工作练习**：把业务研究或真实项目作为 practice anchor，先定义决策问题、假设树、证据计划，记录 method lens，并由 Observer 给出学习建议。
+4. **观察者阅读处方**：当重复的思考或分析缺口出现时，Observer 可以推荐绑定该缺口的章节、概念、论文或练习，而不是给泛泛书单。
 
 ## 项目说明文章
 
@@ -60,6 +61,7 @@
 - 支持轻量 Learning Session Record 和长期 Learning Workspace。
 - 提供 SQ3R 与 Cornell 笔记微模式，用于主动阅读和复习笔记。
 - 把真实业务研究作为 practice anchor，通过决策问题、假设树、证据计划、method lens 和 observer recommendation 形成练习闭环。
+- 将 Observer 建议转成有范围的阅读处方：具体缺口 -> 窄范围阅读对象 -> 后续练习。
 - 对方法、SOP、Prompt、Skill 候选保留验证缺口，不因一次好答案直接升格。
 
 ## 什么时候使用

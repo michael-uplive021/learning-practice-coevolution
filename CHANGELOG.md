@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-19 - Observer Reading Prescription Update
+
+- Added Observer reading prescription guidance for repeated thinking or analysis gaps.
+- Scoped recommendations to a demonstrated gap, narrow reading target, and follow-up practice.
+- Updated README files and skill snapshots so public users can use recommendations without turning them into generic book lists.
+
 ## 2026-06-15 - Public Boundary Wording Cleanup
 
 - Removed implementation-specific boundary wording from public documentation.
