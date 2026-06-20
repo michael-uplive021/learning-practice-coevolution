@@ -8,6 +8,38 @@
   <a href="README.md">Main</a>
 </p>
 
+## Obsidian Plugin: Learning Practice Companion
+
+This repository also contains `Learning Practice Companion`, a local-first Obsidian plugin for active recall, AI critique, transfer practice, and learning session records.
+
+The plugin pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, collect telemetry, or make network requests.
+
+Plugin commands:
+
+- Start learning session
+- Insert reconstruction prompt
+- Insert Copilot mentor prompt
+- Insert transfer and misuse test
+- Close as observer note
+
+Community plugin assets:
+
+- `manifest.json`
+- `main.js`
+- `styles.css`
+- `versions.json`
+- `PRIVACY.md`
+
+Manual installation:
+
+1. Download `manifest.json`, `main.js`, and `styles.css` from a GitHub release.
+2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-companion/`.
+3. Restart Obsidian and enable `Learning Practice Companion` in Community plugins.
+
+See [PRIVACY.md](PRIVACY.md) for the local-only privacy boundary.
+
+## Skill: Learning Practice Coevolution
+
 Core philosophy: reading is training; practice is learning.
 
 `learning-practice-coevolution` turns reading and doing into one training loop. In reading, the user first reconstructs the material in their own words, then AI critiques false familiarity, vague concepts, missing examples, and transfer breaks. In practice, the real task becomes the exercise field: define the problem contract, use the concept, observe the result, and record the next practice.
@@ -86,7 +118,9 @@ Do not use it as a generic summarizer.
 - `SUPPORT.md` - support and payment links.
 - `agents/openai.yaml` - optional OpenAI-facing display metadata.
 - `assets/` - QR code assets for public support channels.
-- `MANIFEST.json` - package metadata and file hashes.
+- `manifest.json` / `main.js` / `styles.css` / `versions.json` - Obsidian plugin assets.
+- `PRIVACY.md` - local-only plugin privacy boundary.
+- `skill-package-manifest.json` - skill package metadata and file hashes.
 - `LICENSE` - MIT License.
 - `CHANGELOG.md` - public release notes.
 

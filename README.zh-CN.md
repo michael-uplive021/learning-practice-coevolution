@@ -8,6 +8,38 @@
   <a href="README.md">主入口</a>
 </p>
 
+## Obsidian 插件：Learning Practice Companion
+
+本仓库也包含 `Learning Practice Companion`，一个 local-first 的 Obsidian 插件，用于主动回忆、AI 批改、迁移练习和 Learning Session Record。
+
+它适合配合 Copilot for Obsidian 使用，但不依赖 Copilot，不读取 Copilot 设置，不调用任何 AI API，不收集 telemetry，也不发起网络请求。
+
+插件命令：
+
+- Start learning session
+- Insert reconstruction prompt
+- Insert Copilot mentor prompt
+- Insert transfer and misuse test
+- Close as observer note
+
+社区插件文件：
+
+- `manifest.json`
+- `main.js`
+- `styles.css`
+- `versions.json`
+- `PRIVACY.md`
+
+手动安装：
+
+1. 从 GitHub release 下载 `manifest.json`、`main.js` 和 `styles.css`。
+2. 放入 `<your-vault>/.obsidian/plugins/learning-practice-companion/`。
+3. 重启 Obsidian，并在 Community plugins 中启用 `Learning Practice Companion`。
+
+local-only 隐私边界见 [PRIVACY.md](PRIVACY.md)。
+
+## Skill：Learning Practice Coevolution
+
 核心理念：阅读即训练，实践即学习。
 
 `learning-practice-coevolution` 把“读”和“做”放进同一个训练闭环：阅读时，用户先用自己的话重构材料，AI 再批改假熟悉、模糊概念、缺少例子和迁移断点；实践时，真实任务就是练习场，先定义问题合约，再用概念解决问题、观察结果、记录下一步练习。
@@ -87,7 +119,9 @@
 - `SUPPORT.md` - 支持入口和付款边界。
 - `agents/openai.yaml` - 可选的 OpenAI 展示元数据。
 - `assets/` - 公开支持入口的二维码资产。
-- `MANIFEST.json` - 包元数据和文件哈希。
+- `manifest.json` / `main.js` / `styles.css` / `versions.json` - Obsidian 插件文件。
+- `PRIVACY.md` - local-only 插件隐私边界。
+- `skill-package-manifest.json` - Skill 包元数据和文件哈希。
 - `LICENSE` - MIT License。
 - `CHANGELOG.md` - 公开版本记录。
 

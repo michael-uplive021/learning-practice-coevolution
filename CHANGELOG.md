@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-06-20 - Obsidian Plugin Community Candidate
+
+- Added the first local-first Obsidian plugin implementation: `Learning Practice Companion`.
+- Added `manifest.json`, `main.js`, `styles.css`, `versions.json`, and `PRIVACY.md` for community plugin packaging.
+- Added commands for learning sessions, reconstruction prompts, Copilot mentor prompts, transfer tests, and observer notes.
+- Updated README files to explain manual installation and privacy boundaries.
+
 ## 2026-06-19 - Observer Reading Prescription Update
 
 - Added Observer reading prescription guidance for repeated thinking or analysis gaps.

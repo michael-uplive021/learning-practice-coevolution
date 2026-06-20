@@ -1,0 +1,10 @@
+{
+  "id": "learning-practice-companion",
+  "name": "Learning Practice Companion",
+  "version": "0.1.0",
+  "minAppVersion": "1.8.0",
+  "description": "Local-first active recall, AI critique, transfer practice, and learning session workflows.",
+  "author": "Jie Huang",
+  "authorUrl": "https://github.com/michael-uplive021",
+  "isDesktopOnly": false
+}

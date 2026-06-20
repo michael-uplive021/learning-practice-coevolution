@@ -1,12 +1,12 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-19-observer-reading-prescription",
-  "name": "Learning Practice Coevolution",
+  "version": "2026-06-20-obsidian-plugin-community-candidate",
+  "name": "Learning Practice Coevolution + Learning Practice Companion",
   "owner": "Jie Huang",
   "license": "MIT",
   "spdx_license_id": "MIT",
   "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
-  "generated_at": "2026-06-19",
+  "generated_at": "2026-06-20",
   "default_language": "en",
   "languages": [
     "en",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "9efb2c1dcc4f68967fa5089f9a18ce6cef09e826239924a8620fbedb9641e55e"
+      "sha256": "72aa23f5c0a4472bfceb03fa99937e6b0c9866f51392a7bf5a60ab07753b46a2"
     },
     {
       "path": "LICENSE",
@@ -61,15 +61,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "8894da60210dc9a53618b5f58f206a24ff094c8bb5e3fececadf5eea0125b033"
+      "sha256": "0a5e8f91500912d91b51dc53d06ffc8dfe90eeff6a7b0dd619086b643f482d1d"
     },
     {
       "path": "README.en.md",
-      "sha256": "d2c106221c32717ddbe2c7ffc9c2f44db3bb9354e3b980f10684912e631838df"
+      "sha256": "33b81b9d2b789c1ffb9d8e408da4204a7bfe8de810c075bd7ce16fc1242db3e7"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "a1465a89248c90293df656ae2ad88acfe993c7171c6f834b8592f6e8ba7f383a"
+      "sha256": "c13c57a0dcf52b635bd7fc1b953d982feed57eac81171019298948e659e1c913"
     },
     {
       "path": "SKILL.md",
@@ -98,6 +98,26 @@
     {
       "path": "assets/paypal-me-michael061394.svg",
       "sha256": "8916c7e5ff32f06a3d62ae9e25926c76ae5fea2817cddcf4242c5e1058874c08"
+    },
+    {
+      "path": "main.js",
+      "sha256": "985a7730dc73bb3ca650db12f518baa1be8ed5d60bafe059206ac3f65952a5ec"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "fb3ece601feda38f25e1e7eb2c14e68d12493ff1923b5933e7fae9d2b2fff160"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "70e781156349819565060ee9157c022c932e2b3f2b16ee0d66a25aebcc0bd9fc"
+    },
+    {
+      "path": "versions.json",
+      "sha256": "1a3685b45ca2cf628611a8a3c182eef0ce19cc014eb0dff7a892bece52655b51"
+    },
+    {
+      "path": "PRIVACY.md",
+      "sha256": "a2829ddb6f7e478c7486ca43f33d992eb729261f00e0f6a7a8cf3f29dc338fea"
     }
   ],
   "private_material_excluded": [
