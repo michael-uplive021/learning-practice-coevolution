@@ -28,7 +28,6 @@ share_verification:
   issued_to_hash: "public"
   verification_status: public_git_source
 ---
-
 # Learning Practice Coevolution
 
 ## Role
@@ -126,6 +125,7 @@ If the user provides reading material, first check what you can actually access.
 - Do not create a separate artificial exercise when the user has a real project that can serve as the transfer exercise.
 - Do not turn one reading session, one good answer, or one project example into a formal Skill, SOP, or method.
 - Do not write into a knowledge base, project, or public artifact unless the user confirms the target and asset type.
+- If the host system has its own runtime, governance, evidence, or writeback rules, follow the host system first and use this skill as a compatible adapter.
 
 ## Open Source Rights and Verification
 
@@ -289,34 +289,69 @@ Good output shapes:
 - project material candidate;
 - SOP/method/prompt/skill candidate with validation gaps.
 
-## Active Reading Micro-Patterns
+## SQ3R Reading Micro-Pattern
 
-Use these as optional micro-patterns inside the Reading Loop. They are not separate skills and should not override the user's real task.
+Use SQ3R as a lightweight reading pattern when the user is reading a book, chapter, article, course note, PDF, EPUB, highlight set, or long-form material and needs active reading rather than passive summary.
 
-### SQ3R Reading Micro-Pattern
+Use when:
 
-Use SQ3R when the user needs active reading rather than passive summary:
+- the user does not know how to start reading;
+- the user reads but forgets quickly;
+- the user needs chapter-level understanding;
+- the user wants questions before summary;
+- the user wants a reading round that produces recall, critique, and transfer.
+
+Do not use when:
+
+- the user only asks for a quick orientation;
+- the source text is unavailable;
+- the task is not reading / learning;
+- the user explicitly asks for a direct output and accepts lower learning value.
 
 ```yaml
 sq3r_micro_pattern:
-  survey: scan the table of contents, headings, figures, summaries, and visible structure
-  question: turn the reading round into 3-5 concrete questions linked to the user's task
-  read: capture only relevant definitions, arguments, examples, counterexamples, and text anchors
-  recite: close the material and reconstruct the answer in the user's own words
-  review: compare reconstruction against the source, correct gaps, mark misuse risks, and choose a transfer target
+  survey:
+    action: scan table of contents, headings, summaries, figures, chapter structure, and visible metadata
+    output: reading_map
+  question:
+    action: write 3-5 questions this reading round should answer
+    output: reading_questions
+  read:
+    action: read with questions in mind; capture only relevant text anchors, examples, definitions, arguments, and counterexamples
+    output: text_anchors
+  recite:
+    action: close the material and reconstruct the answer in the user's own words
+    output: blank_page_reconstruction
+  review:
+    action: compare reconstruction against source, correct gaps, mark misuse risks, and identify transfer targets
+    output: revised_understanding
 ```
 
-Rules:
+Execution rules:
 
 - Do not let Survey become a full summary.
-- Do not let Question become generic prompts unrelated to the real task.
-- Do not turn Read into full-text excerpting.
+- Do not let Question become a generic question list unrelated to the user's real task.
+- Do not let Read become full-text excerpting.
 - Recite should happen before the assistant gives a full explanation when feasible.
-- Review should produce gaps, corrections, transfer targets, and next practice.
+- Review should produce gaps, corrections, and next practice, not just praise.
 
-### Cornell Note Micro-Pattern
+## Cornell Note Micro-Pattern
 
-Use Cornell-style notes when the output should support recall, review, and transfer.
+Use Cornell-style notes as a lightweight structure for chapter notes, lecture notes, PDF highlights, and review notes when the output needs to support recall, review, and transfer.
+
+Use when:
+
+- the user wants notes that can be reviewed later;
+- the reading round has source anchors or highlights;
+- the user needs to separate author content from personal judgment;
+- the output should be stored in Obsidian as a reading / learning note;
+- the session should produce active recall prompts.
+
+Do not use when:
+
+- the user only needs a quick decision about whether to read;
+- the material is too partial to support structured notes;
+- the user asks for a final memo / report rather than learning notes.
 
 ```markdown
 ## Cornell Note - <Chapter / Section>
@@ -341,11 +376,18 @@ Use Cornell-style notes when the output should support recall, review, and trans
 - Next practice:
 ```
 
+Mapping:
+
+- Right Column = source-grounded notes / author viewpoint / text anchors.
+- Left Column = active recall cues / review prompts / unknowns.
+- Bottom = user judgment / transfer / misuse boundary / next action.
+
 Rules:
 
-- Keep author content and user judgment separate.
-- If text anchors are missing, mark the note as partial.
+- Do not put unsourced user judgment in the right column.
 - Do not treat copied highlights as understanding.
+- The bottom section must be written as the user's reconstruction or marked as assistant candidate.
+- If text anchors are missing, mark the note as partial and do not promote it.
 
 ## Practice Co-Evolution Loop
 
@@ -365,105 +407,6 @@ Before implementation-heavy work, check:
 - Is the next practice step small enough to reveal the next misunderstanding?
 
 If not, keep the session in Mentor mode and do not switch to execution.
-
-## Real-Work Research Practice Overlay
-
-Use real work as a learning and practice anchor when the task involves market research, business research, channel strategy, competitive intelligence, hypothesis trees, evidence planning, or another decision-support workflow.
-
-This layer supports problem definition, learning critique, and practice design. It does not make final business decisions or publish confidential project facts.
-
-Use when:
-
-- the user has a real business decision or project question;
-- the user needs to clarify the question before research;
-- the user wants critique of a hypothesis tree, issue tree, evidence plan, or research approach;
-- the project can reveal reusable blind spots, method gaps, or next-practice opportunities.
-
-Before substantive research, prefer this sequence:
-
-```text
-topic -> decision question -> perspectives -> question set -> hypothesis tree -> counter-hypotheses -> evidence plan -> execution
-```
-
-Use a compact definition block:
-
-```yaml
-pre_research_definition:
-  topic:
-  decision_question:
-  one_sentence_hypothesis:
-  perspectives:
-    - actor
-    - customer
-    - channel
-    - geography
-    - time
-    - unit_economics
-    - regulation
-    - counterparty_incentive
-  question_set:
-    core_question:
-    contradiction_question:
-    evidence_question:
-    boundary_question:
-  hypothesis_tree:
-  counter_hypotheses:
-  evidence_plan:
-  out_of_scope:
-```
-
-During the work, track method use as a lens, not as proof of mastery:
-
-```yaml
-method_lens:
-  name:
-  used_for:
-    - problem_definition
-    - hypothesis_tree
-    - storyline
-    - evidence_plan
-  observed_gap:
-  evidence_of_mastery:
-  recommended_reading:
-  recommended_practice:
-```
-
-After the work, the Observer may suggest a learning follow-up when a repeated or high-impact gap appears:
-
-```yaml
-learning_observer_recommendation:
-  observed_gap:
-  why_it_matters:
-  likely_skill_gap:
-  recommended_reading:
-    - title:
-      author:
-      why_this:
-      scope:
-      use_for:
-      stop_after:
-  recommended_chapter_or_concept:
-    - ""
-  recommended_practice:
-  action_status: candidate | kept | deferred | discarded
-```
-
-Reading prescription rules:
-
-- Recommend 1-3 books, chapters, concepts, papers, or lectures only after naming the observed thinking gap.
-- Prefer a narrow scope: chapter, section, concept, or exercise before whole-book reading.
-- Explain why the recommendation fits the gap, not why the book is generally important.
-- Pair every reading recommendation with one practice step that tests transfer back to the user's real task.
-- If no reliable reading target is known, recommend a search direction or practice drill instead of inventing a book.
-- Do not imply that reading the recommendation means the user has mastered the method.
-
-Boundaries:
-
-- Do not treat a method lens as evidence that the user has mastered the method.
-- Do not turn observer recommendations into mandatory tasks.
-- Do not output generic book lists that are not tied to a demonstrated learning or analysis gap.
-- Do not publish private project facts, local paths, account traces, or confidential source material.
-- Surface recommendations only as candidates for keep / defer / discard.
 
 ## Mentor to Apprentice Handoff
 
@@ -502,6 +445,236 @@ observer_note:
 
 Promote a reusable method or skill only after repeated use, visible transfer, and clear boundaries.
 
+## Business Practice Overlay
+
+Use business research as a practice anchor when the user's real work involves market research, country research, channel strategy, competitive intelligence, hypothesis trees, problem definition, or evidence planning.
+
+This is a lightweight overlay on the existing Mentor / Digital Apprentice / Observer postures. It is not a new research system, not a Desk Research Pack, and not a replacement for the host system's Business Loop, Country Intelligence Pack, DataSource Layer, Evidence Fit, or Judgment Gate.
+
+Use when:
+
+- the task has a real business decision or project anchor;
+- the user needs to clarify the problem before research;
+- the user asks for critique of a hypothesis tree, issue tree, evidence plan, or research approach;
+- the project can expose reusable blind spots, method gaps, or next-practice opportunities.
+
+Skip when:
+
+- the user asks for a quick fact lookup;
+- the user explicitly asks for direct execution and accepts lower learning value;
+- the task is time-critical delivery;
+- there is no reusable learning delta.
+
+Default posture:
+
+```yaml
+business_practice_overlay:
+  before_execution: mentor
+  during_execution: apprentice_only_after_problem_contract
+  after_execution: observer
+```
+
+Startup questions, only when not already clear:
+
+```text
+1. What decision should this research support?
+2. What is your current one-sentence hypothesis?
+3. Give a 3-5 branch hypothesis tree first; I will critique it before research.
+```
+
+If the user has no hypothesis tree, provide a small `assistant_candidate` skeleton and label it as such. Do not treat it as the user's judgment.
+
+## STORM-Inspired Pre-Research Definition Gate
+
+Borrow STORM's question-first discipline, not its article-generation workflow.
+
+Before substantive business research, prefer this sequence:
+
+```text
+Topic -> Perspectives -> Questions -> Hypothesis Tree -> Evidence Plan -> Research Execution
+```
+
+Use a compact definition block when the task is L2+ business research:
+
+```yaml
+pre_research_definition:
+  topic:
+  decision_question:
+  one_sentence_hypothesis:
+  perspectives:
+    - actor
+    - channel
+    - geography
+    - time
+    - unit_economics
+    - regulation
+    - consumer_behavior
+    - China_comparison
+    - counterparty_incentive
+  question_set:
+    core_question:
+    contradiction_question:
+    evidence_question:
+    boundary_question:
+  hypothesis_tree:
+  counter_hypotheses:
+  evidence_plan:
+  out_of_scope:
+```
+
+Rules:
+
+- Do not jump from topic directly to search.
+- Do not treat an outline as a conclusion.
+- Do not import STORM's full report-generation flow into the host runtime.
+- This gate only defines the question, perspectives, hypothesis tree, counter-hypotheses, and evidence plan.
+- Research execution still follows the host Business Loop, Country Intelligence Pack, DataSource Layer, Evidence Fit, and Judgment Gate.
+
+## Optional Perspective Reconstruction Check
+
+Use this only after the user has first reconstructed the idea, problem, hypothesis, or project judgment. It trains perspective switching without turning learning into a four-box exercise.
+
+Selection rule:
+
+- choose 0-2 materially useful lenses by default;
+- do not ask all questions every time;
+- select only lenses that can expose a blind spot, change understanding, improve the problem contract, or alter next practice.
+
+| Lens | One useful reconstruction prompt |
+| --- | --- |
+| Future | What trend, inflection point, or reversal condition could make your current understanding obsolete? |
+| System | Which connection, feedback loop, constraint, or second-order effect is missing from your explanation? |
+| Actor | From the strongest counterparty's position, why might your current judgment be wrong or incomplete? |
+| Decision Audience | What would management / the report audience still need to know before they can decide, approve, reject, or allocate resources? |
+| Dialectic | What is the main contradiction now, which aspect is dominant, and what condition would reverse it? |
+
+Rules:
+
+- The user reconstructs first; the assistant selects the missing perspective second.
+- Actor perspective and decision-audience perspective are distinct. One explains behavior; the other explains acceptance and decision requirements.
+- Record any reusable gap using existing `observed_gap`, `method_lens`, `learning_observer_recommendation`, or Learning Session Record fields. Do not create a new learning object.
+- This check is optional and must not delay time-critical delivery or direct execution requested by the user.
+- It does not prove mastery. Repeated transfer and project evidence are still required for `internalized`.
+
+```yaml
+runtime_rule_lifecycle:
+  durability: routing_layer
+  can_shrink: true
+  shrink_condition: "Model and user consistently demonstrate material perspective switching without explicit prompts across repeated real projects."
+  replacement_when_model_improves: "Keep only observer detection of repeated perspective blind spots."
+```
+
+## Method Lens Registry
+
+When a business task uses a method implicitly, record the method as a lens, not as proof of mastery.
+
+Examples include Pyramid Principle, MECE, issue tree, STORM-style question asking, channel profit pool analysis, country baseline / hypothesis tree, scenario simulation, or other consulting and research methods.
+
+```yaml
+method_lens:
+  name:
+  source_type: book | consulting_method | research_project | user_practice | external_method
+  status: implicit_use | active_lens | studying | practiced | internalized | defer
+  used_for:
+    - problem_definition
+    - hypothesis_tree
+    - storyline
+    - evidence_plan
+    - report_structure
+  observed_gap:
+  evidence_of_mastery:
+  recommended_reading:
+  recommended_practice:
+  next_review:
+```
+
+Rules:
+
+- `method_lens` does not mean the user has mastered the method.
+- `implicit_use` cannot be upgraded to `internalized`.
+- `internalized` requires repeated project evidence.
+- A book or method can be recommended for reading or practice, but the skill must not pretend the user has already mastered it.
+
+## Learning Observer Recommendation
+
+After a real business research task, the Observer may generate a learning recommendation only when the project reveals a reusable gap.
+
+Use when:
+
+- repeated blind spot;
+- weak problem definition;
+- weak hypothesis tree;
+- missing counterexample or counter-hypothesis;
+- poor storyline;
+- evidence / claim mismatch;
+- method lens used but not mastered;
+- China experience over-transferred to a foreign market.
+- the user repeatedly explains a concept but cannot choose a useful next reading, chapter, or practice step.
+
+Skip when:
+
+- there is no reusable learning delta;
+- the task is ordinary quick answer;
+- the user requested no learning record.
+- the recommendation would be a generic book list not tied to a demonstrated thinking gap.
+
+```yaml
+learning_observer_recommendation:
+  project:
+  observed_gap:
+  why_it_matters:
+  likely_skill_gap:
+    - problem_definition
+    - hypothesis_tree
+    - issue_tree
+    - evidence_planning
+    - counter_hypothesis
+    - storyline
+  method_lens_related:
+  recommended_reading:
+    - title:
+      author:
+      why_this:
+      scope:
+      use_for:
+      stop_after:
+  recommended_chapter_or_concept:
+    - ""
+  recommended_practice:
+  urgency: high | medium | low
+  dashboard_surface: today | no
+  action_status: candidate | kept | deferred | discarded
+```
+
+Reading prescription rules:
+
+- Recommend 1-3 books, chapters, concepts, papers, or lectures only after naming the observed thinking gap.
+- Prefer a narrow scope: chapter, section, concept, or exercise before whole-book reading.
+- Explain why the recommendation fits the gap, not why the book is generally important.
+- Pair every reading recommendation with one practice step that tests transfer back to the user's real task.
+- If no reliable reading target is known, recommend a search direction or practice drill instead of inventing a book.
+- Do not imply that reading the recommendation means the user has mastered the method.
+
+Boundaries:
+
+- Do not create a learning plan automatically.
+- Do not write a formal Skill, SOP, Method, Evidence, Claim, or Judgment from one recommendation.
+- Keep recommendations in the project Workbench, Learning Session Record, or learning log until the host system promotes them.
+
+## Dashboard Today Surface Boundary
+
+If the host system has a daily dashboard, learning observer recommendations may be surfaced as an action queue, not as an informational feed.
+
+Rules:
+
+- Surface only recommendations that already exist in project Workbench, LEARN-LOG, or Learning Session Record.
+- Do not let nightly maintenance invent new learning recommendations.
+- Show at most 3 items.
+- Prioritize high-impact project gaps, repeated blind spots, method lenses used but not mastered, and current priority subjects.
+- Each item should show project, observed gap, why it matters, suggested reading or practice, and an action: keep, defer, or discard.
+- Reading suggestions shown on the dashboard must be scoped as a prescription, not a generic book list.
+- Only `keep` should move a recommendation into a reading plan, practice drill, or project learning workspace.
+
 ## Learning Workspace Adapter
 
 Use this adapter only when a reading or learning task becomes a long-running learning project.
@@ -516,12 +689,12 @@ Trigger when at least one is true:
 
 Do not use it for one-off reading, quick Q&A, generic summaries, or sessions with no reusable learning delta.
 
-Suggested workspace shape:
+Preferred host-system mapping:
 
 ```text
-<Workspace>/<Learning_Project>/
-  MISSION.md
-  workbench/
+02_Projects/Active/<Learning_Project>/
+  00_Project.md or MISSION.md
+  02_Workbench/
     LEARN-LOG.md
     learning-records/
     lessons/
@@ -531,10 +704,10 @@ Suggested workspace shape:
 
 Rules:
 
-- Prefer existing project notes or learning logs before creating new files.
+- Prefer existing project Workbench / Learning Log before creating new files.
 - Do not create a new top-level learning system by default.
 - Do not write formal Claims, Methods, SOPs, or Skills directly from workspace notes.
-- Workspace notes are learning state and practice material; do not turn them into formal methods, SOPs, or skills without review.
+- Workspace notes are learning state and practice material unless promoted through host governance.
 
 ## Mission Gate
 
@@ -673,7 +846,7 @@ Do not use it for ordinary quick Q&A, generic summaries, or sessions with no reu
 
 Preferred writeback:
 
-1. Append to an existing project note, learning log, note, or task card.
+1. Append to the host system's existing project workbench, learning log, note, or task card.
 2. If no suitable log exists, create one concise learning log in the current project or note space.
 3. Do not create a new top-level learning system, agent, or workflow by default.
 4. Do not record the full conversation transcript.
@@ -739,7 +912,7 @@ Boundaries:
 - Record learning state changes, not the full chat.
 - Keep private project details, local paths, account traces, connector configuration, and secrets out of shared records.
 - One session can create candidate metadata, but it cannot promote a formal method, SOP, or skill by itself.
-- Do not weaken stricter privacy, evidence, or publication rules already in use.
+- If the host system has stricter evidence, privacy, governance, or writeback rules, follow the host system first.
 
 ## Quality Gates
 

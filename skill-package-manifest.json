@@ -6,7 +6,7 @@
   "license": "MIT",
   "spdx_license_id": "MIT",
   "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
-  "generated_at": "2026-06-20",
+  "generated_at": "2026-06-22",
   "default_language": "en",
   "languages": [
     "en",
@@ -73,11 +73,11 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "b2cb07b4a0029161b5a8c3db48f4f3b07301e5c7e31df892b919ffe9b7b483de"
+      "sha256": "ebd0362b4e31e03a02db75e288c2b411d6e5865a202a47b4e0ee3c507b39c9b6"
     },
     {
       "path": "SKILL.en.md",
-      "sha256": "b2cb07b4a0029161b5a8c3db48f4f3b07301e5c7e31df892b919ffe9b7b483de"
+      "sha256": "ebd0362b4e31e03a02db75e288c2b411d6e5865a202a47b4e0ee3c507b39c9b6"
     },
     {
       "path": "SKILL.zh-CN.md",
