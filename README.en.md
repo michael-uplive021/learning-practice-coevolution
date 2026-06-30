@@ -14,9 +14,9 @@ Turn AI from "summarize this book for me" into "help me practice until I can use
 
 `learning-practice-coevolution` is not a generic summarizer. It helps the user reconstruct understanding first, then lets the agent critique, repair concepts, add examples, create transfer practice, and bring learning back into a real task.
 
-## 30-Second Start
+## Quick Start
 
-Copy this into your agent after installing or referencing `SKILL.md`:
+If your agent can already use this skill, start with this:
 
 ```text
 Use $learning-practice-coevolution.
@@ -29,32 +29,34 @@ First ask me 1-2 necessary questions, then make me reconstruct the idea in my ow
 After that, critique my understanding and give me one transfer exercise for a real task.
 ```
 
-## What Tools Do I Need?
+If you have not installed it yet, you can first paste `SKILL.md` as task material. Move it into your agent's skill folder after you decide it is useful.
 
-| Tool | Required? | Role |
-| --- | --- | --- |
-| Agent | Required | Runs the conversation and applies the skill. |
-| This Skill | Required | Provides the learning-practice workflow. |
-| Reader | Optional | WeRead, PDF reader, EPUB reader, browser, or any reading app. |
-| Knowledge base | Optional | Obsidian, Notion, Markdown folder, Feishu docs, or no knowledge base at all. |
+## Can I Use It With Only An Agent?
 
-Best setup:
-
-```text
-Reader + Knowledge Base + Agent + Skill
-```
+Yes.
 
 Minimum setup:
 
 ```text
-Agent + Skill + user-provided material
+Agent + this Skill + user-provided material
 ```
 
-You do not need Obsidian to use this skill. Obsidian is only one possible workspace. The included Obsidian plugin is an optional local companion.
+Better setup:
+
+```text
+Reader + Knowledge Base + Agent + this Skill
+```
+
+| Question | Answer |
+| --- | --- |
+| Do I need Obsidian? | No. Obsidian is only one possible workspace. |
+| Do I need a knowledge base? | No. You can paste material directly. |
+| What counts as a reader? | WeRead, PDF reader, EPUB reader, browser, or any reading app. |
+| Is the Obsidian plugin required? | No. It is an optional companion for inserting prompts and records inside Obsidian. |
 
 ## How To Give Material To The Agent
 
-Basic flow:
+Do not ask for a whole-book summary first. Give the agent material, purpose, and scope:
 
 ```text
 give material -> state purpose -> set scope -> reconstruct first -> critique -> transfer practice -> leave feedback -> continue next round
@@ -64,14 +66,35 @@ Common sources:
 
 | Material source | What to do |
 | --- | --- |
-| WeRead integrated with Agent | Tell the agent the book, chapter, highlights, or notes range; the agent should check access first. |
+| WeRead, if integrated with your agent | Tell the agent the book, chapter, highlights, or notes range; ask it to check access first. |
+| Not sure whether WeRead is integrated | Ask the agent whether it can read it; if not, copy the table of contents, highlights, or notes manually. |
 | WeRead not integrated | Copy the table of contents, chapter excerpt, highlights, notes, or reading thoughts into the agent. |
 | PDF / EPUB | Upload the file, or paste the table of contents plus target chapter or page range. |
 | Already finished a book | Provide the title, remembered thesis, highlights, or reflections; the agent starts with a reconstruction check. |
 | Only a concept | Provide the concept plus the real problem you want to use it on. |
 | No material, only a topic | Ask the agent to build a serial learning path, one small lesson at a time. |
 
-The agent does not automatically know what is in your reading app. If integration exists, use it. If not, provide excerpts, notes, highlights, table of contents, PDF pages, or your own reading reflection.
+The agent does not automatically know what is in your reading app. If integration exists, use it and ask the agent to check access first. If not, provide excerpts, notes, highlights, table of contents, PDF pages, or your own reading reflection.
+
+## Problems This Helps With
+
+**You finished a book and feel you understood it, but cannot use it.**
+
+The skill should not summarize for you. It should first make you explain the idea in your own words, then critique that explanation, then give you a work or project exercise.
+
+**You face a difficult concept and do not know where to begin.**
+
+Tell the agent your purpose and current level. It can split the topic into small lessons, then adjust difficulty, examples, and direction from your feedback.
+
+**You want to bring reading into a real project.**
+
+Give it both the project task and the material. The agent should treat the task as the exercise and find the most relevant parts of the material.
+
+**You want to preserve a method without freezing it too early.**
+
+Methods, SOPs, prompts, or skill ideas stay as candidates until repeated practice shows they are actually useful.
+
+Do not use it as a generic summarizer.
 
 ## Agent's First Questions
 
@@ -80,35 +103,6 @@ After material is provided, the agent should not summarize first. It should ask:
 1. Why are you reading this? What real question does it serve?
 2. What is the material scope: whole book, chapter, highlights, notes, PDF pages, or concept?
 3. What output do you want: understanding check, chapter learning, transfer exercise, project material, reading card, serial lesson, or method candidate?
-
-## What It Does
-
-- Starts from the real task or question behind the reading.
-- Uses active recall and teach-back before giving full explanations when feasible.
-- Separates source claims, AI interpretation, user judgment, and transferable method.
-- Turns real work into the practice exercise when possible.
-- Supports Mentor, Digital Apprentice, and Observer postures.
-- Provides lightweight Learning Session Record and Learning Workspace structures.
-- Offers SQ3R and Cornell-style micro-patterns for active reading and review notes.
-- Uses real-work research as a practice anchor through decision questions, hypothesis trees, evidence plans, method lenses, and observer recommendations.
-- Turns Observer recommendations into scoped reading prescriptions: observed gap -> narrow reading target -> follow-up practice.
-- Supports feedback-driven serial lessons: previous feedback -> next lesson strategy -> mastery checks -> remedial micro-lesson -> stage review.
-- Keeps candidate methods, SOPs, prompts, and skills behind validation gaps instead of promoting them after one session.
-
-## When To Use
-
-Use this skill when you want help with:
-
-- reading a book, chapter, article, PDF, EPUB, course note, or highlight set;
-- understanding a concept you can recognize but cannot use;
-- Feynman-style explanation checks, active recall, or blank-paper reconstruction;
-- turning reading into a project exercise, method candidate, SOP, prompt, or skill candidate;
-- turning a business or research topic into a decision question, hypothesis tree, evidence plan, and practice loop;
-- maintaining a long-running learning workspace with learning records and next-practice steps;
-- continuing a sequence of lessons based on the user's previous feedback and mastery checks;
-- handing off from learning critique to real execution only after the problem is well defined.
-
-Do not use it as a generic summarizer.
 
 ## Material Incompleteness Boundary
 
@@ -133,9 +127,9 @@ Manual installation:
 
 See [PRIVACY.md](PRIVACY.md) for the local-only privacy boundary.
 
-## Public Version Boundary
+## What You Get In The Public Version
 
-This public version keeps the general learning workflow: active recall, AI critique, transfer practice, serial lessons, learning feedback, and method candidates.
+The public version already includes the core learning workflow: active recall, AI critique, transfer practice, serial lessons, learning feedback, and method candidates.
 
 It does not include private BP-Wiki project paths, dashboards, private learning logs, business project examples, connector settings, internal Runtime governance, secrets, account traces, or non-public knowledge.
 

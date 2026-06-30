@@ -7,6 +7,7 @@
 - Added material entry flow for WeRead, PDF / EPUB, finished books, concepts, and topic-only serial learning.
 - Added `USAGE.zh-CN.md` with copy-ready Chinese prompt recipes and material incompleteness boundaries.
 - Moved the Obsidian plugin explanation into an optional companion section so Obsidian is not presented as required.
+- Tightened the public writing style around real user problems, reducing feature-list and process-heavy wording.
 - Kept this as a documentation-only public release; core Skill behavior was not changed.
 
 ## 2026-06-30 - Feedback-Driven Serial Lesson Adapter

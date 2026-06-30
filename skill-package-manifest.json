@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "9d573b7a3e3b2ffb89d6a9c44c0ae71b9d17a46c0083fff00fd0686ee85720e8"
+      "sha256": "efe1f477ce6ba4101b41e4fe46db06afe775e799f5a619f416471ec585698549"
     },
     {
       "path": "LICENSE",
@@ -61,19 +61,19 @@
     },
     {
       "path": "README.md",
-      "sha256": "a4cd2b397df5aca0e59a1e7ca6ec8484d79903b422dac05f59f986a9450a1d07"
+      "sha256": "ae30a8b80d8a1f079984ec3bcb495bf02cb54ff052075097dc76018067d62d56"
     },
     {
       "path": "README.en.md",
-      "sha256": "f7c890821de3b12946d57c87a1f326cd179699e4ce2f482f7a80964208b9c0d7"
+      "sha256": "b1d44bb488ed11cd943fabe78a099d212ea9ebb271e8501546030d690cdd7bb2"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "f8c70db00fe1d9c589b0099f1b6f679dd0c64ccb51f938364b4fe494378720f9"
+      "sha256": "08e3a94a98bb48556ff8d8b3f1087442784d375a082874d46ee2e27c05f91581"
     },
     {
       "path": "USAGE.zh-CN.md",
-      "sha256": "4edb3d9a6a76b115f03c842d6a7d9ca769d4d6de63b4f7c7f0bd34789aff9328"
+      "sha256": "3fa08e1bfc8af6b8b79cc4858942250f888251dea1b0ce9eee4534e07ada3e05"
     },
     {
       "path": "SKILL.md",
