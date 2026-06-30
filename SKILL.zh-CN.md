@@ -528,6 +528,274 @@ observer_note:
 - 不从学习笔记直接写正式 Claims、Methods、SOPs 或 Skills。
 - 工作区笔记属于学习状态和实践材料；未经复核，不要转成正式方法、SOP 或 Skill。
 
+## 可选连续课程适配器
+
+只有当长期学习任务变成一组连续课程、文章或练习笔记时，才启用这个适配器。
+
+触发条件：
+
+- 用户想系统学习一个主题；
+- 用户要求继续下一课或下一篇；
+- 用户要求基于上一篇反馈生成下一课；
+- 同一主题跨多次学习会话；
+- 已有学习工作区，并且课程排序能降低摩擦。
+
+跳过条件：
+
+- 用户只要一次性总结或快速问答；
+- 真实项目应该直接作为练习场；
+- 用户明确要求直接执行；
+- 没有可复用学习增量；
+- 生成课程会耽误时效性任务。
+
+推荐课程工作区：
+
+```text
+<Workspace>/<Learning_Project>/
+  workbench/
+    LEARN-LOG.md
+    learning-records/
+    lessons/
+      00-Learning-Plan.md
+      01.md
+      02.md
+      03.md
+    reference/
+```
+
+规则：
+
+- 优先使用已有学习工作区、学习日志或 lesson 文件夹。
+- 不创建新的顶层学习系统。
+- 每一课都要服务学习 mission 或真实任务。
+- 真实项目练习仍然优先于人工课程推进。
+
+### 课程反馈提取
+
+生成下一课前，先读取最近一课，只提取真实用户反馈。
+
+```yaml
+lesson_feedback_extraction:
+  latest_lesson_ref: ""
+  feedback_section_found: true | false
+  template_lines_ignored: true
+  user_feedback:
+    understood:
+      - ""
+    confused:
+      - ""
+    wants_expand:
+      - ""
+    real_task_connection:
+      - ""
+  feedback_quality: none | thin | useful | strong
+  based_on_visible_context: true | false
+```
+
+规则：
+
+- 忽略默认反馈提示行。
+- 只有用户自己补写的内容算反馈。
+- 如果没有反馈，先向用户要反馈，再继续。
+- 如果用户明确要求先继续，允许继续，但标记 `based_on_visible_context: true`。
+- 选择下一课前，用 3-5 条概括用户当前状态。
+
+### 下一课 ZPD 路由
+
+根据反馈选择下一步课程策略。
+
+```yaml
+next_lesson_selection:
+  feedback_signal:
+    - confused
+    - bored
+    - application_question
+    - mastered
+    - specific_question
+    - thin_feedback
+  next_move:
+    - lower_abstraction
+    - add_concrete_examples
+    - connect_real_task
+    - add_case_and_usage
+    - increase_density
+    - answer_question_first
+    - small_step_continue
+  next_lesson_or_practice: ""
+```
+
+映射：
+
+- `confused`：降低抽象度，增加具体例子，放慢节奏。
+- `bored`：换角度，并连接用户真实问题。
+- `application_question`：增加案例、判断方法和使用场景。
+- `mastered`：提高概念密度或进入下一层。
+- `specific_question`：先回答具体问题，再继续主线。
+- `thin_feedback`：保持当前难度，小步推进。
+
+规则：
+
+- 用户不能重构核心概念时，保持导师模式。
+- 用户能重构且能应用时，只有确认问题合约后才切到数字员工执行。
+- 不从模糊理解直接跳到重执行任务。
+
+### 课程文章模板
+
+仅在连续课程模式下使用。
+
+```markdown
+# {序号} | {标题}
+
+## 这一篇要解决的问题
+
+## 先做一个小回忆
+
+## 正文
+
+## 3 个掌握检查
+
+## 你的回答与反馈
+
+## 小结
+
+## 下一篇预告
+
+---
+
+## 学习反馈
+
+你可以写：
+1. 哪里看懂了？
+2. 哪里没看懂？
+3. 哪个地方想展开？
+4. 这个主题和你的真实问题有什么关系？
+
+请写在这行下面：
+```
+
+规则：
+
+- 可做重构或反馈时，不生成被动文章。
+- 包含掌握检查，但不要做成高摩擦考试。
+- 每课足够短，形成一个可感知的小胜利。
+- 如果课程绑定真实项目，加入一个项目迁移问题。
+
+### 补充小课
+
+当用户似乎理解概念但应用失败，或某个误解阻断迁移时使用。
+
+```yaml
+remedial_micro_lesson:
+  trigger:
+    - concept_understood_but_application_failed
+    - repeated_wrong_example
+    - cannot_transfer_to_real_task
+    - misconception_detected
+  blocked_concept: ""
+  repair_strategy:
+    - pause_main_sequence
+    - generate_one_micro_lesson
+    - use_simpler_example
+    - require_user_reanswer
+  return_condition:
+    - user_can_apply_to_toy_case
+    - user_can_apply_to_real_task
+```
+
+规则：
+
+- 一次补充小课只修一个最小阻塞点。
+- 修阻塞点时不要引入新概念。
+- 只有用户能重新应用后，才回到主线。
+- 可行时优先用用户真实项目做应用测试。
+
+### 课程归档
+
+归档学习增量，不归档完整聊天。
+
+```yaml
+lesson_archive:
+  lesson_ref: ""
+  user_answer_summary: ""
+  mentor_feedback_summary: ""
+  misunderstanding_or_gap: ""
+  application_result: ""
+  next_edge: ""
+  writeback_target: learning_log | learning_record | lesson_note | no_writeback
+```
+
+规则：
+
+- 记录学习状态变化，不记录完整聊天。
+- 不把私有项目细节、账号痕迹、本地路径、连接器配置和 secrets 放进共享记录。
+- 课程归档可以影响 Learning Record 或 Learning Session Record，但不能直接 promoted 为 Method / SOP / Skill。
+
+### 主题学习画像 Lite
+
+只作为主题范围内、有证据支撑的教学辅助。
+
+```yaml
+topic_learning_profile_lite:
+  topic_scope: ""
+  confirmed_patterns:
+    strengths:
+      - ""
+    recurring_blind_spots:
+      - ""
+    preferred_examples:
+      - ""
+    teaching_implications:
+      - ""
+  evidence_basis:
+    - learning_record_ref: ""
+  status: candidate | confirmed | superseded
+```
+
+规则：
+
+- 至少 3 条 Learning Records 才能把某个模式标为 `confirmed`。
+- 不记录人格判断。
+- 不记录私人身份、情绪、医疗、财务或职场敏感细节，除非明确需要且得到允许。
+- 不写“用户就是某类人”。
+- 单条反馈不能变成长期学习画像。
+
+### 阶段学习复盘
+
+只在有意义的学习序列之后使用，不每课都复盘。
+
+```yaml
+learning_stage_review:
+  topic: ""
+  period: ""
+  lessons_completed:
+    - ""
+  demonstrated_progress:
+    - ""
+  persistent_gaps:
+    - ""
+  recurring_patterns:
+    - ""
+  transfer_evidence:
+    - ""
+  linked_topics_or_books:
+    - ""
+  next_stage: continue | pause | shift_to_project | consolidate | archive
+```
+
+触发条件：
+
+- 一本书完成；
+- 一个课程阶段完成；
+- 3-5 节连续课程完成；
+- 用户要求阶段复盘；
+- 学习序列即将转入真实项目执行。
+
+规则：
+
+- 不在每课后生成大段阶段复盘。
+- 阶段复盘总结有证据的学习变化，不写泛泛鼓励。
+- 可以推荐下一步阅读或练习，但不能直接 promoted 为方法或 Skill。
+
 ## Learning Session Record
 
 当一轮阅读、教学、批改、迁移或实践产生可复用学习增量时，记录轻量 session record。

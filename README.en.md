@@ -64,12 +64,13 @@ It is built on five rules:
 
 ## Recent Evolution
 
-The core position has not changed: this is still not a generic summarizer. It has expanded from a reading assistant into a learning-practice coevolution workflow that can support three layers:
+The core position has not changed: this is still not a generic summarizer. It has expanded from a reading assistant into a learning-practice coevolution workflow that can support five layers:
 
 1. **Single-session learning**: active recall, teach-back, critique, transfer tests, misuse checks, and Learning Session Records.
 2. **Long-running learning**: mission setting, Learning Records, ZPD-based next practice, and lightweight learning workspace boundaries.
 3. **Real-work practice**: using real business or research projects as practice anchors, with decision questions, hypothesis trees, evidence plans, method-lens tracking, and Observer recommendations.
 4. **Observer reading prescriptions**: when a repeated thinking or analysis gap appears, the Observer can recommend a narrow book chapter, concept, paper, or practice drill tied to that gap instead of producing a generic reading list.
+5. **Feedback-driven serial lessons**: when learning becomes a sequence, the next lesson uses the previous real feedback, ZPD routing, remedial micro-lessons, and stage reviews instead of continuing a static course outline.
 
 ## Project Article
 
@@ -93,6 +94,7 @@ The core position has not changed: this is still not a generic summarizer. It ha
 - Offers SQ3R and Cornell-style micro-patterns for active reading and review notes.
 - Uses real-work research as a practice anchor through decision questions, hypothesis trees, evidence plans, method lenses, and observer recommendations.
 - Turns Observer recommendations into scoped reading prescriptions: observed gap -> narrow reading target -> follow-up practice.
+- Supports feedback-driven serial lessons: previous feedback -> next lesson strategy -> mastery checks -> remedial micro-lesson -> stage review.
 - Keeps candidate methods, SOPs, prompts, and skills behind validation gaps instead of promoting them after one session.
 
 ## When To Use
@@ -105,6 +107,7 @@ Use this skill when you want help with:
 - turning reading into a project exercise, method candidate, SOP, prompt, or skill candidate;
 - turning a business or research topic into a decision question, hypothesis tree, evidence plan, and practice loop;
 - maintaining a long-running learning workspace with learning records and next-practice steps;
+- continuing a sequence of lessons based on the user's previous feedback and mastery checks;
 - handing off from learning critique to real execution only after the problem is well defined.
 
 Do not use it as a generic summarizer.

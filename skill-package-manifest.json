@@ -1,12 +1,12 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-20-obsidian-plugin-community-candidate",
+  "version": "2026-06-30-feedback-driven-serial-lesson-adapter",
   "name": "Learning Practice Coevolution + Learning Practice Companion",
   "owner": "Jie Huang",
   "license": "MIT",
   "spdx_license_id": "MIT",
   "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
-  "generated_at": "2026-06-22",
+  "generated_at": "2026-06-30",
   "default_language": "en",
   "languages": [
     "en",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "72aa23f5c0a4472bfceb03fa99937e6b0c9866f51392a7bf5a60ab07753b46a2"
+      "sha256": "37235df703a4282cdc15241988056796a59a3494ca22f0e270679b20591e7458"
     },
     {
       "path": "LICENSE",
@@ -61,27 +61,27 @@
     },
     {
       "path": "README.md",
-      "sha256": "0a5e8f91500912d91b51dc53d06ffc8dfe90eeff6a7b0dd619086b643f482d1d"
+      "sha256": "5ae2efce38b620d222f488b4311e8fd8bf52b6f1eb814b0335eeec348e1368a3"
     },
     {
       "path": "README.en.md",
-      "sha256": "33b81b9d2b789c1ffb9d8e408da4204a7bfe8de810c075bd7ce16fc1242db3e7"
+      "sha256": "e58e5124be26a352bfd98811819da6ec71d64fe5cbced5a451b1c114a5226926"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "c13c57a0dcf52b635bd7fc1b953d982feed57eac81171019298948e659e1c913"
+      "sha256": "ec17a8e79a9e0c67d7618fc30dd46a27337d15ad907f7889d2bb3962ddd58eb9"
     },
     {
       "path": "SKILL.md",
-      "sha256": "ebd0362b4e31e03a02db75e288c2b411d6e5865a202a47b4e0ee3c507b39c9b6"
+      "sha256": "dab38053b6d31d9b3c021dde6c57e40299b5907b6fb466e2d701573e36eeca57"
     },
     {
       "path": "SKILL.en.md",
-      "sha256": "ebd0362b4e31e03a02db75e288c2b411d6e5865a202a47b4e0ee3c507b39c9b6"
+      "sha256": "dab38053b6d31d9b3c021dde6c57e40299b5907b6fb466e2d701573e36eeca57"
     },
     {
       "path": "SKILL.zh-CN.md",
-      "sha256": "9f43576ac71fc0c00fe249692405cc5d9923434d37a424553330678dda9f0ffc"
+      "sha256": "71de785e2cbcb83acebbab67e885efed940684777ae1eeabd0e8619415015ce2"
     },
     {
       "path": "SUPPORT.md",
@@ -89,7 +89,7 @@
     },
     {
       "path": "agents/openai.yaml",
-      "sha256": "e3ea5edc3964364d13ca0aba08fbc5c068a468170bf98140223cccde47c98ee1"
+      "sha256": "02929371062d2c8083a7ab83cc417f7cefa6d1de8490a473f44aeb6493b38ef9"
     },
     {
       "path": "assets/alipay-jie-qr.png",

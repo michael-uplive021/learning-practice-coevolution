@@ -1,4 +1,4 @@
 interface:
   display_name: "学习实践共演助手"
-  short_description: "不是总结器；把材料、复述、批改、真实任务练习和观察沉淀串成可复用能力"
-  default_prompt: "Use $learning-practice-coevolution to turn this book, concept, or real project into active recall, critique, transfer practice, and a clear next learning step."
+  short_description: "不是总结器；把材料、复述、批改、真实任务练习、反馈驱动课程和观察沉淀串成可复用能力"
+  default_prompt: "Use $learning-practice-coevolution to turn this book, concept, lesson sequence, or real project into active recall, critique, transfer practice, and a clear next learning step."

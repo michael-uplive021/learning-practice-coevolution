@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-30 - Feedback-Driven Serial Lesson Adapter
+
+- Added a public-safe Serial Lesson Adapter for long-running lesson or article sequences.
+- Added feedback extraction rules so the next lesson uses real user feedback instead of template prompt lines.
+- Added ZPD-based next lesson routing, remedial micro-lessons, lesson archives, topic learning profiles, and stage reviews.
+- Updated README files and OpenAI display metadata to describe feedback-driven serial lessons.
+- Kept the public version host-neutral: no private paths, connector configuration, dashboard rules, private project examples, or proprietary runtime metadata.
+
 ## 2026-06-20 - Obsidian Plugin Community Candidate
 
 - Added the first local-first Obsidian plugin implementation: `Learning Practice Companion`.

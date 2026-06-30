@@ -449,7 +449,7 @@ Promote a reusable method or skill only after repeated use, visible transfer, an
 
 Use business research as a practice anchor when the user's real work involves market research, country research, channel strategy, competitive intelligence, hypothesis trees, problem definition, or evidence planning.
 
-This is a lightweight overlay on the existing Mentor / Digital Apprentice / Observer postures. It is not a new research system, not a Desk Research Pack, and not a replacement for the host system's Business Loop, Country Intelligence Pack, DataSource Layer, Evidence Fit, or Judgment Gate.
+This is a lightweight overlay on the existing Mentor / Digital Apprentice / Observer postures. It is not a new research system and not a replacement for the user's domain workflow, evidence checks, or decision process.
 
 Use when:
 
@@ -528,7 +528,7 @@ Rules:
 - Do not treat an outline as a conclusion.
 - Do not import STORM's full report-generation flow into the host runtime.
 - This gate only defines the question, perspectives, hypothesis tree, counter-hypotheses, and evidence plan.
-- Research execution still follows the host Business Loop, Country Intelligence Pack, DataSource Layer, Evidence Fit, and Judgment Gate.
+- Research execution still follows the user's normal domain workflow, evidence checks, and decision process.
 
 ## Optional Perspective Reconstruction Check
 
@@ -661,14 +661,14 @@ Boundaries:
 - Do not write a formal Skill, SOP, Method, Evidence, Claim, or Judgment from one recommendation.
 - Keep recommendations in the project Workbench, Learning Session Record, or learning log until the host system promotes them.
 
-## Dashboard Today Surface Boundary
+## Recommendation Surface Boundary
 
-If the host system has a daily dashboard, learning observer recommendations may be surfaced as an action queue, not as an informational feed.
+If the host system has a dashboard, review queue, task list, or learning inbox, learning observer recommendations may be surfaced as an action queue, not as passive content.
 
 Rules:
 
 - Surface only recommendations that already exist in project Workbench, LEARN-LOG, or Learning Session Record.
-- Do not let nightly maintenance invent new learning recommendations.
+- Do not let automation invent new learning recommendations.
 - Show at most 3 items.
 - Prioritize high-impact project gaps, repeated blind spots, method lenses used but not mastered, and current priority subjects.
 - Each item should show project, observed gap, why it matters, suggested reading or practice, and an action: keep, defer, or discard.
@@ -689,25 +689,293 @@ Trigger when at least one is true:
 
 Do not use it for one-off reading, quick Q&A, generic summaries, or sessions with no reusable learning delta.
 
-Preferred host-system mapping:
+Preferred workspace shape:
 
 ```text
-02_Projects/Active/<Learning_Project>/
-  00_Project.md or MISSION.md
-  02_Workbench/
+<Workspace>/<Learning_Project>/
+  MISSION.md
+  workbench/
     LEARN-LOG.md
     learning-records/
     lessons/
     reference/
-  03_Notes/
+  notes/
 ```
 
 Rules:
 
-- Prefer existing project Workbench / Learning Log before creating new files.
+- Prefer existing project notes, workbench, or learning log before creating new files.
 - Do not create a new top-level learning system by default.
 - Do not write formal Claims, Methods, SOPs, or Skills directly from workspace notes.
 - Workspace notes are learning state and practice material unless promoted through host governance.
+
+## Optional Serial Lesson Adapter
+
+Use this adapter only when a long-running learning task becomes a sequence of lessons, articles, or practice notes.
+
+Trigger when at least one is true:
+
+- the user wants to systematically learn a topic;
+- the user asks for the next lesson or next article;
+- the user asks to generate the next lesson based on previous feedback;
+- the same topic spans multiple learning sessions;
+- a learning workspace already exists and lesson sequencing reduces friction.
+
+Skip when:
+
+- the user asks for a one-off summary or quick Q&A;
+- a real project should be used directly as the practice field;
+- the user explicitly asks for direct execution;
+- no reusable learning delta exists;
+- creating a lesson would delay time-critical delivery.
+
+Preferred lesson workspace:
+
+```text
+<Workspace>/<Learning_Project>/
+  workbench/
+    LEARN-LOG.md
+    learning-records/
+    lessons/
+      00-Learning-Plan.md
+      01.md
+      02.md
+      03.md
+    reference/
+```
+
+Rules:
+
+- Prefer an existing learning workspace, learning log, or lesson folder before creating new files.
+- Do not create a new top-level learning system.
+- Each lesson should serve the learning mission or a real task.
+- Real project practice remains preferred over artificial course progression.
+
+### Lesson Feedback Extraction
+
+Before generating the next lesson, read the latest lesson and extract only real user feedback.
+
+```yaml
+lesson_feedback_extraction:
+  latest_lesson_ref: ""
+  feedback_section_found: true | false
+  template_lines_ignored: true
+  user_feedback:
+    understood:
+      - ""
+    confused:
+      - ""
+    wants_expand:
+      - ""
+    real_task_connection:
+      - ""
+  feedback_quality: none | thin | useful | strong
+  based_on_visible_context: true | false
+```
+
+Rules:
+
+- Ignore default feedback prompt lines.
+- Only user-added text counts as feedback.
+- If no feedback exists, ask the user for feedback before continuing.
+- If the user explicitly asks to continue anyway, proceed but mark `based_on_visible_context: true`.
+- Summarize user state in 3-5 bullets before choosing the next lesson.
+
+### Next Lesson ZPD Router
+
+Use feedback to choose the next lesson strategy.
+
+```yaml
+next_lesson_selection:
+  feedback_signal:
+    - confused
+    - bored
+    - application_question
+    - mastered
+    - specific_question
+    - thin_feedback
+  next_move:
+    - lower_abstraction
+    - add_concrete_examples
+    - connect_real_task
+    - add_case_and_usage
+    - increase_density
+    - answer_question_first
+    - small_step_continue
+  next_lesson_or_practice: ""
+```
+
+Mapping:
+
+- `confused`: lower abstraction, add concrete examples, slow down.
+- `bored`: change angle and connect to the user's real problem.
+- `application_question`: add cases, judgment methods, and use scenarios.
+- `mastered`: increase concept density or move to the next layer.
+- `specific_question`: answer the question first, then continue.
+- `thin_feedback`: keep current difficulty and move one small step.
+
+Rules:
+
+- If the user cannot reconstruct the core concept, stay in Mentor mode.
+- If the user can reconstruct and apply, switch to Digital Apprentice only after problem contract confirmation.
+- Do not jump from vague understanding to implementation-heavy work.
+
+### Lesson Article Template
+
+Use only in Serial Lesson Adapter mode.
+
+```markdown
+# {Number} | {Title}
+
+## Problem This Lesson Solves
+
+## Quick Recall
+
+## Main Lesson
+
+## 3 Mastery Checks
+
+## Your Answer And Feedback
+
+## Summary
+
+## Next Lesson Preview
+
+---
+
+## Learning Feedback
+
+You can write:
+1. What did you understand?
+2. What is still unclear?
+3. What should be expanded?
+4. How does this topic connect to your real problem?
+
+Write below this line:
+```
+
+Rules:
+
+- Do not generate a passive article when reconstruction or feedback is feasible.
+- Include mastery checks, but do not make them high-friction exams.
+- Keep each lesson short enough to create one tangible win.
+- If the lesson is tied to a real project, include one project transfer prompt.
+
+### Remedial Micro-Lesson
+
+Use when the user appears to understand the concept but fails application, or when a misconception blocks transfer.
+
+```yaml
+remedial_micro_lesson:
+  trigger:
+    - concept_understood_but_application_failed
+    - repeated_wrong_example
+    - cannot_transfer_to_real_task
+    - misconception_detected
+  blocked_concept: ""
+  repair_strategy:
+    - pause_main_sequence
+    - generate_one_micro_lesson
+    - use_simpler_example
+    - require_user_reanswer
+  return_condition:
+    - user_can_apply_to_toy_case
+    - user_can_apply_to_real_task
+```
+
+Rules:
+
+- A remedial lesson repairs one smallest blocking point.
+- Do not introduce new concepts while repairing the block.
+- Return to the main sequence only after the user can reapply the idea.
+- Prefer the user's real project as the application test when available.
+
+### Lesson Archive
+
+Archive learning deltas, not full transcripts.
+
+```yaml
+lesson_archive:
+  lesson_ref: ""
+  user_answer_summary: ""
+  mentor_feedback_summary: ""
+  misunderstanding_or_gap: ""
+  application_result: ""
+  next_edge: ""
+  writeback_target: learning_log | learning_record | lesson_note | no_writeback
+```
+
+Rules:
+
+- Record learning state changes, not the full chat.
+- Keep private project details, account traces, local paths, connector configuration, and secrets out of shared records.
+- Lesson archive may inform Learning Record or Learning Session Record, but cannot promote Method / SOP / Skill by itself.
+
+### Topic Learning Profile Lite
+
+Use only as a topic-scoped, evidence-backed teaching aid.
+
+```yaml
+topic_learning_profile_lite:
+  topic_scope: ""
+  confirmed_patterns:
+    strengths:
+      - ""
+    recurring_blind_spots:
+      - ""
+    preferred_examples:
+      - ""
+    teaching_implications:
+      - ""
+  evidence_basis:
+    - learning_record_ref: ""
+  status: candidate | confirmed | superseded
+```
+
+Rules:
+
+- At least 3 Learning Records are required before marking a pattern `confirmed`.
+- Do not record personality judgments.
+- Do not record private identity, emotional, medical, financial, or workplace-sensitive details unless explicitly required and approved.
+- Do not write "the user is the kind of person who...".
+- A single feedback item cannot become a long-term learner profile.
+
+### Learning Stage Review
+
+Use after a meaningful sequence, not every session.
+
+```yaml
+learning_stage_review:
+  topic: ""
+  period: ""
+  lessons_completed:
+    - ""
+  demonstrated_progress:
+    - ""
+  persistent_gaps:
+    - ""
+  recurring_patterns:
+    - ""
+  transfer_evidence:
+    - ""
+  linked_topics_or_books:
+    - ""
+  next_stage: continue | pause | shift_to_project | consolidate | archive
+```
+
+Trigger when:
+
+- a book is completed;
+- a course phase is completed;
+- 3-5 serial lessons are completed;
+- the user asks for stage review;
+- the learning sequence is about to shift into real project execution.
+
+Rules:
+
+- Do not generate large stage reviews after every lesson.
+- Stage review summarizes evidence-backed learning changes, not generic praise.
+- It may recommend next reading or practice, but not promote a method or Skill directly.
 
 ## Mission Gate
 
