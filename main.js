@@ -1,10 +1,10 @@
 const { Notice, Plugin, normalizePath } = require("obsidian");
 
-const PLUGIN_ROOT = "Learning Practice Companion";
+const PLUGIN_ROOT = "Learning Practice Coevolution";
 
-module.exports = class LearningPracticeCompanionPlugin extends Plugin {
+module.exports = class LearningPracticeCoevolutionPlugin extends Plugin {
   async onload() {
-    this.addRibbonIcon("book-open", "Learning Practice Companion", () => this.openHome());
+    this.addRibbonIcon("book-open", "Learning Practice Coevolution", () => this.openHome());
 
     this.addCommand({
       id: "open-learning-home",
@@ -115,9 +115,9 @@ function formatDateTime(date) {
 }
 
 function homeContent() {
-  return `# Learning Practice Companion
+  return `# Learning Practice Coevolution
 
-Learning Practice Companion is a local-first workflow companion for active recall, AI critique, transfer practice, and learning session records.
+Learning Practice Coevolution is a local-first Obsidian workflow for active recall, AI critique, transfer practice, and learning session records.
 
 It pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, or make network requests.
 

@@ -1,7 +1,7 @@
 {
-  "id": "learning-practice-companion",
-  "name": "Learning Practice Companion",
-  "version": "0.1.0",
+  "id": "learning-practice-coevolution",
+  "name": "Learning Practice Coevolution",
+  "version": "0.1.1",
   "minAppVersion": "1.8.0",
   "description": "Local-first active recall, AI critique, transfer practice, and learning session workflows.",
   "author": "Jie Huang",

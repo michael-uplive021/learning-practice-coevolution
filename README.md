@@ -65,7 +65,7 @@ Reader + Knowledge Base + Agent + this Skill
 | Do I need Obsidian? | No. Obsidian is only one possible workspace. |
 | Do I need a knowledge base? | No. You can paste material directly. |
 | What counts as a reader? | WeRead, PDF reader, EPUB reader, browser, or any reading app. |
-| Is the Obsidian plugin required? | No. It is an optional companion for inserting prompts and records inside Obsidian. |
+| Is the Obsidian plugin required? | No. It is optional. Obsidian users can install it from Community plugins after review, or manually from GitHub while review is pending. |
 
 ## How Do I Give Material To The Agent?
 
@@ -154,13 +154,17 @@ The agent should not pretend it has read the whole book.
 - If only the title is provided, it should ask for a table of contents, chapter excerpt, notes, or user question.
 - If a PDF is only partially readable, it should mark the gap and work only with visible content.
 
-## Optional Obsidian Companion Plugin
+## Install In Obsidian
 
-This repository also contains `Learning Practice Companion`, a local-first Obsidian plugin for active recall, AI critique, transfer practice, and learning session records.
+After the community review is approved, you can install this workflow directly from Obsidian:
 
-The plugin is optional. It pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, collect telemetry, or make network requests.
+1. Open Obsidian Settings.
+2. Go to Community plugins and turn off Restricted mode.
+3. Click Browse.
+4. Search for `Learning Practice Coevolution`.
+5. Click Install, then Enable.
 
-Plugin commands:
+After enabling the plugin, open the command palette and search for `Learning Practice`. You can:
 
 - Start learning session
 - Insert reconstruction prompt
@@ -168,11 +172,13 @@ Plugin commands:
 - Insert transfer and misuse test
 - Close as observer note
 
-Manual installation:
+While the community review is still pending, you can install it manually from GitHub:
 
-1. Download `manifest.json`, `main.js`, and `styles.css` from a GitHub release.
-2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-companion/`.
-3. Restart Obsidian and enable `Learning Practice Companion` in Community plugins.
+1. Download `manifest.json`, `main.js`, and `styles.css` from release `0.1.1`.
+2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`.
+3. Restart Obsidian and enable `Learning Practice Coevolution` in Community plugins.
+
+The Obsidian plugin is local-first. It pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, collect telemetry, or make network requests.
 
 See [PRIVACY.md](PRIVACY.md) for the local-only privacy boundary.
 

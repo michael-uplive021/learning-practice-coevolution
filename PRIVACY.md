@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Learning Practice Companion version `0.1.0` runs locally inside your Obsidian vault.
+Learning Practice Coevolution version `0.1.1` runs locally inside your Obsidian vault.
 
 ## Data Collection
 
@@ -8,7 +8,7 @@ The plugin does not collect, store, transmit, or sell personal data.
 
 ## Network Use
 
-Version `0.1.0` does not make network requests.
+Version `0.1.1` does not make network requests.
 
 ## Telemetry
 
@@ -22,6 +22,6 @@ It can generate prompts that you may copy into Copilot or another AI tool. Those
 
 ## Local Files
 
-The plugin creates Markdown files and folders inside the current Obsidian vault under `Learning Practice Companion/`.
+The plugin creates Markdown files and folders inside the current Obsidian vault under `Learning Practice Coevolution/`.
 
 It does not read your whole vault, upload notes, or promote notes into formal knowledge assets automatically.

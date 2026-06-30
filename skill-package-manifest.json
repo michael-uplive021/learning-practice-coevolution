@@ -1,7 +1,7 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-30-public-readme-usage-flow",
-  "name": "Learning Practice Coevolution + Learning Practice Companion",
+  "version": "2026-06-30-obsidian-community-plugin-submission",
+  "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
   "spdx_license_id": "MIT",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "efe1f477ce6ba4101b41e4fe46db06afe775e799f5a619f416471ec585698549"
+      "sha256": "8afd2d7a0080471bb09e61ad15649c1d67d426b776b40dd21b356a50bf0f03ea"
     },
     {
       "path": "LICENSE",
@@ -61,15 +61,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "ae30a8b80d8a1f079984ec3bcb495bf02cb54ff052075097dc76018067d62d56"
+      "sha256": "296f926c9bd036f8c5f1b0ae7125e305c925a7a20ab04939e4f113d55f7efb68"
     },
     {
       "path": "README.en.md",
-      "sha256": "b1d44bb488ed11cd943fabe78a099d212ea9ebb271e8501546030d690cdd7bb2"
+      "sha256": "551c4bca839d9a732f040398daeed85efefa5889f04e4de92a3ef36ac554c5d9"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "08e3a94a98bb48556ff8d8b3f1087442784d375a082874d46ee2e27c05f91581"
+      "sha256": "cfd69e2e5ef1f4ca96ec82e31c34f8a8e48047a30c245e302d60d5a5b4a92801"
     },
     {
       "path": "USAGE.zh-CN.md",
@@ -105,23 +105,23 @@
     },
     {
       "path": "main.js",
-      "sha256": "985a7730dc73bb3ca650db12f518baa1be8ed5d60bafe059206ac3f65952a5ec"
+      "sha256": "0e06980122d2a356332ceeaac24cc3198e63b0f8be0cabd46684efb5583fe701"
     },
     {
       "path": "manifest.json",
-      "sha256": "fb3ece601feda38f25e1e7eb2c14e68d12493ff1923b5933e7fae9d2b2fff160"
+      "sha256": "6e21e3b44e063e6fcbbbdbb900ba0815f502cf42316d103a6c7eaed549b4456c"
     },
     {
       "path": "styles.css",
-      "sha256": "70e781156349819565060ee9157c022c932e2b3f2b16ee0d66a25aebcc0bd9fc"
+      "sha256": "394d5e2e9690ab19ce31280863993ac378691da5e5b85dffd86dc49151b5492d"
     },
     {
       "path": "versions.json",
-      "sha256": "1a3685b45ca2cf628611a8a3c182eef0ce19cc014eb0dff7a892bece52655b51"
+      "sha256": "c1fcf4db989d5156da9d132252016c8dd5d83a34039d11f61924b5f3777d13ff"
     },
     {
       "path": "PRIVACY.md",
-      "sha256": "a2829ddb6f7e478c7486ca43f33d992eb729261f00e0f6a7a8cf3f29dc338fea"
+      "sha256": "13624e7b32761180735a6f9d2670d883b1c2fa72783aeff372767e9bae3a7e13"
     }
   ],
   "private_material_excluded": [

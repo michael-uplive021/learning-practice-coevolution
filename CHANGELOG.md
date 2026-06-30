@@ -1,12 +1,19 @@
 # Changelog
 
+## 2026-06-30 - Obsidian Community Plugin Submission
+
+- Renamed the Obsidian plugin surface from `Learning Practice Companion` to `Learning Practice Coevolution`.
+- Changed the plugin id from `learning-practice-companion` to `learning-practice-coevolution` before community listing.
+- Bumped the Obsidian plugin version to `0.1.1` and prepared release assets for community plugin installation.
+- Replaced the old optional companion section with Community plugins installation guidance and a temporary GitHub manual install path while review is pending.
+
 ## 2026-06-30 - Public README Usage Flow
 
 - Reworked the public README files as user onboarding pages instead of architecture-first pages.
 - Added explicit setup guidance: Agent and this Skill are required; Reader and Knowledge Base are optional.
 - Added material entry flow for WeRead, PDF / EPUB, finished books, concepts, and topic-only serial learning.
 - Added `USAGE.zh-CN.md` with copy-ready Chinese prompt recipes and material incompleteness boundaries.
-- Moved the Obsidian plugin explanation into an optional companion section so Obsidian is not presented as required.
+- Kept Obsidian as an optional workspace rather than a requirement.
 - Tightened the public writing style around real user problems, reducing feature-list and process-heavy wording.
 - Kept this as a documentation-only public release; core Skill behavior was not changed.
 

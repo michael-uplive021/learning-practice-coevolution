@@ -54,7 +54,7 @@ Agent + 本 Skill + 你提供的材料
 | 我需要 Obsidian 吗？ | 不需要。Obsidian 只是可选工作区。 |
 | 我需要知识库吗？ | 不需要。你直接粘贴材料也能用。 |
 | 阅读器是什么？ | 微信读书、PDF 阅读器、EPUB 阅读器、浏览器都可以。 |
-| 仓库里的 Obsidian 插件必须装吗？ | 不必须。它只是可选 companion，用来在 Obsidian 里插入学习提示和记录。 |
+| 仓库里的 Obsidian 插件必须装吗？ | 不必须。它是可选插件。社区审核通过后，Obsidian 用户可以直接从 Community plugins 安装；审核期间也可以从 GitHub 手动安装。 |
 
 ## 我该怎么把书给 Agent？
 
@@ -137,13 +137,17 @@ Agent 不应该假装读过整本书。
 - 只有书名：应该要求目录、章节摘录、笔记或你的问题。
 - PDF 只能部分读取：标出缺口，只基于可见内容工作。
 
-## 可选 Obsidian Companion 插件
+## 在 Obsidian 里安装
 
-本仓库也包含 `Learning Practice Companion`，一个 local-first 的 Obsidian 插件，用于主动回忆、AI 批改、迁移练习和 Learning Session Record。
+社区审核通过后，你可以直接在 Obsidian 里安装：
 
-插件是可选的。它适合配合 Copilot for Obsidian 使用，但不依赖 Copilot，不读取 Copilot 设置，不调用任何 AI API，不收集 telemetry，也不发起网络请求。
+1. 打开 Obsidian Settings。
+2. 进入 Community plugins，并关闭 Restricted mode。
+3. 点击 Browse。
+4. 搜索 `Learning Practice Coevolution`。
+5. 点击 Install，然后 Enable。
 
-插件命令：
+启用后，在命令面板里搜索 `Learning Practice`，可以使用这些命令：
 
 - Start learning session
 - Insert reconstruction prompt
@@ -151,11 +155,13 @@ Agent 不应该假装读过整本书。
 - Insert transfer and misuse test
 - Close as observer note
 
-手动安装：
+社区审核期间，也可以先从 GitHub 手动安装：
 
-1. 从 GitHub release 下载 `manifest.json`、`main.js` 和 `styles.css`。
-2. 放入 `<your-vault>/.obsidian/plugins/learning-practice-companion/`。
-3. 重启 Obsidian，并在 Community plugins 中启用 `Learning Practice Companion`。
+1. 从 release `0.1.1` 下载 `manifest.json`、`main.js` 和 `styles.css`。
+2. 放入 `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`。
+3. 重启 Obsidian，并在 Community plugins 中启用 `Learning Practice Coevolution`。
+
+这个 Obsidian 插件是 local-first。它适合配合 Copilot for Obsidian 使用，但不依赖 Copilot，不读取 Copilot 设置，不调用任何 AI API，不收集 telemetry，也不发起网络请求。
 
 local-only 隐私边界见 [PRIVACY.md](PRIVACY.md)。
 
