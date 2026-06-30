@@ -174,7 +174,7 @@ After enabling the plugin, open the command palette and search for `Learning Pra
 
 If Browse does not show the plugin yet, install it manually from GitHub:
 
-1. Download `manifest.json`, `main.js`, and `styles.css` from release `0.1.1`.
+1. Download `manifest.json`, `main.js`, and `styles.css` from release `0.1.2`.
 2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`.
 3. Restart Obsidian and enable `Learning Practice Coevolution` in Community plugins.
 

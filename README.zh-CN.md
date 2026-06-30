@@ -157,7 +157,7 @@ Agent 不应该假装读过整本书。
 
 如果 Browse 里暂时搜不到，也可以从 GitHub 手动安装：
 
-1. 从 release `0.1.1` 下载 `manifest.json`、`main.js` 和 `styles.css`。
+1. 从 release `0.1.2` 下载 `manifest.json`、`main.js` 和 `styles.css`。
 2. 放入 `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`。
 3. 重启 Obsidian，并在 Community plugins 中启用 `Learning Practice Coevolution`。
 

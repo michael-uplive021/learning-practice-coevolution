@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-30 - Obsidian Community Listing Copy Refresh
+
+- Bumped the Obsidian plugin version to `0.1.2` so the community listing and release assets carry the current installation guidance.
+- Updated the GitHub manual install fallback from release `0.1.1` to release `0.1.2`.
+- Kept plugin behavior unchanged; this is a listing and documentation alignment release.
+
 ## 2026-06-30 - Obsidian Community Plugin Submission
 
 - Renamed the Obsidian plugin surface from `Learning Practice Companion` to `Learning Practice Coevolution`.

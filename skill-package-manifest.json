@@ -1,6 +1,6 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-30-obsidian-community-plugin-listed",
+  "version": "2026-06-30-obsidian-community-plugin-listed-v012",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "5352f35bc2d0b880d2baf083bd149f332b70aaea89da8f3f8527153672eb65d8"
+      "sha256": "9b6ae30aeb7e12ecdc7159cb5f9fea0a57dcc62327c53618cfe3d11a60441437"
     },
     {
       "path": "LICENSE",
@@ -61,15 +61,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "22af9922243f3d156729337759408e6d6c9649e387c341349432af6cb793de57"
+      "sha256": "f748d2b2b5b417494427901fd0c206c3ed3f119853222b4e77291d8ee2c4a36c"
     },
     {
       "path": "README.en.md",
-      "sha256": "bcc2f1b31d0ad2dc6e4f9dd66cadfda3e4635acd4a272ca84944277b25b77d2f"
+      "sha256": "bdc80f8974448f30eeef62ea0635eb1fe556daf584874905540443c1c68ce3c1"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "aff22eb593127a0e754f54d15046dafa1f85a35d98388bd421ecf46683d8c6a0"
+      "sha256": "4be07022fb79fdbabc4285fec9972f1352c4a108cecaaf84b9a990d6062e29c6"
     },
     {
       "path": "USAGE.zh-CN.md",
@@ -109,7 +109,7 @@
     },
     {
       "path": "manifest.json",
-      "sha256": "6e21e3b44e063e6fcbbbdbb900ba0815f502cf42316d103a6c7eaed549b4456c"
+      "sha256": "692a04bdbbebbc15e1f1e5691a045029b47017dd3df8ce7677d375d39f7a3d36"
     },
     {
       "path": "styles.css",
@@ -117,11 +117,11 @@
     },
     {
       "path": "versions.json",
-      "sha256": "c1fcf4db989d5156da9d132252016c8dd5d83a34039d11f61924b5f3777d13ff"
+      "sha256": "ee4dc285c209c5aa1cd0d6541b03add9d9b9cfc4efd8759bc089e47aefaba518"
     },
     {
       "path": "PRIVACY.md",
-      "sha256": "13624e7b32761180735a6f9d2670d883b1c2fa72783aeff372767e9bae3a7e13"
+      "sha256": "2c930a514f3cda2bb1482aefaf47cfc91a885f81b374a09c5a0bcd46f8535812"
     }
   ],
   "private_material_excluded": [
