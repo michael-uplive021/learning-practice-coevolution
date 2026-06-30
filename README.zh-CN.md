@@ -54,7 +54,7 @@ Agent + 本 Skill + 你提供的材料
 | 我需要 Obsidian 吗？ | 不需要。Obsidian 只是可选工作区。 |
 | 我需要知识库吗？ | 不需要。你直接粘贴材料也能用。 |
 | 阅读器是什么？ | 微信读书、PDF 阅读器、EPUB 阅读器、浏览器都可以。 |
-| 仓库里的 Obsidian 插件必须装吗？ | 不必须。它是可选插件。社区审核通过后，Obsidian 用户可以直接从 Community plugins 安装；审核期间也可以从 GitHub 手动安装。 |
+| 仓库里的 Obsidian 插件必须装吗？ | 不必须。它是可选插件。Obsidian 用户可以直接从 Community plugins 安装；GitHub release 文件作为手动安装备用。 |
 
 ## 我该怎么把书给 Agent？
 
@@ -139,7 +139,7 @@ Agent 不应该假装读过整本书。
 
 ## 在 Obsidian 里安装
 
-社区审核通过后，你可以直接在 Obsidian 里安装：
+你可以直接在 Obsidian 社区插件里安装这个可选插件：
 
 1. 打开 Obsidian Settings。
 2. 进入 Community plugins，并关闭 Restricted mode。
@@ -155,7 +155,7 @@ Agent 不应该假装读过整本书。
 - Insert transfer and misuse test
 - Close as observer note
 
-社区审核期间，也可以先从 GitHub 手动安装：
+如果 Browse 里暂时搜不到，也可以从 GitHub 手动安装：
 
 1. 从 release `0.1.1` 下载 `manifest.json`、`main.js` 和 `styles.css`。
 2. 放入 `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`。

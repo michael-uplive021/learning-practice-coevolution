@@ -52,7 +52,7 @@ Reader + Knowledge Base + Agent + this Skill
 | Do I need Obsidian? | No. Obsidian is only one possible workspace. |
 | Do I need a knowledge base? | No. You can paste material directly. |
 | What counts as a reader? | WeRead, PDF reader, EPUB reader, browser, or any reading app. |
-| Is the Obsidian plugin required? | No. It is optional. Obsidian users can install it from Community plugins after review, or manually from GitHub while review is pending. |
+| Is the Obsidian plugin required? | No. It is optional. Obsidian users can install it from Community plugins. GitHub release files remain the manual fallback. |
 
 ## How To Give Material To The Agent
 
@@ -115,7 +115,7 @@ The agent should not pretend it has read the whole book.
 
 ## Install In Obsidian
 
-After the community review is approved, you can install this workflow directly from Obsidian:
+You can install the optional plugin directly from Obsidian:
 
 1. Open Obsidian Settings.
 2. Go to Community plugins and turn off Restricted mode.
@@ -125,7 +125,7 @@ After the community review is approved, you can install this workflow directly f
 
 After enabling the plugin, open the command palette and search for `Learning Practice`. You can start a learning session, insert a reconstruction prompt, add a transfer practice, or close the session with an observer note.
 
-While the community review is still pending, you can install it manually from GitHub:
+If Browse does not show the plugin yet, install it manually from GitHub:
 
 1. Download `manifest.json`, `main.js`, and `styles.css` from release `0.1.1`.
 2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`.
