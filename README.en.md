@@ -6,82 +6,80 @@
   <strong>English</strong>
   |
   <a href="README.md">Main</a>
+  |
+  <a href="USAGE.zh-CN.md">Chinese Usage</a>
 </p>
 
-## Obsidian Plugin: Learning Practice Companion
+Turn AI from "summarize this book for me" into "help me practice until I can use it."
 
-This repository also contains `Learning Practice Companion`, a local-first Obsidian plugin for active recall, AI critique, transfer practice, and learning session records.
+`learning-practice-coevolution` is not a generic summarizer. It helps the user reconstruct understanding first, then lets the agent critique, repair concepts, add examples, create transfer practice, and bring learning back into a real task.
 
-The plugin pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, collect telemetry, or make network requests.
+## 30-Second Start
 
-Plugin commands:
-
-- Start learning session
-- Insert reconstruction prompt
-- Insert Copilot mentor prompt
-- Insert transfer and misuse test
-- Close as observer note
-
-Community plugin assets:
-
-- `manifest.json`
-- `main.js`
-- `styles.css`
-- `versions.json`
-- `PRIVACY.md`
-
-Manual installation:
-
-1. Download `manifest.json`, `main.js`, and `styles.css` from a GitHub release.
-2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-companion/`.
-3. Restart Obsidian and enable `Learning Practice Companion` in Community plugins.
-
-See [PRIVACY.md](PRIVACY.md) for the local-only privacy boundary.
-
-## Skill: Learning Practice Coevolution
-
-Core philosophy: reading is training; practice is learning.
-
-`learning-practice-coevolution` turns reading and doing into one training loop. In reading, the user first reconstructs the material in their own words, then AI critiques false familiarity, vague concepts, missing examples, and transfer breaks. In practice, the real task becomes the exercise field: define the problem contract, use the concept, observe the result, and record the next practice.
-
-Its operating sequence is: user reconstruction -> AI critique -> concept repair -> transfer practice -> real-task test -> observation -> reusable asset candidate. It switches from Mentor critique to Digital Apprentice execution only after the learning or problem contract is clear.
-
-## Core Idea
-
-This skill makes the philosophy operational through a loop:
+Copy this into your agent after installing or referencing `SKILL.md`:
 
 ```text
-material or task -> user reconstruction -> critique -> concept repair -> transfer practice -> real-task test -> observation -> reusable asset candidate
+Use $learning-practice-coevolution.
+
+I am reading: {book / article / PDF / course note / concept}
+My real purpose is: {why I am reading it}
+
+Do not summarize first.
+First ask me 1-2 necessary questions, then make me reconstruct the idea in my own words.
+After that, critique my understanding and give me one transfer exercise for a real task.
 ```
 
-It is built on five rules:
+## What Tools Do I Need?
 
-- Reading should train judgment, not only speed up content intake.
-- AI should improve the user's problem ownership and reconstruction ability before producing polished output.
-- Real projects are the preferred practice field.
-- Mentor, Digital Apprentice, and Observer are different postures and should not be collapsed into one unreviewed answer.
-- Reusable methods, SOPs, prompts, or skills need repeated practice evidence; one good session is only a candidate.
+| Tool | Required? | Role |
+| --- | --- | --- |
+| Agent | Required | Runs the conversation and applies the skill. |
+| This Skill | Required | Provides the learning-practice workflow. |
+| Reader | Optional | WeRead, PDF reader, EPUB reader, browser, or any reading app. |
+| Knowledge base | Optional | Obsidian, Notion, Markdown folder, Feishu docs, or no knowledge base at all. |
 
-## Recent Evolution
+Best setup:
 
-The core position has not changed: this is still not a generic summarizer. It has expanded from a reading assistant into a learning-practice coevolution workflow that can support five layers:
+```text
+Reader + Knowledge Base + Agent + Skill
+```
 
-1. **Single-session learning**: active recall, teach-back, critique, transfer tests, misuse checks, and Learning Session Records.
-2. **Long-running learning**: mission setting, Learning Records, ZPD-based next practice, and lightweight learning workspace boundaries.
-3. **Real-work practice**: using real business or research projects as practice anchors, with decision questions, hypothesis trees, evidence plans, method-lens tracking, and Observer recommendations.
-4. **Observer reading prescriptions**: when a repeated thinking or analysis gap appears, the Observer can recommend a narrow book chapter, concept, paper, or practice drill tied to that gap instead of producing a generic reading list.
-5. **Feedback-driven serial lessons**: when learning becomes a sequence, the next lesson uses the previous real feedback, ZPD routing, remedial micro-lessons, and stage reviews instead of continuing a static course outline.
+Minimum setup:
 
-## Project Article
+```text
+Agent + Skill + user-provided material
+```
 
-- Chinese WeChat article: [Read the article](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
+You do not need Obsidian to use this skill. Obsidian is only one possible workspace. The included Obsidian plugin is an optional local companion.
 
-## Language Versions
+## How To Give Material To The Agent
 
-- Main skill: [SKILL.md](SKILL.md)
-- English skill snapshot: [SKILL.en.md](SKILL.en.md)
-- Chinese skill version: [SKILL.zh-CN.md](SKILL.zh-CN.md)
-- Chinese README: [README.zh-CN.md](README.zh-CN.md)
+Basic flow:
+
+```text
+give material -> state purpose -> set scope -> reconstruct first -> critique -> transfer practice -> leave feedback -> continue next round
+```
+
+Common sources:
+
+| Material source | What to do |
+| --- | --- |
+| WeRead integrated with Agent | Tell the agent the book, chapter, highlights, or notes range; the agent should check access first. |
+| WeRead not integrated | Copy the table of contents, chapter excerpt, highlights, notes, or reading thoughts into the agent. |
+| PDF / EPUB | Upload the file, or paste the table of contents plus target chapter or page range. |
+| Already finished a book | Provide the title, remembered thesis, highlights, or reflections; the agent starts with a reconstruction check. |
+| Only a concept | Provide the concept plus the real problem you want to use it on. |
+| No material, only a topic | Ask the agent to build a serial learning path, one small lesson at a time. |
+
+The agent does not automatically know what is in your reading app. If integration exists, use it. If not, provide excerpts, notes, highlights, table of contents, PDF pages, or your own reading reflection.
+
+## Agent's First Questions
+
+After material is provided, the agent should not summarize first. It should ask:
+
+1. Why are you reading this? What real question does it serve?
+2. What is the material scope: whole book, chapter, highlights, notes, PDF pages, or concept?
+3. What output do you want: understanding check, chapter learning, transfer exercise, project material, reading card, serial lesson, or method candidate?
 
 ## What It Does
 
@@ -112,12 +110,43 @@ Use this skill when you want help with:
 
 Do not use it as a generic summarizer.
 
+## Material Incompleteness Boundary
+
+The agent should not pretend it has read the whole book.
+
+- If only a table of contents is provided, it can make a reading map.
+- If only highlights are provided, it can run understanding checks around those highlights.
+- If only the title is provided, it should ask for a table of contents, chapter excerpt, notes, or user question.
+- If a PDF is only partially readable, it should mark the gap and work only with visible content.
+
+## Optional Obsidian Companion Plugin
+
+This repository also contains `Learning Practice Companion`, a local-first Obsidian plugin for active recall, AI critique, transfer practice, and learning session records.
+
+The plugin is optional. It pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, collect telemetry, or make network requests.
+
+Manual installation:
+
+1. Download `manifest.json`, `main.js`, and `styles.css` from a GitHub release.
+2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-companion/`.
+3. Restart Obsidian and enable `Learning Practice Companion` in Community plugins.
+
+See [PRIVACY.md](PRIVACY.md) for the local-only privacy boundary.
+
+## Public Version Boundary
+
+This public version keeps the general learning workflow: active recall, AI critique, transfer practice, serial lessons, learning feedback, and method candidates.
+
+It does not include private BP-Wiki project paths, dashboards, private learning logs, business project examples, connector settings, internal Runtime governance, secrets, account traces, or non-public knowledge.
+
 ## Files
 
 - `SKILL.md` - the main skill.
 - `SKILL.en.md` - English skill snapshot.
 - `SKILL.zh-CN.md` - Chinese skill version.
-- `README.en.md` / `README.zh-CN.md` - bilingual documentation.
+- `README.md` - bilingual public onboarding entry.
+- `README.en.md` / `README.zh-CN.md` - language-specific documentation.
+- `USAGE.zh-CN.md` - Chinese usage flow and prompt recipes.
 - `SUPPORT.md` - support and payment links.
 - `agents/openai.yaml` - optional OpenAI-facing display metadata.
 - `assets/` - QR code assets for public support channels.
@@ -127,27 +156,9 @@ Do not use it as a generic summarizer.
 - `LICENSE` - MIT License.
 - `CHANGELOG.md` - public release notes.
 
-## Quick Start
+## Project Article
 
-Copy `SKILL.md` into the skill folder used by your agent tool, or reference it directly as task material.
-
-Example prompt:
-
-```text
-Use $learning-practice-coevolution to help me read this chapter.
-Do not summarize first. Ask me questions and critique my answer.
-```
-
-Another example:
-
-```text
-Use $learning-practice-coevolution. I understand the concept vaguely but cannot use it.
-Make me reconstruct it, then give me a toy example and one transfer exercise.
-```
-
-## Usage Boundary
-
-Use this skill as a learning and practice workflow. Do not include confidential material, local paths, account traces, connector configuration, logs, secrets, or other non-public information when sharing examples or derivatives.
+- Chinese WeChat article: [Read the article](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
 
 ## Support
 

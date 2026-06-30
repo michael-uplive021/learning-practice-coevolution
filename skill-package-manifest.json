@@ -1,6 +1,6 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-30-feedback-driven-serial-lesson-adapter",
+  "version": "2026-06-30-public-readme-usage-flow",
   "name": "Learning Practice Coevolution + Learning Practice Companion",
   "owner": "Jie Huang",
   "license": "MIT",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "37235df703a4282cdc15241988056796a59a3494ca22f0e270679b20591e7458"
+      "sha256": "9d573b7a3e3b2ffb89d6a9c44c0ae71b9d17a46c0083fff00fd0686ee85720e8"
     },
     {
       "path": "LICENSE",
@@ -61,15 +61,19 @@
     },
     {
       "path": "README.md",
-      "sha256": "5ae2efce38b620d222f488b4311e8fd8bf52b6f1eb814b0335eeec348e1368a3"
+      "sha256": "a4cd2b397df5aca0e59a1e7ca6ec8484d79903b422dac05f59f986a9450a1d07"
     },
     {
       "path": "README.en.md",
-      "sha256": "e58e5124be26a352bfd98811819da6ec71d64fe5cbced5a451b1c114a5226926"
+      "sha256": "f7c890821de3b12946d57c87a1f326cd179699e4ce2f482f7a80964208b9c0d7"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "ec17a8e79a9e0c67d7618fc30dd46a27337d15ad907f7889d2bb3962ddd58eb9"
+      "sha256": "f8c70db00fe1d9c589b0099f1b6f679dd0c64ccb51f938364b4fe494378720f9"
+    },
+    {
+      "path": "USAGE.zh-CN.md",
+      "sha256": "4edb3d9a6a76b115f03c842d6a7d9ca769d4d6de63b4f7c7f0bd34789aff9328"
     },
     {
       "path": "SKILL.md",

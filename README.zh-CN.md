@@ -6,83 +6,107 @@
   <a href="README.en.md">English</a>
   |
   <a href="README.md">主入口</a>
+  |
+  <a href="USAGE.zh-CN.md">中文用法</a>
 </p>
 
-## Obsidian 插件：Learning Practice Companion
+让 AI 从“帮你总结书”变成“陪你练会一个东西”。
 
-本仓库也包含 `Learning Practice Companion`，一个 local-first 的 Obsidian 插件，用于主动回忆、AI 批改、迁移练习和 Learning Session Record。
+`learning-practice-coevolution` 不是通用总结器。它让你先重构理解，再让 Agent 批改、补例子、做迁移练习，并把学习带回真实任务。
 
-它适合配合 Copilot for Obsidian 使用，但不依赖 Copilot，不读取 Copilot 设置，不调用任何 AI API，不收集 telemetry，也不发起网络请求。
+## 30 秒开始
 
-插件命令：
-
-- Start learning session
-- Insert reconstruction prompt
-- Insert Copilot mentor prompt
-- Insert transfer and misuse test
-- Close as observer note
-
-社区插件文件：
-
-- `manifest.json`
-- `main.js`
-- `styles.css`
-- `versions.json`
-- `PRIVACY.md`
-
-手动安装：
-
-1. 从 GitHub release 下载 `manifest.json`、`main.js` 和 `styles.css`。
-2. 放入 `<your-vault>/.obsidian/plugins/learning-practice-companion/`。
-3. 重启 Obsidian，并在 Community plugins 中启用 `Learning Practice Companion`。
-
-local-only 隐私边界见 [PRIVACY.md](PRIVACY.md)。
-
-## Skill：Learning Practice Coevolution
-
-核心理念：阅读即训练，实践即学习。
-
-`learning-practice-coevolution` 把“读”和“做”放进同一个训练闭环：阅读时，用户先用自己的话重构材料，AI 再批改假熟悉、模糊概念、缺少例子和迁移断点；实践时，真实任务就是练习场，先定义问题合约，再用概念解决问题、观察结果、记录下一步练习。
-
-它的运行顺序是：用户重构 -> AI 批改 -> 概念修补 -> 迁移练习 -> 真实任务检验 -> 观察复盘 -> 可复用资产候选。只有学习合约或问题合约清楚后，才从导师式批改切换到数字员工执行。
-
-## 核心理念
-
-这个 Skill 通过一条闭环把理念落到操作上：
+把 `SKILL.zh-CN.md` 或 `SKILL.md` 放进你的 Agent Skill 目录，或者直接把它作为任务材料引用。然后复制：
 
 ```text
-材料或任务 -> 用户重构 -> 批改 -> 概念修补 -> 迁移练习 -> 真实任务检验 -> 观察复盘 -> 可复用资产候选
+使用 $learning-practice-coevolution。
+
+我正在读：{书 / 文章 / PDF / 课程笔记 / 概念}
+我的真实目的：{我为什么要读}
+
+请不要直接总结。
+先问我 1-2 个必要问题，然后让我用自己的话重构理解。
+之后批改我的理解，并给我一个能用到真实任务里的迁移练习。
 ```
 
-核心规则：
+## 我需要哪些工具？
 
-- 阅读要训练判断力，而不是只提高信息摄入速度。
-- AI 先提高用户的问题主导权和重构能力，再生产漂亮答案。
-- 真实项目优先作为练习场。
-- 导师、数字员工和观察者是不同姿态，不能混成一个未经审查的答案。
-- 方法、SOP、Prompt 或 Skill 候选需要重复实践证据；一次好会话只能算候选。
+| 工具 | 是否必需 | 作用 |
+| --- | --- | --- |
+| Agent | 必需 | 执行对话和调用 Skill。 |
+| 本 Skill | 必需 | 提供学习实践共演流程。 |
+| 阅读器 | 可选 | 微信读书、PDF 阅读器、EPUB 阅读器、浏览器或任意阅读 App。 |
+| 知识库 | 可选 | Obsidian、Notion、Markdown 文件夹、飞书文档，或者没有知识库。 |
 
-## 最近定位变化
+最佳组合：
 
-核心定位没有变：它仍然不是通用总结器。变化在于，它已经从“读书辅助”扩展为一套学习实践共演流程，可支撑五层场景：
+```text
+阅读器 + 知识库 + Agent + Skill
+```
 
-1. **单次学习**：主动回忆、teach-back、理解批改、迁移测试、误用检查和 Learning Session Record。
-2. **长期学习**：Mission、Learning Record、基于 ZPD 的下一步练习，以及轻量学习工作区边界。
-3. **真实工作练习**：把业务研究或真实项目作为 practice anchor，先定义决策问题、假设树、证据计划，记录 method lens，并由 Observer 给出学习建议。
-4. **观察者阅读处方**：当重复的思考或分析缺口出现时，Observer 可以推荐绑定该缺口的章节、概念、论文或练习，而不是给泛泛书单。
-5. **反馈驱动连续课程**：当学习变成连续课程时，下一课优先读取上一篇真实反馈，再通过 ZPD 路由、补充小课和阶段复盘推进，而不是照着静态大纲硬走。
+最低组合：
 
-## 项目说明文章
+```text
+Agent + Skill + 你提供的材料
+```
 
-- 微信公众号中文说明：[阅读文章](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
+你不需要 Obsidian 才能使用这个 Skill。Obsidian 只是可选工作区。本仓库里的 Obsidian 插件也是可选 companion，不是必需入口。
 
-## 语言版本
+## 我该怎么把书给 Agent？
 
-- 主 Skill: [SKILL.md](SKILL.md)
-- 英文 Skill 快照: [SKILL.en.md](SKILL.en.md)
-- 中文 Skill 版本: [SKILL.zh-CN.md](SKILL.zh-CN.md)
-- 英文 README: [README.en.md](README.en.md)
-- 支持与付款说明: [SUPPORT.md](SUPPORT.md)
+基本流程：
+
+```text
+给材料 -> 说目的 -> 定范围 -> 先重构 -> 再批改 -> 做迁移 -> 留反馈 -> 下一轮继续
+```
+
+展开后是：
+
+1. 你同步、上传或粘贴阅读材料。
+2. Agent 先检查自己实际能访问什么。
+3. Agent 问你为什么读，这次阅读服务哪个真实问题。
+4. Agent 设置阅读模式：快速扫读、章节学习、概念掌握、真实任务迁移或连续课程。
+5. 你先用自己的话重构理解。
+6. Agent 批改并修补理解。
+7. Agent 给迁移练习或补救小课。
+8. 你留下反馈，作为下一轮调整依据。
+
+关键边界：
+
+```text
+Agent 不会自动知道你阅读 App 里的内容。
+如果已有集成，就让 Agent 调用集成并先检查访问范围。
+如果没有集成，就提供摘录、笔记、划线、目录、PDF 页面或你自己的阅读反思。
+```
+
+## 常见材料来源
+
+| 材料来源 | 你该怎么做 |
+| --- | --- |
+| 微信读书已经接入 Agent | 告诉 Agent 书名、章节、划线或笔记范围；Agent 先检查访问权限。 |
+| 微信读书没有接入 | 复制目录、章节摘录、划线、笔记或读后想法到 Agent。 |
+| PDF / EPUB | 上传文件，或粘贴目录加目标章节 / 页码范围。 |
+| 已经读完一本书 | 提供书名、你记得的核心观点、划线或反思；Agent 从重构检查开始。 |
+| 只有一个概念 | 提供概念，以及你想把它用在哪个真实问题上。 |
+| 没有材料，只有主题 | 让 Agent 设计连续学习路径，每次只生成一小课。 |
+
+## Agent 开始时应该先问什么？
+
+提供材料后，Agent 不应该先总结。它应该先问：
+
+1. 你为什么读这个？它服务哪个真实问题？
+2. 这次材料范围是什么：整本书、章节、划线、笔记、PDF 页码，还是一个概念？
+3. 你要的产物是什么：理解检查、章节学习、迁移练习、项目材料、读书卡、连续课程，还是方法候选？
+
+## 常用提示词
+
+完整中文提示词见 [USAGE.zh-CN.md](USAGE.zh-CN.md)，包括：
+
+- 微信读书划线 / 笔记；
+- PDF 章节；
+- 已经读完一本书；
+- 真实项目迁移；
+- 连续学习路径。
 
 ## 它做什么
 
@@ -113,12 +137,51 @@ local-only 隐私边界见 [PRIVACY.md](PRIVACY.md)。
 
 不适合把它当成“全文总结器”直接用。
 
+## 材料不完整时怎么办？
+
+Agent 不应该假装读过整本书。
+
+- 只有目录：可以做阅读地图。
+- 只有划线：围绕划线做理解检查。
+- 只有书名：应该要求目录、章节摘录、笔记或你的问题。
+- PDF 只能部分读取：标出缺口，只基于可见内容工作。
+
+## 可选 Obsidian Companion 插件
+
+本仓库也包含 `Learning Practice Companion`，一个 local-first 的 Obsidian 插件，用于主动回忆、AI 批改、迁移练习和 Learning Session Record。
+
+插件是可选的。它适合配合 Copilot for Obsidian 使用，但不依赖 Copilot，不读取 Copilot 设置，不调用任何 AI API，不收集 telemetry，也不发起网络请求。
+
+插件命令：
+
+- Start learning session
+- Insert reconstruction prompt
+- Insert Copilot mentor prompt
+- Insert transfer and misuse test
+- Close as observer note
+
+手动安装：
+
+1. 从 GitHub release 下载 `manifest.json`、`main.js` 和 `styles.css`。
+2. 放入 `<your-vault>/.obsidian/plugins/learning-practice-companion/`。
+3. 重启 Obsidian，并在 Community plugins 中启用 `Learning Practice Companion`。
+
+local-only 隐私边界见 [PRIVACY.md](PRIVACY.md)。
+
+## 公开版边界
+
+这个公开版保留通用学习流程：主动回忆、AI 批改、迁移练习、连续课程、学习反馈和方法候选。
+
+它不包含私有 BP-Wiki 项目路径、Dashboard、私人学习日志、业务项目样例、连接器设置、内部 Runtime 治理、密钥、账号痕迹或非公开知识。
+
 ## 文件说明
 
 - `SKILL.md` - 主 Skill，默认英文 canonical 版本。
 - `SKILL.en.md` - 英文 Skill 快照。
 - `SKILL.zh-CN.md` - 中文 Skill 版本。
+- `README.md` - 中英双语公开入口。
 - `README.en.md` / `README.zh-CN.md` - 中英文说明。
+- `USAGE.zh-CN.md` - 中文使用流程和提示词。
 - `SUPPORT.md` - 支持入口和付款边界。
 - `agents/openai.yaml` - 可选的 OpenAI 展示元数据。
 - `assets/` - 公开支持入口的二维码资产。
@@ -128,28 +191,9 @@ local-only 隐私边界见 [PRIVACY.md](PRIVACY.md)。
 - `LICENSE` - MIT License。
 - `CHANGELOG.md` - 公开版本记录。
 
-## 快速开始
+## 项目说明文章
 
-把 `SKILL.md` 或 `SKILL.zh-CN.md` 放到你的 Agent 工具支持的 Skill 目录中，也可以直接作为任务材料引用。
-
-示例：
-
-```text
-使用 $learning-practice-coevolution 帮我读这一章。
-不要先总结，先问我问题，然后批改我的回答。
-```
-
-另一个示例：
-
-```text
-使用 $learning-practice-coevolution。
-我大概知道这个概念，但用不出来。
-先让我重构，再给一个玩具例子和一个迁移练习。
-```
-
-## 使用边界
-
-把这个 Skill 当作学习和实践流程使用。分享示例或衍生版本时，不要包含保密材料、本地路径、账号痕迹、连接器配置、日志、密钥或其他非公开信息。
+- 微信公众号中文说明：[阅读文章](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
 
 ## 支持
 
