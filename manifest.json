@@ -1,9 +1,9 @@
 {
   "id": "learning-practice-coevolution",
   "name": "Learning Practice Coevolution",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "minAppVersion": "1.8.0",
-  "description": "Local-first active recall, AI critique, transfer practice, and learning session workflows.",
+  "description": "Local-first learning sessions for active recall, critique prompts, and real-task practice.",
   "author": "Jie Huang",
   "authorUrl": "https://github.com/michael-uplive021",
   "isDesktopOnly": false

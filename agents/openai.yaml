@@ -1,4 +1,4 @@
 interface:
-  display_name: "学习实践共演助手"
-  short_description: "不是总结器；把材料、复述、批改、真实任务练习、反馈驱动课程和观察沉淀串成可复用能力"
-  default_prompt: "Use $learning-practice-coevolution to turn this book, concept, lesson sequence, or real project into active recall, critique, transfer practice, and a clear next learning step."
+  display_name: "学习实践共演｜AI 学习陪练"
+  short_description: "先复述，再批改，再迁移到真实任务；让 AI 帮你练会，而不是替你总结"
+  default_prompt: "Use $learning-practice-coevolution. Make me reconstruct the idea first; then critique gaps, repair the concept, and design one transfer exercise for a real task. End with the next practice or reading target."

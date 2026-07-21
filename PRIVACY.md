@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Learning Practice Coevolution version `0.1.2` runs locally inside your Obsidian vault.
+Learning Practice Coevolution version `0.1.3` runs locally inside your Obsidian vault.
 
 ## Data Collection
 
@@ -8,7 +8,7 @@ The plugin does not collect, store, transmit, or sell personal data.
 
 ## Network Use
 
-Version `0.1.2` does not make network requests.
+Version `0.1.3` does not make network requests.
 
 ## Telemetry
 

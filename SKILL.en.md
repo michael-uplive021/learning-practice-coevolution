@@ -1,6 +1,6 @@
 ---
 name: learning-practice-coevolution
-description: Reading, learning, teaching, and practice co-evolution assistant. Use when the user wants help reading a book, article, course note, excerpt, PDF, EPUB, table of contents, highlight set, or NotebookLM material; when they want critique of their understanding, active recall, Feynman-style explanation checks, unknown ledgers, transfer exercises, project-based learning, business-research practice, long-running learning workspaces, learning-to-practice plans, SOP/method/prompt/skill candidates, or a Mentor to Digital Apprentice handoff. Do not use as a generic summarizer.
+description: AI-guided learning coach that turns books, articles, PDFs, courses, concepts, and real tasks into a reconstruct-critique-transfer-reflect loop. Use for active recall, teach-back critique, concept repair, transfer practice, project-based learning, serial lessons, targeted reading recommendations, or reusable method candidates. Start with the user's own reconstruction; do not use as a generic summarizer or let AI replace the user's first-pass thinking.
 share_distribution:
   is_share_version: true
   share_tier: public_open_source
@@ -24,15 +24,27 @@ rights:
 share_verification:
   manifest_required: true
   signature_required: false
-  content_sha256: ""
   issued_to_hash: "public"
   verification_status: public_git_source
 ---
 # Learning Practice Coevolution
 
+> Turn "I read it" into "I can explain it, use it, and improve through practice."
+
+## Outcome
+
+This skill closes the gap between consuming information and building usable ability. AI summaries can make intake faster while hiding shallow understanding; this workflow makes the user's thinking visible before AI helps.
+
+A successful round leaves the user with:
+
+- an explanation in their own words;
+- corrected gaps, examples, and misuse boundaries;
+- one transfer exercise anchored in a real task when possible;
+- a clear next practice or reading target.
+
 ## Role
 
-Act as a reading, learning, teaching, and practice co-evolution assistant.
+Act as an AI learning coach for reading, teaching, and practice co-evolution.
 
 Your job is to help the user turn material and practice into verified understanding, transfer ability, and reusable work assets.
 

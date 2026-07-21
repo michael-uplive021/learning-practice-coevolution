@@ -1,227 +1,177 @@
 # Learning Practice Coevolution
 
 <p align="center">
-  <a href="README.zh-CN.md"><strong>中文</strong></a>
+  <strong>中文</strong>
   |
   <a href="README.en.md"><strong>English</strong></a>
   |
-  <a href="USAGE.zh-CN.md"><strong>中文用法</strong></a>
+  <a href="USAGE.zh-CN.md"><strong>直接看中文用法</strong></a>
 </p>
 
-让 AI 从“帮你总结书”变成“陪你练会一个东西”。
+> **让 AI 不替你读，而是陪你把知识讲清、用出来、练成自己的能力。**
 
-`learning-practice-coevolution` is not a generic summarizer. It helps you reconstruct your understanding first, then lets the agent critique, repair concepts, add examples, create transfer practice, and bring learning back into a real task.
+这是一个开源的 AI 学习陪练 Skill。它把书、文章、PDF、课程、概念和真实任务，变成一条可反复运行的学习闭环：**你先复述，AI 再批改；修补理解后，立刻迁移到真实任务；最后用复盘决定下一步。**
 
-`learning-practice-coevolution` 不是通用总结器。它让你先重构理解，再让 Agent 批改、修补概念、补充例子、设计迁移练习，并把学习带回真实任务。
+核心是 Agent Skill；仓库里的 Obsidian 插件只是可选的本地提示词与学习记录工具，不会直接调用 AI。
 
-## Quick Start / 快速上手
+## 你是不是也遇到过这些问题？
 
-If your agent can already use this skill, start with this:
+- 摘要看得很快，合上页面却讲不清核心观点。
+- 收藏、划线和笔记越来越多，遇到真实问题还是不会用。
+- AI 给出的答案很完整，但自己的判断力没有同步变强。
+- 想系统学一个主题，却总在第一篇、第一章之后失去连续性。
+
+真正的缺口不在摘要质量，而在于**知识进入之后，没有经过重构、纠错、迁移和反馈，因而没有变成能力。**
+
+## 它和普通总结器有什么不同？
+
+| 普通总结器 | Learning Practice Coevolution |
+| --- | --- |
+| AI 先给答案 | 你先用自己的话复述 |
+| 重点是压缩内容 | 重点是暴露理解缺口 |
+| 读完得到一份笔记 | 读完得到一次纠错和迁移练习 |
+| 学习停在材料里 | 学习回到工作、项目或真实问题 |
+| 下一轮重新开始 | 根据反馈调整下一步难度、例子和方向 |
+
+## 一套闭环，三个角色
+
+| 角色 | 它做什么 | 你得到什么 |
+| --- | --- | --- |
+| **Mentor / 导师** | 追问、批改复述，指出假熟悉、概念混淆和缺失例子 | 更真实的理解状态 |
+| **Digital Apprentice / 数字学徒** | 在目标和边界明确后，把概念带进真实任务 | 一次可检验的迁移 |
+| **Observer / 观察者** | 复盘结果、识别反复出现的盲区，建议下一次练习或针对性阅读 | 可持续的下一步 |
 
 ```text
-Use $learning-practice-coevolution.
-
-I am reading: {book / article / PDF / course note / concept}
-My real purpose is: {why I am reading it}
-
-Do not summarize first.
-First ask me 1-2 necessary questions, then make me reconstruct the idea in my own words.
-After that, critique my understanding and give me one transfer exercise for a real task.
+材料或真实任务
+-> 你先复述
+-> Mentor 批改与概念修补
+-> Digital Apprentice 做迁移练习
+-> 在真实任务中检验
+-> Observer 复盘并选择下一步
 ```
 
-中文：
+一次完整回合至少应留下四样东西：你的解释、被修正的缺口、一个真实迁移练习、下一步学习目标。
+
+## 60 秒开始
+
+如果你的 Agent 已经能调用本 Skill，直接发送：
 
 ```text
 使用 $learning-practice-coevolution。
 
 我正在读：{书 / 文章 / PDF / 课程笔记 / 概念}
-我的真实目的：{我为什么要读}
+我的真实目的：{我为什么要学它、准备把它用在哪里}
+本轮范围：{一章 / 一组划线 / 某几页 / 一个概念}
 
-请不要直接总结。
-先问我 1-2 个必要问题，然后让我用自己的话重构理解。
-之后批改我的理解，并给我一个能用到真实任务里的迁移练习。
+请不要先总结。
+先让我用自己的话复述，再批改我的理解。
+修补概念后，给我一个能放进真实任务里的迁移练习。
+最后告诉我下一步最值得练什么。
 ```
 
-If you have not installed it yet, you can first paste `SKILL.md` or `SKILL.zh-CN.md` as task material. Move it into your agent's skill folder after you decide it is useful.
+还没安装也可以先试：把 `SKILL.zh-CN.md` 或 `SKILL.md` 作为任务材料交给 Agent，再发送上面的提示词。
 
-## Can I Use It With Only An Agent?
+更多可复制场景见 [中文用法与提示词](USAGE.zh-CN.md)。
 
-Yes.
+## 一个具体例子
 
-Minimum setup:
+你刚读完一本战略书，觉得“差异化”很好懂，但不知道怎么用在自己的项目里。
 
-```text
-Agent + this Skill + user-provided material
-```
+这个 Skill 不会先替你总结全书。它会：
 
-Better setup:
+1. 让你先解释“差异化”到底改变了什么选择；
+2. 指出你把“不同”误当成“有价值的不同”的地方；
+3. 让你用当前项目写出目标客户、取舍和验证信号；
+4. 根据你的答案安排下一次练习，必要时给出一条窄范围荐读。
 
-```text
-Reader + Knowledge Base + Agent + this Skill
-```
+衡量结果的标准是：你能否在一个真实选择里正确使用这个概念。
 
-| Question | Answer |
+## 适合谁？不适合谁？
+
+适合：
+
+- 读过不少内容，但讲不清或用不出来的人；
+- 想用主动回忆、费曼式复述和真实任务练习来学习的人；
+- 正在做项目，希望把阅读直接转成判断、研究或行动的人；
+- 想持续学习一个主题，并让下一课真正读取上一轮反馈的人。
+
+不适合：
+
+- 只想立刻获得全文摘要，不愿先尝试复述；
+- 希望 Agent 在看不到材料时假装读完整本书；
+- 想把一次好答案直接固化成方法、SOP 或正式 Skill；
+- 希望 Obsidian 插件自动读取全库、调用 AI 或上传笔记。
+
+## 安装与验证
+
+### 方式一：作为 Agent Skill 使用（核心）
+
+如果你的 Agent 支持 Skills：
+
+1. 下载或克隆本仓库。
+2. 把 `SKILL.md` 与 `agents/openai.yaml` 放入该 Agent 文档指定的 Skill 目录。
+3. 新开会话，调用 `$learning-practice-coevolution`。
+4. 用“请不要先总结，先让我复述”做一次验证；如果 Agent 直接给全文摘要，说明 Skill 尚未正确加载或未被调用。
+
+不同 Agent 的 Skill 目录不同，请以宿主工具自己的安装说明为准。
+
+### 方式二：不安装，先试用
+
+直接把 `SKILL.zh-CN.md` 或 `SKILL.md` 作为任务材料交给 Agent。确认工作流适合你之后，再安装。
+
+### 方式三：安装 Obsidian 插件（可选）
+
+在 Obsidian 中打开 **Settings → Community plugins → Browse**，搜索 `Learning Practice Coevolution`，安装并启用。
+
+插件提供本地学习会话、复述提示词、迁移练习和观察者记录；它不读取 Copilot 设置、不调用 AI API、不收集遥测，也不发起网络请求。详见 [PRIVACY.md](PRIVACY.md)。
+
+手动安装备用：从 release `0.1.3` 下载 `manifest.json`、`main.js` 和 `styles.css`，放入 `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`，重启并启用插件。
+
+## 你可以给它什么材料？
+
+| 材料 | 建议做法 |
 | --- | --- |
-| Do I need Obsidian? | No. Obsidian is only one possible workspace. |
-| Do I need a knowledge base? | No. You can paste material directly. |
-| What counts as a reader? | WeRead, PDF reader, EPUB reader, browser, or any reading app. |
-| Is the Obsidian plugin required? | No. It is optional. Obsidian users can install it from Community plugins. GitHub release files remain the manual fallback. |
+| 书、文章、课程笔记 | 给出目标章节、摘录、划线或你自己的复述 |
+| PDF / EPUB | 上传文件，并限定本轮页码或章节 |
+| 微信读书 | 已接入时先让 Agent 检查可访问范围；未接入时复制目录、划线或笔记 |
+| 已读完的一本书 | 给出你记得的主张和疑问，从理解检查开始 |
+| 一个概念 | 同时给出你准备使用它的真实问题 |
+| 只有一个主题 | 让它设计连续小课，每次只推进一个可完成的学习单元 |
 
-## How Do I Give Material To The Agent?
+Agent 不会自动知道阅读 App 里的内容。材料不完整时，它必须标出缺口，只基于可见内容工作。
 
-Do not ask for a whole-book summary first. Give the agent material, purpose, and scope:
+## 公开版包含什么？
 
-```text
-give material -> state purpose -> set scope -> reconstruct first -> critique -> transfer practice -> leave feedback -> continue next round
-```
+公开版包含主动回忆、理解批改、概念修补、迁移练习、连续小课、学习反馈、观察者荐读和方法候选等核心流程。
 
-In practice, give it three things:
+它不包含私有 BP-Wiki 项目路径、Dashboard、私人学习日志、业务项目样例、连接器设置、内部 Runtime 治理、密钥、账号痕迹或非公开知识。
 
-1. Material it can actually see: table of contents, chapter, highlights, notes, PDF pages, or your own reflection.
-2. Why you are reading: concept understanding, project problem, writing preparation, or systematic learning.
-3. This round's scope: if the whole book is too large, start with one chapter, one highlight set, or one concept.
-
-Boundary:
+## 仓库结构
 
 ```text
-The agent does not automatically know what is in your reading app.
-If integration exists, use it and ask the agent to check access first.
-If not, provide excerpts, notes, highlights, table of contents, PDF pages, or your own reading reflection.
+learning-practice-coevolution/
+├── SKILL.md / SKILL.en.md / SKILL.zh-CN.md   # Agent Skill
+├── README.md / README.en.md / README.zh-CN.md # 项目说明
+├── USAGE.zh-CN.md                              # 中文提示词与场景
+├── agents/openai.yaml                          # Agent 展示元数据
+├── manifest.json / main.js / styles.css        # 可选 Obsidian 插件
+├── PRIVACY.md                                  # 本地隐私边界
+└── skill-package-manifest.json                 # 公开包版本与哈希
 ```
 
-## Common Material Sources
+## 版本说明
 
-| Material source | What to do |
-| --- | --- |
-| WeRead, if integrated with your agent | Tell the agent the book, chapter, highlights, or notes range; ask it to check access first. |
-| Not sure whether WeRead is integrated | Ask the agent whether it can read it; if not, copy the table of contents, highlights, or notes manually. |
-| WeRead not integrated | Copy the table of contents, chapter excerpt, highlights, notes, or reading thoughts into the agent. |
-| PDF / EPUB | Upload the file, or paste the table of contents plus target chapter or page range. |
-| Already finished a book | Provide the title, remembered thesis, highlights, or reflections; the agent starts with a reconstruction check. |
-| Only a concept | Provide the concept plus the real problem you want to use it on. |
-| No material, only a topic | Ask the agent to build a serial learning path, one small lesson at a time. |
+- 早期 `v1.x` tags 记录 Skill-only 的公开里程碑。
+- `0.1.x` releases 对应可安装的 Obsidian 插件资产。
+- 当前公开说明与 Skill 内容以 `main` 为准；可核验的包版本与文件哈希见 `skill-package-manifest.json`。
 
-## Problems This Helps With
+## 项目文章与支持
 
-**You finished a book and feel you understood it, but cannot use it.**
-
-The skill should not summarize for you. It should first make you explain the idea in your own words, then critique that explanation, then give you a work or project exercise.
-
-**You face a difficult concept and do not know where to begin.**
-
-Tell the agent your purpose and current level. It can split the topic into small lessons, then adjust difficulty, examples, and direction from your feedback.
-
-**You want to bring reading into a real project.**
-
-Give it both the project task and the material. The agent should treat the task as the exercise and find the most relevant parts of the material.
-
-**You want to preserve a method without freezing it too early.**
-
-Methods, SOPs, prompts, or skill ideas stay as candidates until repeated practice shows they are actually useful.
-
-Do not use it as a generic summarizer.
-
-## Agent's First Questions
-
-After material is provided, the agent should not summarize first. It should ask:
-
-1. Why are you reading this? What real question does it serve?
-2. What is the material scope: whole book, chapter, highlights, notes, PDF pages, or concept?
-3. What output do you want: understanding check, chapter learning, transfer exercise, project material, reading card, serial lesson, or method candidate?
-
-## Copy-Ready Prompt Recipes
-
-Chinese prompt recipes for WeRead highlights, PDF chapters, finished books, real project transfer, and serial learning are in [USAGE.zh-CN.md](USAGE.zh-CN.md).
-
-Example for serial learning:
-
-```text
-Use $learning-practice-coevolution.
-
-I want to learn systematically: {topic}
-Design a serial learning path.
-Generate only one small lesson at a time.
-After each lesson, give me 3 mastery checks and a feedback area.
-The next lesson must read my feedback first, then adjust difficulty, examples, and direction.
-```
-
-## Material Incompleteness Boundary
-
-The agent should not pretend it has read the whole book.
-
-- If only a table of contents is provided, it can make a reading map.
-- If only highlights are provided, it can run understanding checks around those highlights.
-- If only the title is provided, it should ask for a table of contents, chapter excerpt, notes, or user question.
-- If a PDF is only partially readable, it should mark the gap and work only with visible content.
-
-## Install In Obsidian
-
-You can install the optional plugin directly from Obsidian:
-
-1. Open Obsidian Settings.
-2. Go to Community plugins and turn off Restricted mode.
-3. Click Browse.
-4. Search for `Learning Practice Coevolution`.
-5. Click Install, then Enable.
-
-After enabling the plugin, open the command palette and search for `Learning Practice`. You can:
-
-- Start learning session
-- Insert reconstruction prompt
-- Insert Copilot mentor prompt
-- Insert transfer and misuse test
-- Close as observer note
-
-If Browse does not show the plugin yet, install it manually from GitHub:
-
-1. Download `manifest.json`, `main.js`, and `styles.css` from release `0.1.2`.
-2. Put them under `<your-vault>/.obsidian/plugins/learning-practice-coevolution/`.
-3. Restart Obsidian and enable `Learning Practice Coevolution` in Community plugins.
-
-The Obsidian plugin is local-first. It pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, collect telemetry, or make network requests.
-
-See [PRIVACY.md](PRIVACY.md) for the local-only privacy boundary.
-
-## What You Get In The Public Version
-
-The public version already includes the core learning workflow: active recall, AI critique, transfer practice, serial lessons, learning feedback, and method candidates.
-
-It does not include private BP-Wiki project paths, dashboards, private learning logs, business project examples, connector settings, internal Runtime governance, secrets, account traces, or non-public knowledge.
-
-## Files
-
-- `SKILL.md` - the main skill.
-- `SKILL.en.md` - English skill snapshot.
-- `SKILL.zh-CN.md` - Chinese skill version.
-- `README.md` - bilingual public onboarding entry.
-- `README.en.md` / `README.zh-CN.md` - language-specific documentation.
-- `USAGE.zh-CN.md` - Chinese usage flow and prompt recipes.
-- `SUPPORT.md` - support and payment links.
-- `agents/openai.yaml` - optional OpenAI-facing display metadata.
-- `assets/` - QR code assets for public support channels.
-- `manifest.json` / `main.js` / `styles.css` / `versions.json` - Obsidian plugin assets.
-- `PRIVACY.md` - local-only plugin privacy boundary.
-- `skill-package-manifest.json` - skill package metadata and file hashes.
-- `LICENSE` - MIT License.
-- `CHANGELOG.md` - public release notes.
-
-## Project Article
-
-- Chinese project article on WeChat: [Read the article](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
-
-## Support
-
-If this skill helps your reading, learning, or real-work practice loop, you can support future maintenance through the public payment links below.
-
-| Region | Link | QR |
-| --- | --- | --- |
-| Mainland China / 中国境内 | Alipay QR / 支付宝二维码 | <img src="assets/alipay-jie-qr.png" alt="Alipay QR code" width="180"> |
-| International / 海外 | [PayPal.Me](https://paypal.me/michael061394) | <img src="assets/paypal-me-michael061394.svg" alt="PayPal.Me QR code" width="180"> |
-
-These are external manual support channels. The Alipay image is a user-provided public payment QR image. This repository does not include payment passwords, API keys, bank-card data, or hidden checkout automation. See [SUPPORT.md](SUPPORT.md) for the full payment boundary.
+- 中文项目说明：[微信公众号文章](https://mp.weixin.qq.com/s/DO3uann8cmPEO0T5OtwY4w)
+- 支持与付款边界：[SUPPORT.md](SUPPORT.md)
 
 ## License
 
 MIT License. Copyright (c) 2026 Jie Huang.
 
-Attribution and license notice must be preserved when redistributing or adapting this skill.
+分发或改编本 Skill 时，请保留版权和许可证声明。

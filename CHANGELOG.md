@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-21 - Public Description Rewrite and Obsidian 0.1.3
+
+- Rewrote the public README files around the learner's real problem, the Mentor / Digital Apprentice / Observer model, a concrete before-and-after example, and a verifiable 60-second start.
+- Replaced keyword-heavy Skill and Agent metadata with one shared outcome: reconstruct first, get critique, transfer the idea into a real task, and reflect on the next step.
+- Clarified that the Agent Skill is the core product and the optional Obsidian plugin only provides local prompts and session notes; it does not call AI.
+- Updated the Obsidian plugin description and version to `0.1.3` for a documentation-only listing refresh. Plugin behavior and privacy boundaries are unchanged.
+- Kept the public/private distribution boundary intact and refreshed the package manifest hashes.
+
 ## 2026-06-30 - Obsidian Community Listing Copy Refresh
 
 - Bumped the Obsidian plugin version to `0.1.2` so the community listing and release assets carry the current installation guidance.

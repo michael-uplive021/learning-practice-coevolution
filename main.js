@@ -117,7 +117,7 @@ function formatDateTime(date) {
 function homeContent() {
   return `# Learning Practice Coevolution
 
-Learning Practice Coevolution is a local-first Obsidian workflow for active recall, AI critique, transfer practice, and learning session records.
+Learning Practice Coevolution is a local-first Obsidian companion for reconstruction prompts, real-task transfer practice, observer notes, and learning session records.
 
 It pairs well with Copilot for Obsidian, but it does not depend on Copilot, read Copilot settings, call any AI API, or make network requests.
 

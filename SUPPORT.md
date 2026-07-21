@@ -1,8 +1,8 @@
 # Support / 支持
 
-`learning-practice-coevolution` is open source under the MIT License. Optional support helps maintain the bilingual skill, examples, and compatibility notes.
+`learning-practice-coevolution` is an open-source AI learning coach under the MIT License. Optional support helps maintain the bilingual skill, examples, and compatibility notes.
 
-`learning-practice-coevolution` 以 MIT License 开源。可选支持用于维护中英文 Skill、示例和工具环境兼容说明。
+`learning-practice-coevolution` 是一个以 MIT License 开源的 AI 学习陪练 Skill。可选支持用于维护中英文 Skill、示例和工具环境兼容说明。
 
 ## Payment Links / 付款入口
 

@@ -1,12 +1,12 @@
 {
   "package_id": "learning-practice-coevolution",
-  "version": "2026-06-30-obsidian-community-plugin-listed-v012",
+  "version": "2026-07-21-public-description-rewrite-v013",
   "name": "Learning Practice Coevolution",
   "owner": "Jie Huang",
   "license": "MIT",
   "spdx_license_id": "MIT",
   "repository": "https://github.com/michael-uplive021/learning-practice-coevolution",
-  "generated_at": "2026-06-30",
+  "generated_at": "2026-07-21",
   "default_language": "en",
   "languages": [
     "en",
@@ -53,7 +53,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "9b6ae30aeb7e12ecdc7159cb5f9fea0a57dcc62327c53618cfe3d11a60441437"
+      "sha256": "fbfc9873d585a4363d88f2b93ff80bedfd0c92c69c3b319375dd0adaea6383a6"
     },
     {
       "path": "LICENSE",
@@ -61,39 +61,39 @@
     },
     {
       "path": "README.md",
-      "sha256": "f748d2b2b5b417494427901fd0c206c3ed3f119853222b4e77291d8ee2c4a36c"
+      "sha256": "fc17c3496fa441a56623d01e54132fe85c45bb680f5d3641f9fd7fb8531cb323"
     },
     {
       "path": "README.en.md",
-      "sha256": "bdc80f8974448f30eeef62ea0635eb1fe556daf584874905540443c1c68ce3c1"
+      "sha256": "36e9b4862ac29969b159b7d03bfc577689a180401652195ce28380d30ac80743"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "4be07022fb79fdbabc4285fec9972f1352c4a108cecaaf84b9a990d6062e29c6"
+      "sha256": "fc17c3496fa441a56623d01e54132fe85c45bb680f5d3641f9fd7fb8531cb323"
     },
     {
       "path": "USAGE.zh-CN.md",
-      "sha256": "3fa08e1bfc8af6b8b79cc4858942250f888251dea1b0ce9eee4534e07ada3e05"
+      "sha256": "ec7df2f94f2984ec30233ee300194ec5d3376311d425b346be0213412d29a1ab"
     },
     {
       "path": "SKILL.md",
-      "sha256": "dab38053b6d31d9b3c021dde6c57e40299b5907b6fb466e2d701573e36eeca57"
+      "sha256": "aece0d4f2e47b8ad8714156a01cdb87fe750899aa3565be22e975a15efd32aa1"
     },
     {
       "path": "SKILL.en.md",
-      "sha256": "dab38053b6d31d9b3c021dde6c57e40299b5907b6fb466e2d701573e36eeca57"
+      "sha256": "aece0d4f2e47b8ad8714156a01cdb87fe750899aa3565be22e975a15efd32aa1"
     },
     {
       "path": "SKILL.zh-CN.md",
-      "sha256": "71de785e2cbcb83acebbab67e885efed940684777ae1eeabd0e8619415015ce2"
+      "sha256": "4535e65f1aab12fd4ad14fd9ae61a60c8a59bfa14fd1a85ec8af4daf458dbd5a"
     },
     {
       "path": "SUPPORT.md",
-      "sha256": "f557d01f859e1145a3c8f91638bf59087468bcb5dbdcbe631af556be1fa94fee"
+      "sha256": "56a2ede19e3625df4c9ef44be6273920dd4edd8e834ff73b4142d1363e223914"
     },
     {
       "path": "agents/openai.yaml",
-      "sha256": "02929371062d2c8083a7ab83cc417f7cefa6d1de8490a473f44aeb6493b38ef9"
+      "sha256": "23ec1ce31a73f465aa9fd5d367ecfde98b3875dad874db7051a1cae374f938b5"
     },
     {
       "path": "assets/alipay-jie-qr.png",
@@ -105,11 +105,11 @@
     },
     {
       "path": "main.js",
-      "sha256": "0e06980122d2a356332ceeaac24cc3198e63b0f8be0cabd46684efb5583fe701"
+      "sha256": "eddb5e92a6af9c16ab0d4708de3c19ee28b1fd1c4d1abab7d1f825b33b76824f"
     },
     {
       "path": "manifest.json",
-      "sha256": "692a04bdbbebbc15e1f1e5691a045029b47017dd3df8ce7677d375d39f7a3d36"
+      "sha256": "9723de2f76334b6f11b9a95d9335acdbbf8de510ae5ac90b359889c400b424e5"
     },
     {
       "path": "styles.css",
@@ -117,11 +117,11 @@
     },
     {
       "path": "versions.json",
-      "sha256": "ee4dc285c209c5aa1cd0d6541b03add9d9b9cfc4efd8759bc089e47aefaba518"
+      "sha256": "9f6f40cf8db2fd71a103b1d501db35eb47648e3493ea53e3dd88621f7a4e35d6"
     },
     {
       "path": "PRIVACY.md",
-      "sha256": "2c930a514f3cda2bb1482aefaf47cfc91a885f81b374a09c5a0bcd46f8535812"
+      "sha256": "36aec45ff75988d97fe29d8bbde5e7cab90305cfb7c114b27a56eec76c0be03a"
     }
   ],
   "private_material_excluded": [
